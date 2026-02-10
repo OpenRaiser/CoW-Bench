@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambrian-S: Towards Spatial Supersensing in Video</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Handle sticky header offset for anchor links */
+        .section-anchor {
+            scroll-margin-top: 5rem;
+            /* Adjust based on header height (h-16 = 4rem + some buffer) */
+        }
+
+        /* Active link styling */
+        .nav-link.active {
+            color: #1e40af;
+            /* text-blue-800 */
+            font-weight: 600;
+        }
+
+        .nav-link.active i {
+            stroke: #1e40af;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col font-sans text-gray-800 bg-white">
+
+    <!-- Header -->
+    <header
+        class="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-md transition-all duration-300">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="https://github.com/OpenRaiser/awesome-world-model-evolution" target="_blank"
+                rel="noopener noreferrer" class="flex items-center space-x-2">
+                <span class="text-xl font-bold text-blue-800 tracking-tight">UMM</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-1 lg:space-x-6">
+                <a href="#home"
+                    class="nav-link text-sm font-medium transition-colors hover:text-blue-600 flex items-center space-x-1 text-gray-600 px-3 py-2 rounded-md hover:bg-gray-50"
+                    onclick="smoothScroll(event, 'home')">
+                    <i data-lucide="home" class="w-4 h-4"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#overview"
+                    class="nav-link text-sm font-medium transition-colors hover:text-blue-600 flex items-center space-x-1 text-gray-600 px-3 py-2 rounded-md hover:bg-gray-50"
+                    onclick="smoothScroll(event, 'overview')">
+                    <i data-lucide="book-open" class="w-4 h-4"></i>
+                    <span>Overview</span>
+                </a>
+                <a href="#approach"
+                    class="nav-link text-sm font-medium transition-colors hover:text-blue-600 flex items-center space-x-1 text-gray-600 px-3 py-2 rounded-md hover:bg-gray-50"
+                    onclick="smoothScroll(event, 'approach')">
+                    <i data-lucide="network" class="w-4 h-4"></i>
+                    <span>Approach</span>
+                </a>
+                <a href="#resources"
+                    class="nav-link text-sm font-medium transition-colors hover:text-blue-600 flex items-center space-x-1 text-gray-600 px-3 py-2 rounded-md hover:bg-gray-50"
+                    onclick="smoothScroll(event, 'resources')">
+                    <i data-lucide="layers" class="w-4 h-4"></i>
+                    <span>Resources</span>
+                </a>
+                <a href="#analysis"
+                    class="nav-link text-sm font-medium transition-colors hover:text-blue-600 flex items-center space-x-1 text-gray-600 px-3 py-2 rounded-md hover:bg-gray-50"
+                    onclick="smoothScroll(event, 'analysis')">
+                    <i data-lucide="bar-chart-2" class="w-4 h-4"></i>
+                    <span>Analysis</span>
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Button (Visible on small screens) -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="https://github.com/cambrian-mllm/cambrian-s" target="_blank" rel="noreferrer"
+                    class="text-gray-500 hover:text-gray-900 transition-colors" title="View on GitHub">
+                    <i data-lucide="github" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu (Hidden by default) -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white border-b border-gray-200 absolute w-full left-0 top-16 shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home"
+                    class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                    onclick="smoothScroll(event, 'home')">Home</a>
+                <a href="#overview"
+                    class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                    onclick="smoothScroll(event, 'overview')">Overview</a>
+                <a href="#approach"
+                    class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                    onclick="smoothScroll(event, 'approach')">Approach</a>
+                <a href="#resources"
+                    class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                    onclick="smoothScroll(event, 'resources')">Resources</a>
+                <a href="#analysis"
+                    class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                    onclick="smoothScroll(event, 'analysis')">Analysis</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1">
+        <!-- Hero Section -->
+        <section id="home"
+            class="section-anchor pt-20 pb-12 bg-gradient-to-b from-blue-50 to-white min-h-[60vh] flex flex-col justify-center">
+            <div class="container mx-auto px-4 text-center max-w-4xl">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight opacity-0 animate-fade-in-up"
+                    style="animation-delay: 0s; animation-fill-mode: forwards;">
+                    The Trinity of Consistency as a Defining Principle for General World Models
+                </h1>
+
+                <div class="text-lg text-gray-600 mb-8 space-y-2 opacity-0 animate-fade-in-up"
+                    style="animation-delay: 0.2s; animation-fill-mode: forwards;">
+                    <div class="flex flex-wrap justify-center gap-x-4 gap-y-2 text-lg">
+                        <span class="author-block"><a href="https://openreview.net/profile?id=~Jingxuan_Wei1"
+                                target="_blank" rel="noopener" class="text-blue-600 hover:underline">Jingxuan
+                                Wei</a>,</span>
+                        <span class="author-block"><a href="https://openreview.net/profile?id=~Siyuan_Li6"
+                                target="_blank" rel="noopener" class="text-blue-600 hover:underline">Siyuan
+                                Li</a>,</span>
+                        <span class="author-block"><a href="https://openreview.net/profile?id=~Cheng_Tan1"
+                                target="_blank" rel="noopener" class="text-blue-600 hover:underline">Cheng
+                                Tan</a></span>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-4 opacity-0 animate-fade-in-up"
+                    style="animation-delay: 0.4s; animation-fill-mode: forwards;">
+                    <a href="javascript:void(0)"
+                        class="inline-flex items-center px-6 py-3 rounded-full bg-gray-900 text-white hover:bg-gray-800 transition-colors shadow-sm hover:shadow-md cursor-default">
+                        <i data-lucide="file-text" class="w-4 h-4 mr-2"></i>
+                        Paper
+                    </a>
+                    <a href="https://github.com/OpenRaiser/CoW-Bench" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center px-6 py-3 rounded-full bg-gray-100 text-gray-900 hover:bg-gray-200 transition-colors border border-gray-200">
+                        <i data-lucide="github" class="w-4 h-4 mr-2"></i>
+                        Code
+                    </a>
+                    <a href="https://huggingface.co/datasets/OpenRaiser/CoW-Bench" target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center px-6 py-3 rounded-full bg-gray-100 text-gray-900 hover:bg-gray-200 transition-colors border border-gray-200">
+                        <i data-lucide="database" class="w-4 h-4 mr-2"></i>
+                        Dataset
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section id="overview" class="section-anchor py-16">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <div class="prose prose-lg mx-auto text-justify text-gray-700">
+                    <div class="flex items-center justify-center mb-6">
+                        <i data-lucide="book-open" class="w-6 h-6 text-blue-800 mr-2"></i>
+                        <h2 class="text-3xl font-bold text-gray-900 m-0">Overview</h2>
+                    </div>
+                    <p class="lead text-xl text-gray-600 text-center mb-8">
+                        Abstract
+                    </p>
+                    <p>
+                        The construction of World Models capable of learning, simulating, and reasoning about objective
+                        physical laws constitutes a foundational challenge in the pursuit of Artificial General
+                        Intelligence. Recent advancements represented by video generation models like Sora have
+                        demonstrated the potential of data-driven scaling laws to approximate physical dynamics, while
+                        the emerging Unified Multimodal Model (UMM) offers a promising architectural paradigm for
+                        integrating perception, language, and reasoning. Despite these advances, the field still lacks a
+                        principled theoretical framework that defines the essential properties requisite for a General
+                        World Model. In this paper, we propose that a World Model must be grounded in the Trinity of
+                        Consistency: Modal Consistency as the semantic interface, Spatial Consistency as the geometric
+                        basis, and Temporal Consistency as the causal engine. Through this tripartite lens, we
+                        systematically review the evolution of multimodal learning, revealing a trajectory from loosely
+                        coupled specialized modules toward unified architectures that enable the synergistic emergence
+                        of internal world simulators. To complement this conceptual framework, we introduce CoW-Bench, a
+                        benchmark centered on multi-frame reasoning and generation scenarios. CoW-Bench evaluates both
+                        video generation models and UMMs under a unified evaluation protocol. Our work establishes a
+                        principled pathway toward general world models, clarifying both the limitations of current
+                        systems and the architectural requirements for future progress.
+                    </p>
+                    <figure class="my-8">
+                        <img src="images/1.png" alt="The Trinity of Consistency"
+                            class="w-full h-auto rounded-xl shadow-lg border border-gray-100">
+                        <figcaption class="text-sm text-gray-500 text-center mt-4">
+                            <strong>The Trinity of Consistency in world models:</strong> Modal Consistency (Semantics),
+                            Spatial Consistency (Geometry), and Temporal Consistency (Causality).
+                        </figcaption>
+                    </figure>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Approach Section -->
+        <section id="approach" class="section-anchor py-16 bg-gray-50">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">The Spatial Supersensing Hierarchy</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">From linguistic understanding to predictive world
+                        modeling, we define a new hierarchy of capabilities for video MLLMs.</p>
+                </div>
+
+                <div
+                    class="bg-white p-4 rounded-2xl shadow-xl border border-gray-100 transition-transform hover:scale-[1.01] duration-500">
+                    <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=A%20hierarchical%20diagram%20of%20spatial%20supersensing%20capabilities%20in%20video%2C%20from%20linguistic%20understanding%20to%20predictive%20world%20modeling%2C%20academic%20style%2C%20clean%20lines%2C%20white%20background&image_size=landscape_16_9"
+                        alt="Spatial Supersensing Hierarchy" class="w-full h-auto rounded-xl" />
+                    <div class="mt-6 text-center">
+                        <p class="text-gray-600 font-medium">
+                            Figure 1: From pixels to predictive mind.
+                        </p>
+                        <p class="text-sm text-gray-500 mt-2 max-w-3xl mx-auto">
+                            We look beyond linguistic-only understanding to envision multimodal intelligence that sees,
+                            remembers, and reasons as part of a continuous, lived world.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="section-anchor py-20">
+            <div class="container mx-auto px-4 max-w-5xl">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Core Resources</h2>
+                    <div class="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Models -->
+                    <div
+                        class="group p-8 bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <div class="flex items-center mb-4">
+                            <div class="p-3 bg-blue-50 rounded-lg group-hover:bg-blue-100 transition-colors">
+                                <i data-lucide="layers" class="w-6 h-6 text-blue-700"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 ml-4">Cambrian-S Models</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            State-of-the-art MLLMs optimized for spatial reasoning. Available in <strong>7B, 13B, and
+                                34B</strong> parameter sizes, achieving top performance on VSI-SUPER.
+                        </p>
+                        <a href="https://huggingface.co/cambrian-mllm" target="_blank"
+                            class="inline-flex items-center font-semibold text-blue-600 hover:text-blue-800 transition-colors">
+                            HuggingFace Collection <i data-lucide="arrow-right"
+                                class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+
+                    <!-- Dataset -->
+                    <div
+                        class="group p-8 bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <div class="flex items-center mb-4">
+                            <div class="p-3 bg-green-50 rounded-lg group-hover:bg-green-100 transition-colors">
+                                <i data-lucide="database" class="w-6 h-6 text-green-700"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 ml-4">VSI-590K Dataset</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            A large-scale instruction tuning dataset with <strong>150K+ video clips</strong>, focusing
+                            on spatial reasoning, object permanence, and dynamic events.
+                        </p>
+                        <a href="https://huggingface.co/datasets/cambrian-mllm/vsi-590k" target="_blank"
+                            class="inline-flex items-center font-semibold text-green-600 hover:text-green-800 transition-colors">
+                            Download Data <i data-lucide="arrow-right"
+                                class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+
+                    <!-- Benchmarks -->
+                    <div
+                        class="group p-8 bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <div class="flex items-center mb-4">
+                            <div class="p-3 bg-purple-50 rounded-lg group-hover:bg-purple-100 transition-colors">
+                                <i data-lucide="bar-chart-2" class="w-6 h-6 text-purple-700"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 ml-4">VSI-SUPER Benchmark</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            A comprehensive benchmark suite evaluating spatial supersensing. Tests capabilities like
+                            <strong>temporal ordering</strong> and <strong>predictive modeling</strong>.
+                        </p>
+                        <a href="https://github.com/cambrian-mllm/cambrian-s" target="_blank"
+                            class="inline-flex items-center font-semibold text-purple-600 hover:text-purple-800 transition-colors">
+                            View Leaderboard <i data-lucide="arrow-right"
+                                class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+
+                    <!-- Code -->
+                    <div
+                        class="group p-8 bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <div class="flex items-center mb-4">
+                            <div class="p-3 bg-gray-100 rounded-lg group-hover:bg-gray-200 transition-colors">
+                                <i data-lucide="github" class="w-6 h-6 text-gray-800"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 ml-4">Codebase</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Complete implementation of Cambrian-S training and evaluation pipelines. Fully open-source
+                            and ready for research adaptation.
+                        </p>
+                        <a href="https://github.com/cambrian-mllm/cambrian-s" target="_blank"
+                            class="inline-flex items-center font-semibold text-gray-700 hover:text-gray-900 transition-colors">
+                            GitHub Repository <i data-lucide="arrow-right"
+                                class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analysis Section -->
+        <section id="analysis" class="section-anchor py-16 bg-gray-50">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Diagnostic Analysis</h2>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200">
+                    <div class="flex items-start mb-6">
+                        <i data-lucide="microscope" class="w-8 h-8 text-blue-600 mr-4 flex-shrink-0 mt-1"></i>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Deconstructing Video Benchmarks</h3>
+                            <p class="text-gray-700 leading-relaxed text-justify">
+                                Recent advances in MLLM have led to a surge in video QA benchmarks. However, a critical
+                                question remains: to what extent do existing video benchmarks truly examine visual
+                                sensing capabilities rather than simply testing language priors?
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-gray-100 pt-6 mt-2">
+                        <p class="text-gray-700 leading-relaxed text-justify">
+                            We establish several experimental conditions (Single Frame, Multiple Frames, Captions Only,
+                            Blind Test) to isolate the contributions of different information sources. By analyzing
+                            performance differences between these conditions, we create a fine-grained profile of each
+                            benchmark's characteristics.
+                        </p>
+                    </div>
+
+                    <div class="mt-8 flex justify-center">
+                        <a href="https://arxiv.org/abs/2406.11838" target="_blank"
+                            class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-blue-700 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                            Read the Full Analysis in Paper <i data-lucide="external-link" class="w-4 h-4 ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 bg-gray-50 mt-12">
+        <div class="container mx-auto px-4 py-8 text-center text-sm text-gray-500">
+            <p>&copy;
+                <script>document.write(new Date().getFullYear())</script> Cambrian-S Project. All rights reserved.
+            </p>
+            <p class="mt-2">
+                Towards Spatial Supersensing in Video
+            </p>
+        </div>
+    </footer>
+
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation-name: fadeInUp;
+            animation-duration: 0.6s;
+            animation-fill-mode: forwards;
+        }
+    </style>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth Scrolling Function
+        function smoothScroll(event, targetId) {
+            event.preventDefault();
+
+            // Update URL hash without jumping
+            history.pushState(null, null, '#' + targetId);
+
+            // Close mobile menu if open
+            if (!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                // We rely on CSS scroll-behavior: smooth and scroll-margin-top
+                // But specifically for programmatic scroll, we can use scrollIntoView
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+
+        // Scroll Spy Implementation
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            // Options for IntersectionObserver
+            // rootMargin: -10% from top (to account for header) and -50% from bottom
+            // This creates a "viewing area" in the middle-top of the screen
+            const observerOptions = {
+                root: null,
+                rootMargin: '-80px 0px -50% 0px',
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Remove active class from all links
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            link.classList.remove('text-blue-800');
+                            link.classList.add('text-gray-600');
+
+                            // Reset icon color
+                            const icon = link.querySelector('i');
+                            if (icon) icon.style.stroke = '';
+                        });
+
+                        // Add active class to corresponding links
+                        const activeId = entry.target.id;
+                        const activeLinks = document.querySelectorAll(`.nav-link[href="#${activeId}"]`);
+
+                        activeLinks.forEach(link => {
+                            link.classList.add('active');
+                            link.classList.remove('text-gray-600');
+                            link.classList.add('text-blue-800');
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+
+</html>
