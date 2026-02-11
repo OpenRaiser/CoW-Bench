@@ -7,512 +7,650 @@
     <title>The Trinity of Consistency as a Defining Principle for General World Models</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
         body {
             font-family: 'Inter', sans-serif;
-        }
-
-        html {
             scroll-behavior: smooth;
         }
 
-        /* Handle sticky header offset for anchor links */
         .section-anchor {
             scroll-margin-top: 5rem;
-            /* Adjust based on header height (h-16 = 4rem + some buffer) */
         }
 
-        /* Active link styling */
-        .nav-link.active {
-            color: #1e40af;
-            /* text-blue-800 */
-            font-weight: 600;
+        /* Video Comparison Slider Styles */
+        .video-compare-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            cursor: ew-resize;
         }
 
-        .nav-link.active i {
-            stroke: #1e40af;
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 50%;
+            overflow: hidden;
+            border-right: 2px solid white;
+            z-index: 10;
+        }
+
+        .video-compare-label {
+            position: absolute;
+            top: 10px;
+            padding: 4px 8px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            font-size: 12px;
+            border-radius: 4px;
+            z-index: 20;
+        }
+
+        .label-left {
+            left: 10px;
+        }
+
+        .label-right {
+            right: 10px;
+        }
+
+        /* Timeline Styles */
+        .timeline-item:hover .timeline-content {
+            transform: scale(1.02);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Custom Scrollbar for Modal */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #555;
         }
     </style>
 </head>
 
-<body class="min-h-screen flex flex-col font-sans text-gray-800 bg-white">
+<body class="bg-white text-gray-800">
 
     <!-- Header -->
-    <header
-        class="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-md transition-all duration-300">
+    <header class="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/90 backdrop-blur-md">
         <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold text-gray-900">CoW-Bench</a>
 
-
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex items-center space-x-1 lg:space-x-6">
-                <a href="#home"
-                    class="nav-link text-sm font-medium transition-colors hover:text-blue-600 flex items-center space-x-1 text-gray-600 px-3 py-2 rounded-md hover:bg-gray-50"
-                    onclick="smoothScroll(event, 'home')">
-                    <i data-lucide="home" class="w-4 h-4"></i>
-                    <span>Home</span>
-                </a>
-                <a href="#overview"
-                    class="nav-link text-sm font-medium transition-colors hover:text-blue-600 flex items-center space-x-1 text-gray-600 px-3 py-2 rounded-md hover:bg-gray-50"
-                    onclick="smoothScroll(event, 'overview')">
-                    <i data-lucide="book-open" class="w-4 h-4"></i>
-                    <span>Overview</span>
-                </a>
-                <a href="#approach"
-                    class="nav-link text-sm font-medium transition-colors hover:text-blue-600 flex items-center space-x-1 text-gray-600 px-3 py-2 rounded-md hover:bg-gray-50"
-                    onclick="smoothScroll(event, 'approach')">
-                    <i data-lucide="network" class="w-4 h-4"></i>
-                    <span>Approach</span>
-                </a>
-                <a href="#resources"
-                    class="nav-link text-sm font-medium transition-colors hover:text-blue-600 flex items-center space-x-1 text-gray-600 px-3 py-2 rounded-md hover:bg-gray-50"
-                    onclick="smoothScroll(event, 'resources')">
-                    <i data-lucide="layers" class="w-4 h-4"></i>
-                    <span>Resources</span>
-                </a>
-                <a href="#analysis"
-                    class="nav-link text-sm font-medium transition-colors hover:text-blue-600 flex items-center space-x-1 text-gray-600 px-3 py-2 rounded-md hover:bg-gray-50"
-                    onclick="smoothScroll(event, 'analysis')">
-                    <i data-lucide="bar-chart-2" class="w-4 h-4"></i>
-                    <span>Analysis</span>
-                </a>
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#home" class="hover:text-blue-600 transition-colors">Home</a>
+                <a href="#trinity" class="hover:text-blue-600 transition-colors">The Trinity</a>
+                <a href="#evolution" class="hover:text-blue-600 transition-colors">Evolution</a>
+                <a href="#cow-bench" class="hover:text-blue-600 transition-colors">CoW-Bench</a>
+                <a href="#results" class="hover:text-blue-600 transition-colors">Results</a>
+                <a href="#future" class="hover:text-blue-600 transition-colors">Future</a>
             </nav>
 
-            <!-- Mobile Menu Button (Visible on small screens) -->
-            <div class="md:hidden flex items-center">
-                <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900 focus:outline-none">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
-                </button>
-            </div>
-
-            <div class="hidden md:flex items-center space-x-4">
-                <a href="https://github.com/OpenRaiser/CoW-Bench" target="_blank" rel="noreferrer"
-                    class="text-gray-500 hover:text-gray-900 transition-colors" title="View on GitHub">
+            <div class="flex items-center space-x-2">
+                <a href="https://github.com/OpenRaiser/CoW-Bench" target="_blank"
+                    class="p-2 hover:bg-gray-100 rounded-full transition-colors">
                     <i data-lucide="github" class="w-5 h-5"></i>
                 </a>
             </div>
         </div>
-
-        <!-- Mobile Navigation Menu (Hidden by default) -->
-        <div id="mobile-menu"
-            class="hidden md:hidden bg-white border-b border-gray-200 absolute w-full left-0 top-16 shadow-lg">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home"
-                    class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50"
-                    onclick="smoothScroll(event, 'home')">Home</a>
-                <a href="#overview"
-                    class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50"
-                    onclick="smoothScroll(event, 'overview')">Overview</a>
-                <a href="#approach"
-                    class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50"
-                    onclick="smoothScroll(event, 'approach')">Approach</a>
-                <a href="#resources"
-                    class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50"
-                    onclick="smoothScroll(event, 'resources')">Resources</a>
-                <a href="#analysis"
-                    class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50"
-                    onclick="smoothScroll(event, 'analysis')">Analysis</a>
-            </div>
-        </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="flex-1">
-        <!-- Hero Section -->
-        <section id="home"
-            class="section-anchor pt-20 pb-6 bg-gradient-to-b from-blue-50 to-white min-h-[60vh] flex flex-col justify-center">
-            <div class="container mx-auto px-4 text-center max-w-4xl">
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight opacity-0 animate-fade-in-up"
-                    style="animation-delay: 0s; animation-fill-mode: forwards;">
+    <main>
+        <!-- Module 1: Hero Section -->
+        <section id="home" class="section-anchor pt-16 pb-12 bg-gradient-to-b from-blue-50 to-white">
+            <div class="container mx-auto px-4 text-center max-w-5xl">
+                <!-- Title -->
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                     The Trinity of Consistency as a Defining Principle for General World Models
                 </h1>
 
-                <div class="text-lg text-gray-600 mb-8 space-y-2 opacity-0 animate-fade-in-up"
-                    style="animation-delay: 0.2s; animation-fill-mode: forwards;">
-                    <div class="flex flex-wrap justify-center gap-x-4 gap-y-2 text-lg">
-                        <span class="author-block"><a href="https://openreview.net/profile?id=~Jingxuan_Wei1"
-                                target="_blank" rel="noopener" class="text-blue-600 hover:underline">Jingxuan
-                                Wei</a>,</span>
-                        <span class="author-block"><a href="https://openreview.net/profile?id=~Siyuan_Li6"
-                                target="_blank" rel="noopener" class="text-blue-600 hover:underline">Siyuan
-                                Li</a>,</span>
-                        <span class="author-block"><a href="https://openreview.net/profile?id=~Cheng_Tan1"
-                                target="_blank" rel="noopener" class="text-blue-600 hover:underline">Cheng
-                                Tan</a></span>
-                    </div>
+                <!-- Authors -->
+                <div class="flex flex-wrap justify-center gap-4 text-lg text-gray-700 mb-4">
+                    <a href="#"
+                        class="hover:text-blue-600 border-b border-transparent hover:border-blue-600 transition-all">Jingxuan
+                        Wei</a>
+                    <a href="#"
+                        class="hover:text-blue-600 border-b border-transparent hover:border-blue-600 transition-all">Siyuan
+                        Li</a>
+                    <a href="#"
+                        class="hover:text-blue-600 border-b border-transparent hover:border-blue-600 transition-all">Cheng
+                        Tan</a>
                 </div>
 
-                <div class="flex flex-wrap justify-center gap-4 opacity-0 animate-fade-in-up"
-                    style="animation-delay: 0.4s; animation-fill-mode: forwards;">
-                    <a href="javascript:void(0)"
-                        class="inline-flex items-center px-6 py-3 rounded-full bg-gray-900 text-white hover:bg-gray-800 transition-colors shadow-sm hover:shadow-md cursor-default">
-                        <i data-lucide="file-text" class="w-4 h-4 mr-2"></i>
-                        Paper
-                    </a>
-                    <a href="https://github.com/OpenRaiser/CoW-Bench" target="_blank" rel="noopener noreferrer"
-                        class="inline-flex items-center px-6 py-3 rounded-full bg-gray-100 text-gray-900 hover:bg-gray-200 transition-colors border border-gray-200">
-                        <i data-lucide="github" class="w-4 h-4 mr-2"></i>
-                        Code
+                <!-- Affiliations -->
+                <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-500 mb-8">
+                    <span class="flex items-center"><i data-lucide="building-2" class="w-4 h-4 mr-1"></i> University of
+                        Chinese Academy of Sciences</span>
+                    <span class="flex items-center"><i data-lucide="flask-conical" class="w-4 h-4 mr-1"></i> Shanghai AI
+                        Laboratory</span>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <a href="blank" target="_blank"
+                        class="inline-flex items-center px-6 py-3 rounded-full bg-gray-900 text-white hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                        <i data-lucide="file-text" class="w-4 h-4 mr-2"></i> Paper (Arxiv)
                     </a>
                     <a href="https://huggingface.co/datasets/OpenRaiser/CoW-Bench" target="_blank"
-                        rel="noopener noreferrer"
-                        class="inline-flex items-center px-6 py-3 rounded-full bg-gray-100 text-gray-900 hover:bg-gray-200 transition-colors border border-gray-200">
-                        <i data-lucide="database" class="w-4 h-4 mr-2"></i>
-                        Dataset
+                        class="inline-flex items-center px-6 py-3 rounded-full bg-yellow-400 text-gray-900 hover:bg-yellow-500 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 font-medium">
+                        <span class="mr-2">🤗</span> Dataset
+                    </a>
+                    <a href="https://github.com/OpenRaiser/CoW-Bench" target="_blank"
+                        class="inline-flex items-center px-6 py-3 rounded-full bg-gray-100 text-gray-900 hover:bg-gray-200 border border-gray-300 transition-all shadow hover:shadow-md hover:-translate-y-0.5">
+                        <i data-lucide="code" class="w-4 h-4 mr-2"></i> Code
+                    </a>
+                    <a href="#results"
+                        class="inline-flex items-center px-6 py-3 rounded-full bg-blue-100 text-blue-700 hover:bg-blue-200 transition-all shadow hover:shadow-md hover:-translate-y-0.5">
+                        <i data-lucide="bar-chart-2" class="w-4 h-4 mr-2"></i> Leaderboard
                     </a>
                 </div>
-            </div>
-        </section>
 
-        <!-- Overview Section -->
-        <section id="overview" class="section-anchor pt-4 pb-16">
-            <div class="container mx-auto px-4 max-w-4xl">
-                <div class="prose prose-lg mx-auto text-justify text-gray-700">
-                    <div class="flex items-center justify-center mb-6">
-                        <i data-lucide="book-open" class="w-6 h-6 text-blue-800 mr-2"></i>
-                        <h2 class="text-3xl font-bold text-gray-900 m-0">Overview</h2>
+                <!-- Teaser Image (Figure 1) -->
+                <div
+                    class="relative max-w-4xl mx-auto rounded-2xl shadow-2xl overflow-hidden bg-white border border-gray-100 p-2">
+                    <img src="images/1.png" alt="The Trinity of Consistency: Modal, Spatial, and Temporal"
+                        class="w-full h-auto rounded-xl">
+                    <div class="absolute bottom-4 left-0 right-0 text-center">
+                        <span class="bg-black/50 text-white px-4 py-1 rounded-full text-sm backdrop-blur-sm">Figure 1:
+                            The Trinity of Consistency</span>
                     </div>
-                    <p class="lead text-xl text-gray-600 text-center mb-8">
-                        Abstract
-                    </p>
-                    <p>
-                        The construction of World Models capable of learning, simulating, and reasoning about objective
-                        physical laws constitutes a foundational challenge in the pursuit of Artificial General
-                        Intelligence. Recent advancements represented by video generation models like Sora have
-                        demonstrated the potential of data-driven scaling laws to approximate physical dynamics, while
-                        the emerging Unified Multimodal Model (UMM) offers a promising architectural paradigm for
-                        integrating perception, language, and reasoning. Despite these advances, the field still lacks a
-                        principled theoretical framework that defines the essential properties requisite for a General
-                        World Model. In this paper, we propose that a World Model must be grounded in the Trinity of
-                        Consistency: Modal Consistency as the semantic interface, Spatial Consistency as the geometric
-                        basis, and Temporal Consistency as the causal engine. Through this tripartite lens, we
-                        systematically review the evolution of multimodal learning, revealing a trajectory from loosely
-                        coupled specialized modules toward unified architectures that enable the synergistic emergence
-                        of internal world simulators. To complement this conceptual framework, we introduce CoW-Bench, a
-                        benchmark centered on multi-frame reasoning and generation scenarios. CoW-Bench evaluates both
-                        video generation models and UMMs under a unified evaluation protocol. Our work establishes a
-                        principled pathway toward general world models, clarifying both the limitations of current
-                        systems and the architectural requirements for future progress.
-                    </p>
-                    <figure class="my-8">
-                        <img src="images/1.png" alt="The Trinity of Consistency"
-                            class="w-full h-auto rounded-xl shadow-lg border border-gray-100">
-                        <figcaption class="text-sm text-gray-500 text-center mt-4">
-                            <strong>The Trinity of Consistency in world models:</strong> Modal Consistency (Semantics),
-                            Spatial Consistency (Geometry), and Temporal Consistency (Causality).
-                        </figcaption>
-                    </figure>
-
                 </div>
             </div>
         </section>
 
-        <!-- Approach Section -->
-        <section id="approach" class="section-anchor py-16 bg-gray-50">
+        <!-- Module 2: Abstract & The Trinity -->
+        <section id="trinity" class="section-anchor py-16 bg-white">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <!-- Abstract -->
+                <div class="max-w-4xl mx-auto text-center mb-16">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Why Do We Need a General World Model?</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed text-justify md:text-center">
+                        Current video generation models simulate pixels, but do they understand the world?
+                        We propose that a true General World Model must be grounded in the <strong>Trinity of
+                            Consistency</strong>.
+                        It's not just about looking real—it's about aligning with semantic instructions, respecting 3D
+                        geometry,
+                        and obeying physical laws over time.
+                    </p>
+                </div>
+
+                <!-- The Trinity Cards -->
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Modal Consistency -->
+                    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:shadow-lg transition-shadow">
+                        <div
+                            class="h-48 bg-blue-100 rounded-xl mb-6 flex items-center justify-center overflow-hidden relative">
+                            <!-- Placeholder for Interactive Visual -->
+                            <i data-lucide="message-square" class="w-16 h-16 text-blue-500"></i>
+                            <div class="absolute inset-0 bg-gradient-to-t from-blue-900/10 to-transparent"></div>
+                            <span class="absolute bottom-2 right-2 text-xs font-mono bg-white/80 px-2 py-1 rounded">Text
+                                ↔ Vision</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Modal Consistency</h3>
+                        <p class="text-sm text-gray-500 uppercase tracking-wider mb-3 font-semibold text-blue-600">The
+                            Interface</p>
+                        <p class="text-gray-600">
+                            The model must accurately translate semantic instructions (language) into visual
+                            manifestations, ensuring every described object and attribute appears as requested.
+                        </p>
+                    </div>
+
+                    <!-- Spatial Consistency -->
+                    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:shadow-lg transition-shadow">
+                        <div
+                            class="h-48 bg-purple-100 rounded-xl mb-6 flex items-center justify-center overflow-hidden relative">
+                            <!-- Placeholder for Interactive Visual -->
+                            <i data-lucide="box" class="w-16 h-16 text-purple-500"></i>
+                            <div class="absolute inset-0 bg-gradient-to-t from-purple-900/10 to-transparent"></div>
+                            <span class="absolute bottom-2 right-2 text-xs font-mono bg-white/80 px-2 py-1 rounded">3D
+                                Geometry</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Spatial Consistency</h3>
+                        <p class="text-sm text-gray-500 uppercase tracking-wider mb-3 font-semibold text-purple-600">The
+                            Basis</p>
+                        <p class="text-gray-600">
+                            The world is 3D. Objects must maintain their geometric structure, relative positions, and
+                            perspective correctness across different viewpoints.
+                        </p>
+                    </div>
+
+                    <!-- Temporal Consistency -->
+                    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:shadow-lg transition-shadow">
+                        <div
+                            class="h-48 bg-orange-100 rounded-xl mb-6 flex items-center justify-center overflow-hidden relative">
+                            <!-- Placeholder for Interactive Visual -->
+                            <i data-lucide="clock" class="w-16 h-16 text-orange-500"></i>
+                            <div class="absolute inset-0 bg-gradient-to-t from-orange-900/10 to-transparent"></div>
+                            <span
+                                class="absolute bottom-2 right-2 text-xs font-mono bg-white/80 px-2 py-1 rounded">Causality
+                                & Physics</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Temporal Consistency</h3>
+                        <p class="text-sm text-gray-500 uppercase tracking-wider mb-3 font-semibold text-orange-600">The
+                            Engine</p>
+                        <p class="text-gray-600">
+                            Events must follow cause and effect. Gravity, collisions, and object permanence must hold
+                            true over time, avoiding "dream-like" morphing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 3: Evolution of World Models -->
+        <section id="evolution" class="section-anchor py-16 bg-gray-900 text-white">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4">Evolution of World Models</h2>
+                    <p class="text-gray-400">From specialized experts to unified generalists.</p>
+                </div>
+
+                <div class="relative">
+                    <!-- Vertical Line (Mobile) / Horizontal Line (Desktop) -->
+                    <div
+                        class="absolute left-4 top-0 bottom-0 w-1 bg-gray-700 md:left-0 md:right-0 md:top-1/2 md:h-1 md:w-full md:bottom-auto">
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-12 relative z-10">
+                        <!-- Phase 1 -->
+                        <div class="timeline-item group pl-12 md:pl-0 md:pt-12 relative">
+                            <div
+                                class="absolute left-2 top-0 w-5 h-5 bg-blue-500 rounded-full border-4 border-gray-900 md:left-1/2 md:-top-2.5 md:-ml-2.5 group-hover:bg-blue-400 transition-colors">
+                            </div>
+                            <div
+                                class="timeline-content bg-gray-800 p-6 rounded-xl border border-gray-700 transition-transform duration-300">
+                                <div class="text-blue-400 font-bold text-sm mb-2">PHASE 1</div>
+                                <h3 class="text-xl font-bold mb-3">Specialists</h3>
+                                <p class="text-gray-400 text-sm mb-4">Loosely coupled modules for specific tasks.</p>
+                                <div class="flex gap-2">
+                                    <span class="px-2 py-1 bg-gray-700 rounded text-xs">StyleGAN</span>
+                                    <span class="px-2 py-1 bg-gray-700 rounded text-xs">Simulators</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Phase 2 -->
+                        <div class="timeline-item group pl-12 md:pl-0 md:pt-12 relative">
+                            <div
+                                class="absolute left-2 top-0 w-5 h-5 bg-purple-500 rounded-full border-4 border-gray-900 md:left-1/2 md:-top-2.5 md:-ml-2.5 group-hover:bg-purple-400 transition-colors">
+                            </div>
+                            <div
+                                class="timeline-content bg-gray-800 p-6 rounded-xl border border-gray-700 transition-transform duration-300">
+                                <div class="text-purple-400 font-bold text-sm mb-2">PHASE 2</div>
+                                <h3 class="text-xl font-bold mb-3">Alignment</h3>
+                                <p class="text-gray-400 text-sm mb-4">Connecting vision and language, bridging
+                                    modalities.</p>
+                                <div class="flex gap-2">
+                                    <span class="px-2 py-1 bg-gray-700 rounded text-xs">CLIP</span>
+                                    <span class="px-2 py-1 bg-gray-700 rounded text-xs">NeRF</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Phase 3 -->
+                        <div class="timeline-item group pl-12 md:pl-0 md:pt-12 relative">
+                            <div
+                                class="absolute left-2 top-0 w-5 h-5 bg-green-500 rounded-full border-4 border-gray-900 md:left-1/2 md:-top-2.5 md:-ml-2.5 group-hover:bg-green-400 transition-colors">
+                            </div>
+                            <div
+                                class="timeline-content bg-gray-800 p-6 rounded-xl border border-gray-700 transition-transform duration-300">
+                                <div class="text-green-400 font-bold text-sm mb-2">PHASE 3</div>
+                                <h3 class="text-xl font-bold mb-3">Unified Models</h3>
+                                <p class="text-gray-400 text-sm mb-4">All-in-One architectures with internal world
+                                    simulation.</p>
+                                <div class="flex gap-2">
+                                    <span class="px-2 py-1 bg-gray-700 rounded text-xs">Sora</span>
+                                    <span class="px-2 py-1 bg-gray-700 rounded text-xs">Gemini</span>
+                                    <span class="px-2 py-1 bg-gray-700 rounded text-xs">UMM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 4: CoW-Bench -->
+        <section id="cow-bench" class="section-anchor py-16 bg-gray-50">
             <div class="container mx-auto px-4 max-w-6xl">
                 <div class="text-center mb-10">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">The Spatial Supersensing Hierarchy</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">From linguistic understanding to predictive world
-                        modeling, we define a new hierarchy of capabilities for video MLLMs.</p>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">CoW-Bench: The Ultimate Test</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        A benchmark with 18 diverse tasks designed to rigorously evaluate physical reasoning and causal
+                        consistency.
+                    </p>
                 </div>
 
-                <div
-                    class="bg-white p-4 rounded-2xl shadow-xl border border-gray-100 transition-transform hover:scale-[1.01] duration-500">
-                    <img src="images/2.png" alt="Spatial Supersensing Hierarchy" class="w-full h-auto rounded-xl" />
-                    <div class="mt-6 text-center">
-                        <p class="text-gray-600 font-medium">
-                            Figure 1: From pixels to predictive mind.
-                        </p>
-                        <p class="text-sm text-gray-500 mt-2 max-w-3xl mx-auto">
-                            We look beyond linguistic-only understanding to envision multimodal intelligence that sees,
-                            remembers, and reasons as part of a continuous, lived world.
-                        </p>
+                <!-- Tabs -->
+                <div class="flex justify-center mb-8 space-x-2">
+                    <button class="px-4 py-2 rounded-full bg-blue-600 text-white font-medium shadow-sm">All
+                        Tasks</button>
+                    <button
+                        class="px-4 py-2 rounded-full bg-white text-gray-600 hover:bg-gray-100 font-medium border border-gray-200">Object
+                        State</button>
+                    <button
+                        class="px-4 py-2 rounded-full bg-white text-gray-600 hover:bg-gray-100 font-medium border border-gray-200">Physics
+                        Dynamics</button>
+                    <button
+                        class="px-4 py-2 rounded-full bg-white text-gray-600 hover:bg-gray-100 font-medium border border-gray-200">Spatio-temporal</button>
+                </div>
+
+                <!-- Task Gallery (Grid) -->
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                    <!-- Generating placeholders for 18 tasks -->
+                    <!-- In a real scenario, these would be specific GIFs -->
+                    <script>
+                        const tasks = [
+                            "Gravity", "Collision", "Friction", "Rigidity", "Fluid", "Light",
+                            "Perspective", "Occlusion", "Permanence", "Counting", "Color", "Material",
+                            "Action", "Sequence", "Causality", "Transition", "Speed", "Trajectory"
+                        ];
+
+                        tasks.forEach((task, index) => {
+                            document.write(`
+                                <div class="group relative aspect-square bg-gray-200 rounded-lg overflow-hidden cursor-pointer hover:ring-2 hover:ring-blue-500 transition-all" onclick="openModal('${task}')">
+                                    <div class="absolute inset-0 flex items-center justify-center text-gray-400">
+                                        <i data-lucide="play-circle" class="w-8 h-8 opacity-50 group-hover:opacity-100 transition-opacity"></i>
+                                    </div>
+                                    <div class="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs py-1 px-2 text-center backdrop-blur-sm">
+                                        ${task}
+                                    </div>
+                                </div>
+                            `);
+                        });
+                    </script>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 5: Evaluation Results -->
+        <section id="results" class="section-anchor py-16 bg-white">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">SOTA Models Struggle with Reality</h2>
+                    <p class="text-gray-600">Current top-tier models often exhibit "Hollow Realism"—high visual quality
+                        but poor physical logic.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Radar Chart -->
+                    <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100">
+                        <canvas id="radarChart"></canvas>
+                        <div class="mt-4 text-center">
+                            <span class="inline-block bg-red-100 text-red-700 text-xs px-2 py-1 rounded font-bold">Key
+                                Takeaway</span>
+                            <p class="text-sm text-gray-600 mt-2">Models fail significantly in long-term temporal
+                                consistency.</p>
+                        </div>
+                    </div>
+
+                    <!-- Video Comparison Slider -->
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Visualizing Physical Hallucinations</h3>
+                        <div class="mb-4 text-sm text-gray-600 bg-gray-50 p-3 rounded-lg border border-gray-200">
+                            <strong>Prompt:</strong> "A glass cup falls off the table and shatters on the floor."
+                        </div>
+
+                        <div class="video-compare-container shadow-xl" id="videoSlider">
+                            <!-- Background (Model A - Fail) -->
+                            <div
+                                class="absolute inset-0 bg-red-100 flex items-center justify-center text-red-900 font-bold">
+                                Model A (Fail): Cup bounces like rubber
+                            </div>
+                            <div class="video-compare-label label-right">Model A (Fail)</div>
+
+                            <!-- Foreground (Model B - Success/Reference) -->
+                            <div class="video-overlay" id="videoOverlay">
+                                <div
+                                    class="absolute inset-0 w-[600px] bg-green-100 flex items-center justify-center text-green-900 font-bold">
+                                    Model B (Success): Realistic shattering
+                                </div>
+                                <div class="video-compare-label label-left">Real Physics</div>
+                            </div>
+                        </div>
+                        <p class="text-xs text-center text-gray-400 mt-2">Drag to compare</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Resources Section -->
-        <section id="resources" class="section-anchor py-20">
+        <!-- Module 6: Future Outlook -->
+        <section id="future" class="section-anchor py-16 bg-blue-900 text-white">
             <div class="container mx-auto px-4 max-w-5xl">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Core Resources</h2>
-                    <div class="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4">Future Outlook</h2>
+                    <p class="text-blue-200">Where do we go from here?</p>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Models -->
-                    <div
-                        class="group p-8 bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                        <div class="flex items-center mb-4">
-                            <div class="p-3 bg-blue-50 rounded-lg group-hover:bg-blue-100 transition-colors">
-                                <i data-lucide="layers" class="w-6 h-6 text-blue-700"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-900 ml-4"> Models</h3>
-                        </div>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
-
-                        </p>
-                        <a href="" target="_blank"
-                            class="inline-flex items-center font-semibold text-blue-600 hover:text-blue-800 transition-colors">
-                            HuggingFace Collection <i data-lucide="arrow-right"
-                                class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"></i>
-                        </a>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-blue-800/50 p-6 rounded-xl border border-blue-700 backdrop-blur-sm">
+                        <i data-lucide="box" class="w-8 h-8 text-blue-300 mb-4"></i>
+                        <h3 class="text-lg font-bold mb-2">Integrating 3D Priors</h3>
+                        <p class="text-blue-100 text-sm">Explicitly incorporating depth and geometry into the generation
+                            process.</p>
                     </div>
-
-                    <!-- Dataset -->
-                    <div
-                        class="group p-8 bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                        <div class="flex items-center mb-4">
-                            <div class="p-3 bg-green-50 rounded-lg group-hover:bg-green-100 transition-colors">
-                                <i data-lucide="database" class="w-6 h-6 text-green-700"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-900 ml-4">VSI-590K Dataset</h3>
-                        </div>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
-                            A large-scale instruction tuning dataset with <strong>150K+ video clips</strong>, focusing
-                            on spatial reasoning, object permanence, and dynamic events.
-                        </p>
-                        <a href="" target="_blank"
-                            class="inline-flex items-center font-semibold text-green-600 hover:text-green-800 transition-colors">
-                            Download Data <i data-lucide="arrow-right"
-                                class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"></i>
-                        </a>
+                    <div class="bg-blue-800/50 p-6 rounded-xl border border-blue-700 backdrop-blur-sm">
+                        <i data-lucide="scale" class="w-8 h-8 text-blue-300 mb-4"></i>
+                        <h3 class="text-lg font-bold mb-2">Physics-Informed Loss</h3>
+                        <p class="text-blue-100 text-sm">Training with objectives that penalize physical violations.</p>
                     </div>
-
-                    <!-- Benchmarks -->
-                    <div
-                        class="group p-8 bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                        <div class="flex items-center mb-4">
-                            <div class="p-3 bg-purple-50 rounded-lg group-hover:bg-purple-100 transition-colors">
-                                <i data-lucide="bar-chart-2" class="w-6 h-6 text-purple-700"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-900 ml-4">VSI-SUPER Benchmark</h3>
-                        </div>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
-                            A comprehensive benchmark suite evaluating spatial supersensing. Tests capabilities like
-                            <strong>temporal ordering</strong> and <strong>predictive modeling</strong>.
-                        </p>
-                        <a href="" target="_blank"
-                            class="inline-flex items-center font-semibold text-purple-600 hover:text-purple-800 transition-colors">
-                            View Leaderboard <i data-lucide="arrow-right"
-                                class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"></i>
-                        </a>
-                    </div>
-
-                    <!-- Code -->
-                    <div
-                        class="group p-8 bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                        <div class="flex items-center mb-4">
-                            <div class="p-3 bg-gray-100 rounded-lg group-hover:bg-gray-200 transition-colors">
-                                <i data-lucide="github" class="w-6 h-6 text-gray-800"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-900 ml-4">Codebase</h3>
-                        </div>
-                        <p class="text-gray-600 mb-6 leading-relaxed">
-                            <!--  -->
-                        </p>
-                        <a href="" target="_blank"
-                            class="inline-flex items-center font-semibold text-gray-700 hover:text-gray-900 transition-colors">
-                            GitHub Repository <i data-lucide="arrow-right"
-                                class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"></i>
-                        </a>
+                    <div class="bg-blue-800/50 p-6 rounded-xl border border-blue-700 backdrop-blur-sm">
+                        <i data-lucide="globe" class="w-8 h-8 text-blue-300 mb-4"></i>
+                        <h3 class="text-lg font-bold mb-2">General World Simulator</h3>
+                        <p class="text-blue-100 text-sm">Moving towards models that can simulate complex, long-horizon
+                            scenarios.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Analysis Section -->
-        <section id="analysis" class="section-anchor py-16 bg-gray-50">
+        <!-- Module 7: Citation & Contact -->
+        <section class="py-16 bg-gray-50">
             <div class="container mx-auto px-4 max-w-4xl">
-                <div class="text-center mb-10">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Diagnostic Analysis</h2>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Citation</h2>
+                <div class="bg-gray-900 text-gray-300 p-6 rounded-xl overflow-x-auto font-mono text-sm relative group">
+                    <button class="absolute top-4 right-4 text-gray-500 hover:text-white"
+                        onclick="navigator.clipboard.writeText(document.querySelector('code').innerText)">
+                        <i data-lucide="copy" class="w-5 h-5"></i>
+                    </button>
+                    <pre><code>@article{wei2026trinity,
+  title={The Trinity of Consistency as a Defining Principle for General World Models},
+  author={Wei, Jingxuan and Li, Siyuan and Tan, Cheng},
+  journal={arXiv},
+  year={2026}
+}</code></pre>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200">
-                    <div class="flex items-start mb-6">
-                        <i data-lucide="microscope" class="w-8 h-8 text-blue-600 mr-4 flex-shrink-0 mt-1"></i>
-                        <div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Deconstructing Video Benchmarks</h3>
-                            <p class="text-gray-700 leading-relaxed text-justify">
-                                Recent advances in MLLM have led to a surge in video QA benchmarks. However, a critical
-                                question remains: to what extent do existing video benchmarks truly examine visual
-                                sensing capabilities rather than simply testing language priors?
-                            </p>
-                        </div>
-                    </div>
 
-                    <div class="border-t border-gray-100 pt-6 mt-2">
-                        <p class="text-gray-700 leading-relaxed text-justify">
-                            We establish several experimental conditions (Single Frame, Multiple Frames, Captions Only,
-                            Blind Test) to isolate the contributions of different information sources. By analyzing
-                            performance differences between these conditions, we create a fine-grained profile of each
-                            benchmark's characteristics.
-                        </p>
-                    </div>
-
-                    <div class="mt-8 flex justify-center">
-                        <a href="blank" target="_blank"
-                            class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-blue-700 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
-                            Read the Full Analysis in Paper <i data-lucide="external-link" class="w-4 h-4 ml-2"></i>
-                        </a>
-                    </div>
+                <div class="mt-8 text-center text-sm text-gray-500">
+                    <p class="mb-2">Code and Dataset are released under Apache 2.0 License.</p>
                 </div>
             </div>
         </section>
 
     </main>
 
-
-
-    <style>
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
+    <!-- Footer -->
+    <footer class="partners">
+        <style>
+            footer.partners {
+                padding: 40px 20px;
+                border-top: 1px solid #eee;
+                background: #fff;
             }
 
-            to {
+            .logo-grid {
+                display: flex;
+                gap: 32px;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                opacity: 0.8;
+            }
+
+            .logo-grid img,
+            .logo-grid .logo-pdf {
+                height: 48px;
+                transition: opacity 0.3s;
+            }
+
+            .logo-grid img:hover {
                 opacity: 1;
-                transform: translateY(0);
             }
-        }
+        </style>
+        <div class="logo-grid">
+            <img src="images/浙大logo.png" alt="Zhejiang University">
+            <img src="images/shlab.png" alt="Shanghai AI Laboratory">
+            <!-- Using object for PDF as requested previously -->
+            <object data="images/OpenDataLab_blue_no_words.pdf" type="application/pdf" class="logo-pdf">
+                <img src="images/shlab.png" alt="OpenDataLab"> <!-- Fallback if PDF fails -->
+            </object>
+            <img src="images/中国科学院大学标准Logo下载/国科大标准Logo/国科大标准Logo横式二（蓝色）.png" alt="UCAS">
+        </div>
+        <div class="text-center mt-8 text-gray-400 text-sm">
+            &copy; 2024 OpenDataLab. All rights reserved. <br>
+            Contact: <a href="mailto:opendatalab@pjlab.org.cn" class="hover:text-blue-500">opendatalab@pjlab.org.cn</a>
+        </div>
+    </footer>
 
-        .animate-fade-in-up {
-            animation-name: fadeInUp;
-            animation-duration: 0.6s;
-            animation-fill-mode: forwards;
-        }
-    </style>
+    <!-- Task Modal -->
+    <div id="taskModal" class="fixed inset-0 z-[100] hidden">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-2xl w-full max-w-3xl overflow-hidden shadow-2xl">
+            <div class="p-6 border-b border-gray-100 flex justify-between items-center">
+                <h3 id="modalTitle" class="text-2xl font-bold text-gray-900">Task Details</h3>
+                <button onclick="closeModal()" class="text-gray-400 hover:text-gray-900">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div class="p-6">
+                <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                    <span class="font-bold text-blue-800">Prompt:</span>
+                    <span class="text-blue-700" id="modalPrompt">A ball drops from height and accelerates due to
+                        gravity.</span>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-gray-100 rounded-lg aspect-video flex items-center justify-center relative">
+                        <span class="text-red-500 font-bold">Failure Case</span>
+                        <div class="absolute bottom-2 left-2 text-xs bg-black/50 text-white px-2 py-1 rounded">Model A
+                        </div>
+                    </div>
+                    <div class="bg-gray-100 rounded-lg aspect-video flex items-center justify-center relative">
+                        <span class="text-green-500 font-bold">Success Case</span>
+                        <div class="absolute bottom-2 left-2 text-xs bg-black/50 text-white px-2 py-1 rounded">Model B
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
-        // Initialize Icons
+        // Initialize Lucide Icons
         lucide.createIcons();
 
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Smooth Scrolling Function
-        function smoothScroll(event, targetId) {
-            event.preventDefault();
-
-            // Update URL hash without jumping
-            history.pushState(null, null, '#' + targetId);
-
-            // Close mobile menu if open
-            if (!mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.add('hidden');
-            }
-
-            const targetElement = document.getElementById(targetId);
-            if (targetElement) {
-                // We rely on CSS scroll-behavior: smooth and scroll-margin-top
-                // But specifically for programmatic scroll, we can use scrollIntoView
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        }
-
-        // Scroll Spy Implementation
-        document.addEventListener('DOMContentLoaded', () => {
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.nav-link');
-
-            // Options for IntersectionObserver
-            // rootMargin: -10% from top (to account for header) and -50% from bottom
-            // This creates a "viewing area" in the middle-top of the screen
-            const observerOptions = {
-                root: null,
-                rootMargin: '-80px 0px -50% 0px',
-                threshold: 0
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        // Remove active class from all links
-                        navLinks.forEach(link => {
-                            link.classList.remove('active');
-                            link.classList.remove('text-blue-800');
-                            link.classList.add('text-gray-600');
-
-                            // Reset icon color
-                            const icon = link.querySelector('i');
-                            if (icon) icon.style.stroke = '';
-                        });
-
-                        // Add active class to corresponding links
-                        const activeId = entry.target.id;
-                        const activeLinks = document.querySelectorAll(`.nav-link[href="#${activeId}"]`);
-
-                        activeLinks.forEach(link => {
-                            link.classList.add('active');
-                            link.classList.remove('text-gray-600');
-                            link.classList.add('text-blue-800');
-                        });
+        // Chart.js - Radar Chart
+        const ctx = document.getElementById('radarChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['Modal Consistency', 'Spatial Consistency', 'Temporal Consistency', 'Physics', 'Causality'],
+                datasets: [{
+                    label: 'OpenAI Sora (Est.)',
+                    data: [90, 85, 70, 65, 60],
+                    fill: true,
+                    backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                    borderColor: 'rgb(59, 130, 246)',
+                    pointBackgroundColor: 'rgb(59, 130, 246)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgb(59, 130, 246)'
+                }, {
+                    label: 'Open Source Baseline',
+                    data: [70, 50, 40, 30, 25],
+                    fill: true,
+                    backgroundColor: 'rgba(239, 68, 68, 0.2)',
+                    borderColor: 'rgb(239, 68, 68)',
+                    pointBackgroundColor: 'rgb(239, 68, 68)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgb(239, 68, 68)'
+                }]
+            },
+            options: {
+                elements: {
+                    line: { borderWidth: 3 }
+                },
+                scales: {
+                    r: {
+                        angleLines: { display: true },
+                        suggestedMin: 0,
+                        suggestedMax: 100
                     }
-                });
-            }, observerOptions);
-
-            sections.forEach(section => {
-                observer.observe(section);
-            });
+                }
+            }
         });
+
+        // Video Slider Logic
+        const sliderContainer = document.getElementById('videoSlider');
+        const overlay = document.getElementById('videoOverlay');
+        let isDown = false;
+
+        sliderContainer.addEventListener('mousedown', () => isDown = true);
+        window.addEventListener('mouseup', () => isDown = false);
+        sliderContainer.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            const rect = sliderContainer.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const width = Math.max(0, Math.min(x, rect.width));
+            const percentage = (width / rect.width) * 100;
+            overlay.style.width = `${percentage}%`;
+        });
+
+        // Touch support for slider
+        sliderContainer.addEventListener('touchstart', () => isDown = true);
+        window.addEventListener('touchend', () => isDown = false);
+        sliderContainer.addEventListener('touchmove', (e) => {
+            if (!isDown) return;
+            const rect = sliderContainer.getBoundingClientRect();
+            const touch = e.touches[0];
+            const x = touch.clientX - rect.left;
+            const width = Math.max(0, Math.min(x, rect.width));
+            const percentage = (width / rect.width) * 100;
+            overlay.style.width = `${percentage}%`;
+        });
+
+        // Modal Logic
+        const modal = document.getElementById('taskModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalPrompt = document.getElementById('modalPrompt');
+
+        window.openModal = function (taskName) {
+            modalTitle.textContent = taskName;
+            modalPrompt.textContent = `Detailed prompt for ${taskName} task: "A realistic video demonstrating ${taskName.toLowerCase()} principles..."`;
+            modal.classList.remove('hidden');
+        }
+
+        window.closeModal = function () {
+            modal.classList.add('hidden');
+        }
     </script>
-    <style>
-        footer.partners {
-            padding: 20px;
-            border-top: 1px solid #eee;
-            background: #fff;
-        }
-
-        .logo-grid {
-            display: flex;
-            gap: 24px;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .logo-grid img,
-        .logo-grid .logo-pdf {
-            height: 48px;
-            /* 可按需调整统一高度 */
-        }
-    </style>
-
-    <footer class="partners">
-        <div class="logo-grid">
-            <img src="images/浙大logo.png" alt="Zhejiang University logo">
-            <img src="images/shlab.png" alt="Shanghai Artificial Intelligence Laboratory logo">
-            <object data="images/OpenDataLab_blue_no_words.pdf" type="application/pdf" class="logo-pdf">
-                <a href="images/OpenDataLab_blue_no_words.pdf">OpenDataLab logo (PDF)</a>
-            </object>
-            <img src="images/中国科学院大学标准Logo下载/国科大标准Logo/国科大标准Logo横式二（蓝色）.png"
-                alt="University of Chinese Academy of Sciences logo">
-        </div>
-    </footer>
-
-
-    <!-- Footer -->
-    <footer class="border-t border-gray-200 bg-gray-50 mt-12">
-        <div class="container mx-auto px-4 py-8 text-center text-sm text-gray-500">
-            <p>&copy;
-                <script>document.write(new Date().getFullYear())</script> UMM Project. All rights reserved.
-            </p>
-            <p class="mt-2">
-                Towards Spatial Supersensing in Video
-            </p>
-        </div>
-    </footer>
-
 </body>
 
 </html>
