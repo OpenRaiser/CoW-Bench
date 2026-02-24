@@ -66,6 +66,116 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
 
+        /* Carousel Styles */
+        .indicator {
+            transition: all 0.3s ease;
+        }
+
+        .carousel-3d-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            height: 500px;
+            margin: 0 auto;
+            perspective: 1200px;
+            transform-style: preserve-3d;
+        }
+
+        .carousel-slide-3d {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 70%;
+            height: auto;
+            aspect-ratio: 16/10;
+            background: white;
+            border-radius: 1rem;
+            transition: all 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
+            opacity: 0;
+            z-index: 0;
+            transform: translate(-50%, -50%) scale(0.8);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            border: 1px solid #e5e7eb;
+            cursor: pointer;
+            overflow: hidden;
+            backface-visibility: hidden;
+            -webkit-font-smoothing: antialiased;
+            /* GPU Acceleration */
+            transform-style: preserve-3d;
+            will-change: transform, opacity;
+        }
+
+        .carousel-slide-3d.active {
+            opacity: 1;
+            z-index: 20;
+            transform: translate(-50%, -50%) translateZ(0) scale(1) rotateY(0deg);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            cursor: default;
+            border-color: #3b82f6;
+        }
+
+        .carousel-slide-3d.prev {
+            opacity: 0.65;
+            z-index: 10;
+            /* Left side: Perspective transform */
+            transform: translate(-50%, -50%) translateX(-50%) translateZ(-100px) rotateY(20deg) scale(0.85);
+            background-color: #f9fafb;
+        }
+
+        .carousel-slide-3d.next {
+            opacity: 0.65;
+            z-index: 10;
+            /* Right side: Perspective transform */
+            transform: translate(-50%, -50%) translateX(50%) translateZ(-100px) rotateY(-20deg) scale(0.85);
+            background-color: #f9fafb;
+        }
+
+        /* Hover effect for side slides */
+        .carousel-slide-3d.prev:hover,
+        .carousel-slide-3d.next:hover {
+            opacity: 0.8;
+            transform: translate(-50%, -50%) translateX(var(--tx, -50%)) translateZ(-50px) rotateY(var(--ry, 20deg)) scale(0.9);
+            z-index: 15;
+        }
+
+        .carousel-slide-3d.prev:hover {
+            --tx: -50%;
+            --ry: 20deg;
+        }
+
+        .carousel-slide-3d.next:hover {
+            --tx: 50%;
+            --ry: -20deg;
+        }
+
+        /* Loader */
+        .slide-loader {
+            position: absolute;
+            inset: 0;
+            background: #f3f4f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 50;
+            transition: opacity 0.3s;
+        }
+
+        /* Fallback for browsers without 3D transform support */
+        @media (transform-style: flat) {
+            .carousel-slide-3d.prev {
+                transform: translate(-50%, -50%) translateX(-100%) scale(0.8);
+            }
+
+            .carousel-slide-3d.next {
+                transform: translate(-50%, -50%) translateX(100%) scale(0.8);
+            }
+        }
+
         /* Custom Scrollbar for Modal */
         .custom-scrollbar::-webkit-scrollbar {
             width: 8px;
@@ -82,6 +192,117 @@
 
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
             background: #555;
+        }
+
+        /* Evolution Modal Styles */
+        .evo-modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            /* Safari support */
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 100;
+            pointer-events: auto;
+            /* Ensure backdrop is clickable */
+        }
+
+        .evo-modal-backdrop.active {
+            opacity: 1;
+        }
+
+        .evo-modal-container {
+            position: fixed;
+            inset: 0;
+            z-index: 101;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+        }
+
+        .evo-modal-content {
+            background: white;
+            border-radius: 1.5rem;
+            width: 90%;
+            max-width: 50rem;
+            height: 80vh;
+            max-height: 900px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            opacity: 0;
+            transform-origin: top left;
+            transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.4s ease;
+            pointer-events: auto;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            position: relative;
+            /* Ensure stacking context */
+            z-index: 110;
+            /* Ensure content is above backdrop */
+        }
+
+        .evo-modal-content.active {
+            opacity: 1;
+            transform: translate(0, 0) scale(1) !important;
+        }
+
+        .evo-close-btn {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            z-index: 20;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .evo-close-btn:hover {
+            background: white;
+            transform: scale(1.1);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .evo-image-container {
+            height: 50%;
+            width: 100%;
+            background-color: #f8fafc;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .evo-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04));
+        }
+
+        .evo-text-container {
+            height: 50%;
+            width: 100%;
+            padding: 2.5rem;
+            overflow-y: auto;
+            background: white;
         }
     </style>
 </head>
@@ -164,12 +385,9 @@
                 <!-- Teaser Image (Figure 1) -->
                 <div
                     class="relative max-w-4xl mx-auto rounded-2xl shadow-2xl overflow-hidden bg-white border border-gray-100 p-2">
-                    <img src="images/1.png" alt="The Trinity of Consistency: Modal, Spatial, and Temporal"
-                        class="w-full h-auto rounded-xl">
-                    <div class="absolute bottom-4 left-0 right-0 text-center">
-                        <span class="bg-black/50 text-white px-4 py-1 rounded-full text-sm backdrop-blur-sm">Figure 1:
-                            The Trinity of Consistency</span>
-                    </div>
+                    <img src="images/other/fig_teaser.png"
+                        alt="The Trinity of Consistency: Modal, Spatial, and Temporal" class="w-full h-auto rounded-xl">
+
                 </div>
             </div>
         </section>
@@ -181,12 +399,10 @@
                 <div class="max-w-4xl mx-auto text-center mb-16">
                     <h2 class="text-3xl font-bold text-gray-900 mb-6">Why Do We Need a General World Model?</h2>
                     <p class="text-lg text-gray-600 leading-relaxed text-justify md:text-center">
-                        Current video generation models simulate pixels, but do they understand the world?
-                        We propose that a true General World Model must be grounded in the <strong>Trinity of
-                            Consistency</strong>.
-                        It's not just about looking real—it's about aligning with semantic instructions, respecting 3D
-                        geometry,
-                        and obeying physical laws over time.
+                        The construction of World Models capable of learning, simulating, and reasoning about objective
+                        physical laws constitutes a foundational challenge in the pursuit of Artificial General
+                        Intelligence. Existing models often behave as naive physicists; we propose that a robust World
+                        Model must be grounded in the Trinity of Consistency.
                     </p>
                 </div>
 
@@ -206,8 +422,8 @@
                         <p class="text-sm text-gray-500 uppercase tracking-wider mb-3 font-semibold text-blue-600">The
                             Interface</p>
                         <p class="text-gray-600">
-                            The model must accurately translate semantic instructions (language) into visual
-                            manifestations, ensuring every described object and attribute appears as requested.
+                            The ability to align heterogeneous information (text, image, tactile) into a unified
+                            semantic space, serving as the cognitive interface for instruction and feedback.
                         </p>
                     </div>
 
@@ -225,8 +441,8 @@
                         <p class="text-sm text-gray-500 uppercase tracking-wider mb-3 font-semibold text-purple-600">The
                             Basis</p>
                         <p class="text-gray-600">
-                            The world is 3D. Objects must maintain their geometric structure, relative positions, and
-                            perspective correctness across different viewpoints.
+                            The capacity to construct a 3D-aware representation that respects geometry, occlusion, and
+                            object permanence, ensuring the static plausibility of the simulated world.
                         </p>
                     </div>
 
@@ -245,8 +461,8 @@
                         <p class="text-sm text-gray-500 uppercase tracking-wider mb-3 font-semibold text-orange-600">The
                             Engine</p>
                         <p class="text-gray-600">
-                            Events must follow cause and effect. Gravity, collisions, and object permanence must hold
-                            true over time, avoiding "dream-like" morphing.
+                            The adherence to physical laws and causal logic over time, ensuring that dynamic evolution
+                            follows a predictable and logically sound trajectory.
                         </p>
                     </div>
                 </div>
@@ -258,7 +474,8 @@
             <div class="container mx-auto px-4 max-w-6xl">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl font-bold mb-4">Evolution of World Models</h2>
-                    <p class="text-gray-400">From specialized experts to unified generalists.</p>
+                    <p class="text-gray-400">From loosely coupled specialized modules toward unified general
+                        architectures.</p>
                 </div>
 
                 <div class="relative">
@@ -268,56 +485,59 @@
                     </div>
 
                     <div class="grid md:grid-cols-3 gap-12 relative z-10">
-                        <!-- Phase 1 -->
-                        <div class="timeline-item group pl-12 md:pl-0 md:pt-12 relative">
+                        <!-- Phase 1: Modal -->
+                        <div class="timeline-item group pl-12 md:pl-0 md:pt-12 relative cursor-pointer"
+                            onclick="openEvolutionModal(this.querySelector('.timeline-content'), 'phase1')">
                             <div
                                 class="absolute left-2 top-0 w-5 h-5 bg-blue-500 rounded-full border-4 border-gray-900 md:left-1/2 md:-top-2.5 md:-ml-2.5 group-hover:bg-blue-400 transition-colors">
                             </div>
                             <div
                                 class="timeline-content bg-gray-800 p-6 rounded-xl border border-gray-700 transition-transform duration-300">
                                 <div class="text-blue-400 font-bold text-sm mb-2">PHASE 1</div>
-                                <h3 class="text-xl font-bold mb-3">Specialists</h3>
-                                <p class="text-gray-400 text-sm mb-4">Loosely coupled modules for specific tasks.</p>
+                                <h3 class="text-xl font-bold mb-3">Modal Evolution</h3>
+                                <p class="text-gray-400 text-sm mb-4">Transitioning from geometric isolation to native
+                                    unified models.</p>
                                 <div class="flex gap-2">
-                                    <span class="px-2 py-1 bg-gray-700 rounded text-xs">StyleGAN</span>
-                                    <span class="px-2 py-1 bg-gray-700 rounded text-xs">Simulators</span>
+                                    <span class="px-2 py-1 bg-gray-700 rounded text-xs">Dual-Tower</span>
+                                    <span class="px-2 py-1 bg-gray-700 rounded text-xs">MM-DiT</span>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Phase 2 -->
-                        <div class="timeline-item group pl-12 md:pl-0 md:pt-12 relative">
+                        <!-- Phase 2: Spatial -->
+                        <div class="timeline-item group pl-12 md:pl-0 md:pt-12 relative cursor-pointer"
+                            onclick="openEvolutionModal(this.querySelector('.timeline-content'), 'phase2')">
                             <div
                                 class="absolute left-2 top-0 w-5 h-5 bg-purple-500 rounded-full border-4 border-gray-900 md:left-1/2 md:-top-2.5 md:-ml-2.5 group-hover:bg-purple-400 transition-colors">
                             </div>
                             <div
                                 class="timeline-content bg-gray-800 p-6 rounded-xl border border-gray-700 transition-transform duration-300">
                                 <div class="text-purple-400 font-bold text-sm mb-2">PHASE 2</div>
-                                <h3 class="text-xl font-bold mb-3">Alignment</h3>
-                                <p class="text-gray-400 text-sm mb-4">Connecting vision and language, bridging
-                                    modalities.</p>
+                                <h3 class="text-xl font-bold mb-3">Spatial Evolution</h3>
+                                <p class="text-gray-400 text-sm mb-4">From implicit fields and primitives to generative
+                                    priors.</p>
                                 <div class="flex gap-2">
-                                    <span class="px-2 py-1 bg-gray-700 rounded text-xs">CLIP</span>
                                     <span class="px-2 py-1 bg-gray-700 rounded text-xs">NeRF</span>
+                                    <span class="px-2 py-1 bg-gray-700 rounded text-xs">3DGS</span>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Phase 3 -->
-                        <div class="timeline-item group pl-12 md:pl-0 md:pt-12 relative">
+                        <!-- Phase 3: Temporal -->
+                        <div class="timeline-item group pl-12 md:pl-0 md:pt-12 relative cursor-pointer"
+                            onclick="openEvolutionModal(this.querySelector('.timeline-content'), 'phase3')">
                             <div
                                 class="absolute left-2 top-0 w-5 h-5 bg-green-500 rounded-full border-4 border-gray-900 md:left-1/2 md:-top-2.5 md:-ml-2.5 group-hover:bg-green-400 transition-colors">
                             </div>
                             <div
                                 class="timeline-content bg-gray-800 p-6 rounded-xl border border-gray-700 transition-transform duration-300">
                                 <div class="text-green-400 font-bold text-sm mb-2">PHASE 3</div>
-                                <h3 class="text-xl font-bold mb-3">Unified Models</h3>
-                                <p class="text-gray-400 text-sm mb-4">All-in-One architectures with internal world
-                                    simulation.</p>
+                                <h3 class="text-xl font-bold mb-3">Temporal Evolution</h3>
+                                <p class="text-gray-400 text-sm mb-4">From autoregressive modeling to Diffusion
+                                    Transformers.</p>
                                 <div class="flex gap-2">
-                                    <span class="px-2 py-1 bg-gray-700 rounded text-xs">Sora</span>
-                                    <span class="px-2 py-1 bg-gray-700 rounded text-xs">Gemini</span>
-                                    <span class="px-2 py-1 bg-gray-700 rounded text-xs">UMM</span>
+                                    <span class="px-2 py-1 bg-gray-700 rounded text-xs">Diffusion</span>
+                                    <span class="px-2 py-1 bg-gray-700 rounded text-xs">Transformers</span>
                                 </div>
                             </div>
                         </div>
@@ -332,9 +552,26 @@
                 <div class="text-center mb-10">
                     <h2 class="text-3xl font-bold text-gray-900 mb-4">CoW-Bench: The Ultimate Test</h2>
                     <p class="text-gray-600 max-w-2xl mx-auto">
-                        A benchmark with 18 diverse tasks designed to rigorously evaluate physical reasoning and causal
-                        consistency.
+                        CoW-Bench (Consistency of World-models Benchmark) rigorously tests the model's ability to
+                        maintain the Trinity of Consistency under complex scenarios. It includes 1,485 meticulously
+                        constructed samples, organized into 18 fine-grained sub-tasks spanning Modal, Spatial, Temporal
+                        dimensions and their cross-axis synergies.
                     </p>
+
+                    <!-- Benchmark Taxonomy Figure -->
+                    <figure class="mt-8 mb-4">
+                        <img src="images/benchmark/UMM-Bench_Category_Distribution.png"
+                            alt="Hierarchical Taxonomy of CoW-Bench" style="width: 60%;"
+                            class="mx-auto rounded-lg shadow-md">
+                        <figcaption class="mt-3 text-center text-gray-500">
+                            <small>
+                                <strong>Hierarchical Taxonomy of CoW-Bench.</strong>
+                                The inner ring represents the main consistency dimensions (Modal, Space, Time), while
+                                the outer ring details the 18 fine-grained sub-tasks. The uniform sector sizes visually
+                                confirm the rigorously balanced distribution of the dataset.
+                            </small>
+                        </figcaption>
+                    </figure>
                 </div>
 
                 <!-- Tabs -->
@@ -381,50 +618,236 @@
 
         <!-- Module 5: Evaluation Results -->
         <section id="results" class="section-anchor py-16 bg-white">
-            <div class="container mx-auto px-4 max-w-6xl">
+            <div class="container mx-auto px-4 max-w-7xl">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">SOTA Models Struggle with Reality</h2>
-                    <p class="text-gray-600">Current top-tier models often exhibit "Hollow Realism"—high visual quality
-                        but poor physical logic.</p>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Empirical Results & Dynamic Leaderboard</h2>
+                    <p class="text-gray-600">Comprehensive evaluation across 18 sub-tasks reveals the current state of
+                        World Models.</p>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <!-- Radar Chart -->
-                    <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100">
-                        <canvas id="radarChart"></canvas>
-                        <div class="mt-4 text-center">
-                            <span class="inline-block bg-red-100 text-red-700 text-xs px-2 py-1 rounded font-bold">Key
-                                Takeaway</span>
-                            <p class="text-sm text-gray-600 mt-2">Models fail significantly in long-term temporal
-                                consistency.</p>
+                <!-- Part 1: Radar Chart & Figure 2 -->
+                <div class="grid md:grid-cols-2 gap-8 mb-16">
+                    <!-- Interactive Chart -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col">
+                        <h3 class="text-lg font-bold mb-4 text-gray-800">Interactive Performance Analysis</h3>
+                        <div class="flex-grow flex items-center justify-center relative aspect-square md:aspect-auto">
+                            <canvas id="mainRadarChart"></canvas>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-4 text-center">Click legend to toggle models</p>
+                    </div>
+                    <!-- Figure 2 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col">
+                        <h3 class="text-lg font-bold mb-4 text-gray-800">Overall Performance Comparison</h3>
+                        <div class="flex-grow flex items-center justify-center bg-gray-50 rounded-xl p-4">
+                            <img src="images/result/figure2.png" alt="Performance Comparison of Mainstream Models"
+                                class="max-h-[400px] w-full object-contain">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Part 2: Heatmaps Carousel -->
+                <div class="mb-16">
+                    <h3 class="text-xl font-bold mb-6 text-gray-900">Detailed Error Analysis (Heatmaps)</h3>
+
+                    <div class="relative group w-full flex flex-col items-center">
+                        <!-- Carousel Container -->
+                        <div class="carousel-3d-container mb-6" id="heatmapCarousel">
+                            <!-- Slide 1: Modal -->
+                            <div class="carousel-slide-3d" onclick="window.goToSlide(0)">
+                                <div class="slide-loader"><i data-lucide="loader"
+                                        class="w-8 h-8 animate-spin text-blue-500"></i></div>
+                                <div class="w-full h-[80%] bg-white overflow-hidden mb-2 relative">
+                                    <embed data-src="images/result/figure35.png" type="image/png"
+                                        class="w-full h-full lazy-embed">
+                                    <!-- Transparent overlay for drag interaction on active slide -->
+                                    <div class="absolute inset-0 bg-transparent z-10"></div>
+                                </div>
+                                <h4 class="text-base font-bold text-gray-800">Modal Consistency</h4>
+                                <p class="text-xs text-gray-500 mt-1 text-center line-clamp-2">Performance distribution
+                                    across multimodal alignment tasks.</p>
+                            </div>
+                            <!-- Slide 2: Spatial -->
+                            <div class="carousel-slide-3d" onclick="window.goToSlide(1)">
+                                <div class="slide-loader"><i data-lucide="loader"
+                                        class="w-8 h-8 animate-spin text-blue-500"></i></div>
+                                <div class="w-full h-[80%] bg-white overflow-hidden mb-2 relative">
+                                    <embed data-src="images/result/figure36.png" type="image/png"
+                                        class="w-full h-full lazy-embed">
+                                    <div class="absolute inset-0 bg-transparent z-10"></div>
+                                </div>
+                                <h4 class="text-base font-bold text-gray-800">Spatial Consistency</h4>
+                                <p class="text-xs text-gray-500 mt-1 text-center line-clamp-2">Spatial reasoning
+                                    capabilities and local geometry.</p>
+                            </div>
+                            <!-- Slide 3: Temporal -->
+                            <div class="carousel-slide-3d" onclick="window.goToSlide(2)">
+                                <div class="slide-loader"><i data-lucide="loader"
+                                        class="w-8 h-8 animate-spin text-blue-500"></i></div>
+                                <div class="w-full h-[80%] bg-white overflow-hidden mb-2 relative">
+                                    <embed data-src="images/result/figure37.png" type="image/png"
+                                        class="w-full h-full lazy-embed">
+                                    <div class="absolute inset-0 bg-transparent z-10"></div>
+                                </div>
+                                <h4 class="text-base font-bold text-gray-800">Temporal Consistency</h4>
+                                <p class="text-xs text-gray-500 mt-1 text-center line-clamp-2">Temporal coherence and
+                                    long-term object permanence.</p>
+                            </div>
+                        </div>
+
+                        <!-- Indicators -->
+                        <div class="flex justify-center gap-2">
+                            <button onclick="window.goToSlide(0)"
+                                class="w-2 h-2 rounded-full bg-blue-600 transition-all indicator"
+                                aria-label="Go to slide 1"></button>
+                            <button onclick="window.goToSlide(1)"
+                                class="w-2 h-2 rounded-full bg-gray-300 hover:bg-blue-400 transition-all indicator"
+                                aria-label="Go to slide 2"></button>
+                            <button onclick="window.goToSlide(2)"
+                                class="w-2 h-2 rounded-full bg-gray-300 hover:bg-blue-400 transition-all indicator"
+                                aria-label="Go to slide 3"></button>
                         </div>
                     </div>
 
-                    <!-- Video Comparison Slider -->
-                    <div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Visualizing Physical Hallucinations</h3>
-                        <div class="mb-4 text-sm text-gray-600 bg-gray-50 p-3 rounded-lg border border-gray-200">
-                            <strong>Prompt:</strong> "A glass cup falls off the table and shatters on the floor."
-                        </div>
+                    <p class="mt-6 text-gray-600 text-center italic max-w-3xl mx-auto">
+                        "Heatmaps over sub-metrics reveal that while local geometry plausibility is strong, models
+                        struggle with explicit goal-conditioned state tracking (e.g., TS-Maze-2D) and semantic role
+                        binding."
+                    </p>
+                </div>
 
-                        <div class="video-compare-container shadow-xl" id="videoSlider">
-                            <!-- Background (Model A - Fail) -->
-                            <div
-                                class="absolute inset-0 bg-red-100 flex items-center justify-center text-red-900 font-bold">
-                                Model A (Fail): Cup bounces like rubber
+                <!-- Part 3: Leaderboard Table -->
+                <div class="mb-16">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-xl font-bold text-gray-900">CoW-Bench Leaderboard</h3>
+                        <div class="flex gap-2">
+                            <div class="relative">
+                                <i data-lucide="search"
+                                    class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400"></i>
+                                <input type="text" id="leaderboardSearch" placeholder="Search model..."
+                                    class="pl-9 pr-4 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
                             </div>
-                            <div class="video-compare-label label-right">Model A (Fail)</div>
-
-                            <!-- Foreground (Model B - Success/Reference) -->
-                            <div class="video-overlay" id="videoOverlay">
-                                <div
-                                    class="absolute inset-0 w-[600px] bg-green-100 flex items-center justify-center text-green-900 font-bold">
-                                    Model B (Success): Realistic shattering
-                                </div>
-                                <div class="video-compare-label label-left">Real Physics</div>
-                            </div>
+                            <button onclick="exportCSV()"
+                                class="px-4 py-2 bg-white border border-gray-200 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50 flex items-center gap-2">
+                                <i data-lucide="download" class="w-4 h-4"></i> Export CSV
+                            </button>
                         </div>
-                        <p class="text-xs text-center text-gray-400 mt-2">Drag to compare</p>
+                    </div>
+
+                    <div class="overflow-x-auto rounded-xl shadow-sm border border-gray-200 bg-white max-h-[600px] overflow-y-auto relative custom-scrollbar"
+                        id="leaderboardContainer">
+                        <table class="min-w-full text-sm" id="leaderboardTable">
+                            <thead
+                                class="bg-gray-50 text-gray-900 font-bold uppercase tracking-wider sticky top-0 z-20 shadow-sm">
+                                <tr>
+                                    <th class="px-6 py-4 text-left border-b sticky left-0 bg-gray-50 z-30 min-w-[200px]"
+                                        onclick="sortTable('model')">Model <i data-lucide="arrow-up-down"
+                                            class="inline w-3 h-3 ml-1 text-gray-400"></i></th>
+                                    <th class="px-4 py-4 text-center border-b text-blue-600 cursor-pointer hover:bg-gray-100"
+                                        onclick="sortTable('AVG')">AVG <i data-lucide="arrow-up-down"
+                                            class="inline w-3 h-3 ml-1 text-gray-400"></i></th>
+
+                                    <!-- Modal Group -->
+                                    <th class="px-2 py-4 text-center border-b border-l border-gray-200 bg-blue-50/50"
+                                        colspan="3">Modal</th>
+
+                                    <!-- Temporal Group -->
+                                    <th class="px-2 py-4 text-center border-b border-l border-gray-200 bg-yellow-50/50"
+                                        colspan="3">Temporal</th>
+
+                                    <!-- Spatial Group -->
+                                    <th class="px-2 py-4 text-center border-b border-l border-gray-200 bg-green-50/50"
+                                        colspan="3">Spatial</th>
+
+                                    <!-- Cross-Modal Groups (Hidden on small screens) -->
+                                    <th class="px-2 py-4 text-center border-b border-l border-gray-200 hidden lg:table-cell"
+                                        colspan="3">M-T</th>
+                                    <th class="px-2 py-4 text-center border-b border-l border-gray-200 hidden lg:table-cell"
+                                        colspan="3">M-S</th>
+                                    <th class="px-2 py-4 text-center border-b border-l border-gray-200 hidden lg:table-cell"
+                                        colspan="3">T-S</th>
+                                </tr>
+                                <tr class="text-xs text-gray-500">
+                                    <th class="border-b sticky left-0 bg-gray-50 z-30"></th>
+                                    <th class="border-b"></th>
+
+                                    <!-- Modal Sub-tasks -->
+                                    <th class="px-2 py-2 border-b border-l border-gray-200 cursor-pointer hover:bg-blue-50"
+                                        title="Subject Attribute" onclick="sortTable('SUAT')">SUAT</th>
+                                    <th class="px-2 py-2 border-b cursor-pointer hover:bg-blue-50" title="Local Edit"
+                                        onclick="sortTable('LCED')">LCED</th>
+                                    <th class="px-2 py-2 border-b cursor-pointer hover:bg-blue-50"
+                                        title="Multi-Constraint" onclick="sortTable('MCON')">MCON</th>
+
+                                    <!-- Temporal Sub-tasks -->
+                                    <th class="px-2 py-2 border-b border-l border-gray-200 cursor-pointer hover:bg-yellow-50"
+                                        title="Worldline" onclick="sortTable('WLIN')">WLIN</th>
+                                    <th class="px-2 py-2 border-b cursor-pointer hover:bg-yellow-50"
+                                        title="Slow Evolution" onclick="sortTable('SLEV')">SLEV</th>
+                                    <th class="px-2 py-2 border-b cursor-pointer hover:bg-yellow-50" title="Stage Order"
+                                        onclick="sortTable('STOR')">STOR</th>
+
+                                    <!-- Spatial Sub-tasks -->
+                                    <th class="px-2 py-2 border-b border-l border-gray-200 cursor-pointer hover:bg-green-50"
+                                        title="Sem-Planar" onclick="sortTable('SEPL_spatial')">SEPL</th>
+                                    <th class="px-2 py-2 border-b cursor-pointer hover:bg-green-50" title="Occ/Contain"
+                                        onclick="sortTable('OCCO_spatial')">OCCO</th>
+                                    <th class="px-2 py-2 border-b cursor-pointer hover:bg-green-50" title="MV-3D"
+                                        onclick="sortTable('MV3D')">MV3D</th>
+
+                                    <!-- Cross-Modal Sub-tasks (Hidden lg) -->
+                                    <th class="px-2 py-2 border-b border-l border-gray-200 hidden lg:table-cell cursor-pointer hover:bg-gray-50"
+                                        onclick="sortTable('TREV')">TREV</th>
+                                    <th class="px-2 py-2 border-b hidden lg:table-cell cursor-pointer hover:bg-gray-50"
+                                        onclick="sortTable('LOHO')">LOHO</th>
+                                    <th class="px-2 py-2 border-b hidden lg:table-cell cursor-pointer hover:bg-gray-50"
+                                        onclick="sortTable('ATDY')">ATDY</th>
+
+                                    <th class="px-2 py-2 border-b border-l border-gray-200 hidden lg:table-cell cursor-pointer hover:bg-gray-50"
+                                        onclick="sortTable('SEPL_ms')">SEPL</th>
+                                    <th class="px-2 py-2 border-b hidden lg:table-cell cursor-pointer hover:bg-gray-50"
+                                        onclick="sortTable('OCCO_ms')">OCCO</th>
+                                    <th class="px-2 py-2 border-b hidden lg:table-cell cursor-pointer hover:bg-gray-50"
+                                        onclick="sortTable('SEMV')">SEMV</th>
+
+                                    <th class="px-2 py-2 border-b border-l border-gray-200 hidden lg:table-cell cursor-pointer hover:bg-gray-50"
+                                        onclick="sortTable('3DLO')">3DLO</th>
+                                    <th class="px-2 py-2 border-b hidden lg:table-cell cursor-pointer hover:bg-gray-50"
+                                        onclick="sortTable('OCMO')">OCMO</th>
+                                    <th class="px-2 py-2 border-b hidden lg:table-cell cursor-pointer hover:bg-gray-50"
+                                        onclick="sortTable('MAZE')">MAZE</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100 font-medium text-gray-700 bg-white"
+                                id="leaderboardBody">
+                                <!-- Rows populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Back to Top Button (inside container context) -->
+                    <button onclick="document.getElementById('leaderboardContainer').scrollTop = 0"
+                        class="mt-4 mx-auto flex items-center gap-2 text-sm text-gray-500 hover:text-blue-600 transition-colors">
+                        <i data-lucide="arrow-up" class="w-4 h-4"></i> Back to Top of Table
+                    </button>
+                </div>
+
+                <!-- Part 4: Key Takeaway (Subtle Style) -->
+                <div
+                    class="bg-gradient-to-r from-orange-50 to-white border-l-4 border-orange-400 p-6 rounded-r-xl shadow-sm transition-all hover:shadow-md">
+                    <div class="flex items-start gap-4">
+                        <div class="p-2 bg-orange-100 rounded-lg text-orange-600">
+                            <i data-lucide="lightbulb" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-gray-900 font-bold mb-1">Core Diagnostic Conclusion</h4>
+                            <p class="text-gray-600 leading-relaxed text-sm">
+                                "Models achieve strong local motion plausibility yet fail when tasks require a
+                                persistent, goal-directed world state. The <span
+                                    class="font-semibold text-orange-700">constraint backoff phenomenon</span> is
+                                widespread—models silently replace strict constraints with common defaults to maintain
+                                visual plausibility."
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -434,27 +857,62 @@
         <section id="future" class="section-anchor py-16 bg-blue-900 text-white">
             <div class="container mx-auto px-4 max-w-5xl">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold mb-4">Future Outlook</h2>
-                    <p class="text-blue-200">Where do we go from here?</p>
+                    <h2 class="text-3xl font-bold mb-4">Challenges & Future Outlook</h2>
+                    <p class="text-blue-200 text-lg">From Generative Models to General World Simulators</p>
                 </div>
 
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="bg-blue-800/50 p-6 rounded-xl border border-blue-700 backdrop-blur-sm">
-                        <i data-lucide="box" class="w-8 h-8 text-blue-300 mb-4"></i>
-                        <h3 class="text-lg font-bold mb-2">Integrating 3D Priors</h3>
-                        <p class="text-blue-100 text-sm">Explicitly incorporating depth and geometry into the generation
-                            process.</p>
+                <!-- Challenges Grid -->
+                <div class="grid md:grid-cols-3 gap-6 mb-12">
+                    <!-- Challenge 1 -->
+                    <div
+                        class="bg-blue-800/50 p-6 rounded-xl border border-blue-700 backdrop-blur-sm hover:bg-blue-800/70 transition-colors">
+                        <i data-lucide="sigma" class="w-8 h-8 text-blue-300 mb-4"></i>
+                        <h3 class="text-lg font-bold mb-3">Differentiability of Physical Authenticity</h3>
+                        <p class="text-blue-100 text-sm leading-relaxed">Embedding Hamiltonians and conservation laws
+                            into differentiable operators.</p>
                     </div>
-                    <div class="bg-blue-800/50 p-6 rounded-xl border border-blue-700 backdrop-blur-sm">
-                        <i data-lucide="scale" class="w-8 h-8 text-blue-300 mb-4"></i>
-                        <h3 class="text-lg font-bold mb-2">Physics-Informed Loss</h3>
-                        <p class="text-blue-100 text-sm">Training with objectives that penalize physical violations.</p>
+
+                    <!-- Challenge 2 -->
+                    <div
+                        class="bg-blue-800/50 p-6 rounded-xl border border-blue-700 backdrop-blur-sm hover:bg-blue-800/70 transition-colors">
+                        <i data-lucide="link-2" class="w-8 h-8 text-blue-300 mb-4"></i>
+                        <h3 class="text-lg font-bold mb-3">Brittleness of Long-term Causal Chains</h3>
+                        <p class="text-blue-100 text-sm leading-relaxed">Resisting the butterfly effect in hour-day
+                            scale generations.</p>
                     </div>
-                    <div class="bg-blue-800/50 p-6 rounded-xl border border-blue-700 backdrop-blur-sm">
-                        <i data-lucide="globe" class="w-8 h-8 text-blue-300 mb-4"></i>
-                        <h3 class="text-lg font-bold mb-2">General World Simulator</h3>
-                        <p class="text-blue-100 text-sm">Moving towards models that can simulate complex, long-horizon
-                            scenarios.</p>
+
+                    <!-- Challenge 3 -->
+                    <div
+                        class="bg-blue-800/50 p-6 rounded-xl border border-blue-700 backdrop-blur-sm hover:bg-blue-800/70 transition-colors">
+                        <i data-lucide="sliders-horizontal" class="w-8 h-8 text-blue-300 mb-4"></i>
+                        <h3 class="text-lg font-bold mb-3">Paradigm Shift to Controllability</h3>
+                        <p class="text-blue-100 text-sm leading-relaxed">Upgrading prompts to APIs for editable online
+                            simulations.</p>
+                    </div>
+                </div>
+
+                <!-- Ultimate Outlook -->
+                <div
+                    class="relative bg-gradient-to-r from-blue-950 to-blue-900 p-8 rounded-2xl border border-blue-700 shadow-xl overflow-hidden">
+                    <!-- Decoration -->
+                    <div
+                        class="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-blue-500 rounded-full blur-3xl opacity-20">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 -mb-10 -ml-10 w-40 h-40 bg-purple-500 rounded-full blur-3xl opacity-20">
+                    </div>
+
+                    <div class="relative z-10 text-center">
+                        <h3 class="text-xl font-bold mb-4 text-blue-200 uppercase tracking-widest text-xs">Ultimate
+                            Outlook</h3>
+                        <p class="text-lg md:text-xl text-white leading-relaxed font-light italic">
+                            "The path forward lies in the <span
+                                class="font-semibold text-blue-300">Prompt-as-Action</span> enabled by UMMs. By
+                            leveraging the reasoning capacity of LLMs to translate high-dimensional natural language
+                            intents into precise spatiotemporal dynamics, the World Model transcends content generation
+                            to become a <span class="font-bold text-white">General World Simulator</span>—a computable
+                            reality bridging digital imagination and physical law."
+                        </p>
                     </div>
                 </div>
             </div>
@@ -517,7 +975,7 @@
             <img src="images/浙大logo.png" alt="Zhejiang University">
             <img src="images/shlab.png" alt="Shanghai AI Laboratory">
             <!-- Using object for PDF as requested previously -->
-            <object data="images/OpenDataLab_blue_no_words.pdf" type="application/pdf" class="logo-pdf">
+            <object data="images/OpenDataLab_blue_no_words.png" type="image/png" class="logo-pdf">
                 <img src="images/shlab.png" alt="OpenDataLab"> <!-- Fallback if PDF fails -->
             </object>
             <img src="images/中国科学院大学标准Logo下载/国科大标准Logo/国科大标准Logo横式二（蓝色）.png" alt="UCAS">
@@ -561,82 +1019,48 @@
         </div>
     </div>
 
+    <!-- Evolution Modal -->
+    <div id="evolutionModal" class="evo-modal-container hidden" role="dialog" aria-modal="true"
+        aria-labelledby="evoTitle">
+        <div id="evoBackdrop" class="evo-modal-backdrop" onclick="closeEvolutionModal()"></div>
+        <div id="evoContent" class="evo-modal-content">
+            <button class="evo-close-btn" onclick="closeEvolutionModal()" aria-label="Close modal">
+                <i data-lucide="x" class="w-6 h-6 text-gray-700"></i>
+            </button>
+
+            <!-- Image Section (60%) -->
+            <div class="evo-image-container">
+                <img id="evoImg" src="" alt="Phase Illustration" loading="lazy">
+            </div>
+
+            <!-- Content Section (40%) -->
+            <div class="evo-text-container custom-scrollbar">
+                <div id="evoPhaseLabel" class="font-bold text-sm mb-2 uppercase tracking-wider"></div>
+                <h3 id="evoTitle" class="text-3xl font-bold text-gray-900 mb-4"></h3>
+                <div class="w-12 h-1 bg-gray-200 mb-6"></div>
+                <p id="evoDesc" class="text-gray-600 leading-relaxed text-lg mb-6 text-justify"></p>
+
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r">
+                    <p class="text-sm text-blue-800 font-medium">Key Technologies:</p>
+                    <div id="evoTags" class="flex flex-wrap gap-2 mt-2">
+                        <!-- Tags injected via JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
+        // Initialize Lucide Icons (Safe check)
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
 
-        // Chart.js - Radar Chart
-        const ctx = document.getElementById('radarChart').getContext('2d');
-        new Chart(ctx, {
-            type: 'radar',
-            data: {
-                labels: ['Modal Consistency', 'Spatial Consistency', 'Temporal Consistency', 'Physics', 'Causality'],
-                datasets: [{
-                    label: 'OpenAI Sora (Est.)',
-                    data: [90, 85, 70, 65, 60],
-                    fill: true,
-                    backgroundColor: 'rgba(59, 130, 246, 0.2)',
-                    borderColor: 'rgb(59, 130, 246)',
-                    pointBackgroundColor: 'rgb(59, 130, 246)',
-                    pointBorderColor: '#fff',
-                    pointHoverBackgroundColor: '#fff',
-                    pointHoverBorderColor: 'rgb(59, 130, 246)'
-                }, {
-                    label: 'Open Source Baseline',
-                    data: [70, 50, 40, 30, 25],
-                    fill: true,
-                    backgroundColor: 'rgba(239, 68, 68, 0.2)',
-                    borderColor: 'rgb(239, 68, 68)',
-                    pointBackgroundColor: 'rgb(239, 68, 68)',
-                    pointBorderColor: '#fff',
-                    pointHoverBackgroundColor: '#fff',
-                    pointHoverBorderColor: 'rgb(239, 68, 68)'
-                }]
-            },
-            options: {
-                elements: {
-                    line: { borderWidth: 3 }
-                },
-                scales: {
-                    r: {
-                        angleLines: { display: true },
-                        suggestedMin: 0,
-                        suggestedMax: 100
-                    }
-                }
-            }
-        });
+        // ==========================================
+        // Modal Logic (Moved to top for reliability)
+        // ==========================================
 
-        // Video Slider Logic
-        const sliderContainer = document.getElementById('videoSlider');
-        const overlay = document.getElementById('videoOverlay');
-        let isDown = false;
-
-        sliderContainer.addEventListener('mousedown', () => isDown = true);
-        window.addEventListener('mouseup', () => isDown = false);
-        sliderContainer.addEventListener('mousemove', (e) => {
-            if (!isDown) return;
-            const rect = sliderContainer.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const width = Math.max(0, Math.min(x, rect.width));
-            const percentage = (width / rect.width) * 100;
-            overlay.style.width = `${percentage}%`;
-        });
-
-        // Touch support for slider
-        sliderContainer.addEventListener('touchstart', () => isDown = true);
-        window.addEventListener('touchend', () => isDown = false);
-        sliderContainer.addEventListener('touchmove', (e) => {
-            if (!isDown) return;
-            const rect = sliderContainer.getBoundingClientRect();
-            const touch = e.touches[0];
-            const x = touch.clientX - rect.left;
-            const width = Math.max(0, Math.min(x, rect.width));
-            const percentage = (width / rect.width) * 100;
-            overlay.style.width = `${percentage}%`;
-        });
-
-        // Modal Logic
+        // Task Modal Logic
         const modal = document.getElementById('taskModal');
         const modalTitle = document.getElementById('modalTitle');
         const modalPrompt = document.getElementById('modalPrompt');
@@ -649,6 +1073,598 @@
 
         window.closeModal = function () {
             modal.classList.add('hidden');
+        }
+
+        // Evolution Modal Data & Logic
+        const evolutionData = {
+            phase1: {
+                phase: "Phase 1: Modal Consistency",
+                color: "text-blue-500",
+                title: "Evolution of Modal Consistency Paradigms",
+                description: "Transitioning from geometric isolation (Dual-Tower) to unstable early fusion, and finally to orthogonally decoupled native unified multimodal models (MM-DiT). This evolution represents the journey towards true multimodal understanding where text, vision, and other modalities are processed in a shared semantic space.",
+                image: "images/evolution/fig-4.png",
+                tags: ["Dual-Tower", "Early Fusion", "MM-DiT", "Multimodal"]
+            },
+            phase2: {
+                phase: "Phase 2: Spatial Consistency",
+                color: "text-purple-500",
+                title: "Evolution of Spatial Consistency Paradigms",
+                description: "Tracing the trajectory from early 2D proxy manifolds, to implicit continuous fields (NeRF), explicit Lagrangian primitives (3DGS), and finally generative statistical priors. This progression highlights the shift towards more robust and scalable 3D representations in world modeling.",
+                image: "images/evolution/fig-10.png",
+                tags: ["NeRF", "3DGS", "Generative Priors", "Spatial"]
+            },
+            phase3: {
+                phase: "Phase 3: Temporal Consistency",
+                color: "text-green-500",
+                title: "Evolution of Video Generation Paradigms",
+                description: "Advancing from latent temporal inflation, to discrete autoregressive sequence modeling, and culminating in native spatiotemporal continuous Diffusion Transformers. This milestone enables the simulation of complex dynamics and long-term causal dependencies.",
+                image: "images/evolution/fig-13.png",
+                tags: ["Autoregressive", "Diffusion Transformers", "Spatiotemporal", "Video Gen"]
+            }
+        };
+
+        let activeTriggerRect = null;
+
+        window.openEvolutionModal = function (trigger, phaseId) {
+            const data = evolutionData[phaseId];
+            if (!data) return;
+
+            // Update Content
+            document.getElementById('evoImg').src = data.image;
+            document.getElementById('evoTitle').innerText = data.title;
+            document.getElementById('evoDesc').innerText = data.description;
+
+            const phaseLabel = document.getElementById('evoPhaseLabel');
+            phaseLabel.innerText = data.phase;
+            phaseLabel.className = `font-bold text-sm mb-2 uppercase tracking-wider ${data.color}`;
+
+            const tagsContainer = document.getElementById('evoTags');
+            tagsContainer.innerHTML = data.tags.map(tag =>
+                `<span class="px-2 py-1 bg-white border border-gray-200 rounded text-xs text-gray-600 shadow-sm">${tag}</span>`
+            ).join('');
+
+            // Show Modal Container
+            const modal = document.getElementById('evolutionModal');
+            const backdrop = document.getElementById('evoBackdrop');
+            const content = document.getElementById('evoContent');
+
+            modal.classList.remove('hidden');
+
+            // Re-initialize Lucide icons for the new close button
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+
+            // Genie Effect Animation
+            activeTriggerRect = trigger.getBoundingClientRect();
+
+            // 1. Get final rect
+            const finalRect = content.getBoundingClientRect();
+
+            // 2. Calculate transform
+            const scaleX = activeTriggerRect.width / finalRect.width;
+            const scaleY = activeTriggerRect.height / finalRect.height;
+            const tx = activeTriggerRect.left - finalRect.left;
+            const ty = activeTriggerRect.top - finalRect.top;
+
+            // 3. Apply initial state (no transition)
+            content.style.transition = 'none';
+            content.style.transform = `translate(${tx}px, ${ty}px) scale(${scaleX}, ${scaleY})`;
+            content.style.opacity = '0.5';
+
+            // 4. Force reflow
+            content.offsetHeight;
+
+            // 5. Apply final state (with transition)
+            content.style.transition = '';
+            requestAnimationFrame(() => {
+                backdrop.classList.add('active');
+                content.classList.add('active');
+                content.style.transform = '';
+                content.style.opacity = '';
+            });
+
+            // Lock body scroll
+            document.body.style.overflow = 'hidden';
+        }
+
+        window.closeEvolutionModal = function () {
+            const modal = document.getElementById('evolutionModal');
+            const backdrop = document.getElementById('evoBackdrop');
+            const content = document.getElementById('evoContent');
+
+            // Reverse Animation
+            if (activeTriggerRect) {
+                const finalRect = content.getBoundingClientRect();
+                const scaleX = activeTriggerRect.width / finalRect.width;
+                const scaleY = activeTriggerRect.height / finalRect.height;
+                const tx = activeTriggerRect.left - finalRect.left;
+                const ty = activeTriggerRect.top - finalRect.top;
+
+                content.style.transform = `translate(${tx}px, ${ty}px) scale(${scaleX}, ${scaleY})`;
+                content.classList.remove('active');
+                content.style.opacity = '0';
+            } else {
+                content.classList.remove('active');
+            }
+
+            backdrop.classList.remove('active');
+
+            // Wait for transition to finish
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+                content.style.transform = '';
+                content.style.opacity = '';
+            }, 400);
+        }
+
+        // Close on ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !document.getElementById('evolutionModal').classList.contains('hidden')) {
+                closeEvolutionModal();
+            }
+        });
+
+        // ==========================================
+        // 3D Carousel Logic
+        // ==========================================
+        try {
+            let currentSlide = 0;
+            const carousel = document.getElementById('heatmapCarousel');
+            const indicators = document.querySelectorAll('.indicator');
+            const slides = carousel.querySelectorAll('.carousel-slide-3d');
+            const totalSlides = slides.length;
+            let autoPlayInterval;
+
+            // Lazy load function
+            function loadSlideContent(slideIndex) {
+                const slide = slides[slideIndex];
+                if (!slide) return;
+                const embed = slide.querySelector('embed');
+                const loader = slide.querySelector('.slide-loader');
+
+                if (embed && embed.getAttribute('data-src')) {
+                    embed.src = embed.getAttribute('data-src');
+                    embed.removeAttribute('data-src');
+
+                    // Hide loader when loaded (approximation for PDF)
+                    setTimeout(() => {
+                        if (loader) loader.style.opacity = '0';
+                        setTimeout(() => { if (loader) loader.remove(); }, 300);
+                    }, 1000);
+                }
+            }
+
+            function updateCarousel() {
+                if (!slides.length) return;
+                slides.forEach((slide, index) => {
+                    // Clear all state classes
+                    slide.className = slide.className.replace(/\b(active|prev|next)\b/g, '').trim();
+
+                    // Calculate position relative to current
+                    if (index === currentSlide) {
+                        slide.classList.add('active');
+                        slide.style.opacity = '1';
+                        slide.style.zIndex = '20';
+                        slide.style.transform = 'translate(-50%, -50%) translateZ(0) scale(1) rotateY(0deg)';
+                        loadSlideContent(index); // Load current
+                    } else if (index === (currentSlide - 1 + totalSlides) % totalSlides) {
+                        slide.classList.add('prev');
+                        slide.style.opacity = '0.65';
+                        slide.style.zIndex = '10';
+                        slide.style.transform = 'translate(-50%, -50%) translateX(-50%) translateZ(-100px) rotateY(20deg) scale(0.85)';
+                        loadSlideContent(index); // Preload prev
+                    } else if (index === (currentSlide + 1) % totalSlides) {
+                        slide.classList.add('next');
+                        slide.style.opacity = '0.65';
+                        slide.style.zIndex = '10';
+                        slide.style.transform = 'translate(-50%, -50%) translateX(50%) translateZ(-100px) rotateY(-20deg) scale(0.85)';
+                        loadSlideContent(index); // Preload next
+                    } else {
+                        // Hidden
+                        slide.style.opacity = '0';
+                        slide.style.zIndex = '0';
+                        slide.style.transform = 'translate(-50%, -50%) scale(0.5)';
+                    }
+                });
+
+                // Update indicators
+                indicators.forEach((indicator, index) => {
+                    if (index === currentSlide) {
+                        indicator.classList.remove('bg-gray-300', 'hover:bg-blue-400');
+                        indicator.classList.add('bg-blue-600');
+                    } else {
+                        indicator.classList.add('bg-gray-300', 'hover:bg-blue-400');
+                        indicator.classList.remove('bg-blue-600');
+                    }
+                });
+            }
+
+            // Swipe Logic
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            if (carousel) {
+                carousel.addEventListener('touchstart', e => {
+                    touchStartX = e.changedTouches[0].screenX;
+                    clearInterval(autoPlayInterval);
+                }, { passive: true });
+
+                carousel.addEventListener('touchend', e => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    if (touchEndX < touchStartX - 50) window.nextSlide();
+                    if (touchEndX > touchStartX + 50) window.prevSlide();
+                    startAutoPlay();
+                }, { passive: true });
+            }
+
+            window.nextSlide = function () {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateCarousel();
+                resetAutoPlay();
+            }
+
+            window.prevSlide = function () {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateCarousel();
+                resetAutoPlay();
+            }
+
+            window.goToSlide = function (index) {
+                currentSlide = index;
+                updateCarousel();
+                resetAutoPlay();
+            }
+
+            function startAutoPlay() {
+                clearInterval(autoPlayInterval);
+                autoPlayInterval = setInterval(window.nextSlide, 5000);
+            }
+
+            function resetAutoPlay() {
+                clearInterval(autoPlayInterval);
+                startAutoPlay();
+            }
+
+            // Initial setup
+            if (slides.length > 0) {
+                updateCarousel();
+                startAutoPlay();
+            }
+        } catch (e) {
+            console.error("Carousel init failed:", e);
+        }
+
+        // ==========================================
+        // Chart.js - Radar Chart
+        // ==========================================
+        try {
+            if (typeof Chart !== 'undefined') {
+                const cowBenchData = {
+                    models: [
+                        {
+                            name: "Sora",
+                            color: "rgb(59, 130, 246)", // Blue
+                            modal: (5.16 + 8.35 + 8.38) / 3,
+                            temporal: (9.32 + 5.80 + 6.22) / 3,
+                            spatial: (8.41 + 6.19 + 8.51) / 3,
+                            mt: (6.96 + 8.12 + 5.25) / 3,
+                            ms: (8.64 + 5.97 + 9.49) / 3,
+                            ts: (8.40 + 9.25 + 4.17) / 3,
+                            avg: 7.37
+                        },
+                        {
+                            name: "Kling",
+                            color: "rgb(16, 185, 129)", // Emerald
+                            modal: (4.11 + 8.19 + 5.63) / 3,
+                            temporal: (9.10 + 5.17 + 5.53) / 3,
+                            spatial: (8.72 + 7.88 + 9.32) / 3,
+                            mt: (7.08 + 8.71 + 6.58) / 3,
+                            ms: (8.20 + 6.79 + 9.44) / 3,
+                            ts: (8.08 + 9.30 + 5.30) / 3,
+                            avg: 7.40
+                        },
+                        {
+                            name: "GPT-image-1.5",
+                            color: "rgb(236, 72, 153)", // Pink
+                            modal: (7.75 + 8.99 + 8.34) / 3,
+                            temporal: (9.23 + 8.65 + 7.14) / 3,
+                            spatial: (8.32 + 8.53 + 9.32) / 3,
+                            mt: (8.13 + 9.74 + 8.05) / 3,
+                            ms: (9.45 + 8.69 + 9.79) / 3,
+                            ts: (8.54 + 8.20 + 7.26) / 3,
+                            avg: 8.56
+                        },
+                        {
+                            name: "HunyuanVideo",
+                            color: "rgb(249, 115, 22)", // Orange
+                            modal: (2.91 + 6.89 + 2.41) / 3,
+                            temporal: (8.62 + 3.06 + 2.94) / 3,
+                            spatial: (6.52 + 5.67 + 6.04) / 3,
+                            mt: (4.01 + 9.52 + 3.66) / 3,
+                            ms: (5.83 + 4.78 + 9.64) / 3,
+                            ts: (6.97 + 6.79 + 2.08) / 3,
+                            avg: 5.46
+                        },
+                        {
+                            name: "Emu3.5",
+                            color: "rgb(139, 92, 246)", // Violet
+                            modal: (6.15 + 8.76 + 8.61) / 3,
+                            temporal: (8.77 + 5.31 + 4.72) / 3,
+                            spatial: (8.81 + 8.62 + 8.77) / 3,
+                            mt: (5.70 + 9.42 + 6.10) / 3,
+                            ms: (8.47 + 8.61 + 9.76) / 3,
+                            ts: (8.58 + 9.22 + 5.58) / 3,
+                            avg: 7.78
+                        }
+                    ]
+                };
+
+                const ctx = document.getElementById('mainRadarChart').getContext('2d');
+                const datasets = cowBenchData.models.map(model => ({
+                    label: model.name,
+                    data: [
+                        model.modal.toFixed(2),
+                        model.spatial.toFixed(2),
+                        model.temporal.toFixed(2),
+                        model.mt.toFixed(2),
+                        model.ms.toFixed(2),
+                        model.ts.toFixed(2)
+                    ],
+                    fill: true,
+                    backgroundColor: model.color.replace('rgb', 'rgba').replace(')', ', 0.1)'),
+                    borderColor: model.color,
+                    pointBackgroundColor: model.color,
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: model.color,
+                    borderWidth: 2
+                }));
+
+                new Chart(ctx, {
+                    type: 'radar',
+                    data: {
+                        labels: ['Modal', 'Spatial', 'Temporal', 'Modal-Temp', 'Modal-Spat', 'Temp-Spat'],
+                        datasets: datasets
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            r: {
+                                angleLines: { display: true, color: '#f3f4f6' },
+                                grid: { color: '#e5e7eb' },
+                                suggestedMin: 0,
+                                suggestedMax: 10,
+                                ticks: { backdropColor: 'transparent', font: { size: 10 } },
+                                pointLabels: {
+                                    font: { size: 12, weight: 'bold' },
+                                    color: '#374151'
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: { usePointStyle: true, padding: 20 }
+                            },
+                            tooltip: {
+                                backgroundColor: 'rgba(0,0,0,0.8)',
+                                padding: 12,
+                                cornerRadius: 8
+                            }
+                        }
+                    }
+                });
+            } else {
+                console.warn("Chart.js not loaded");
+            }
+        } catch (e) {
+            console.error("Chart init failed:", e);
+        }
+
+        // ==========================================
+        // Leaderboard Logic
+        // ==========================================
+        try {
+            const fullLeaderboardData = [
+                // Closed-Source Video-Generation Models
+                { model: "Sora", AVG: 7.37, SUAT: 5.16, LCED: 8.35, MCON: 8.38, WLIN: 9.32, SLEV: 5.80, STOR: 6.22, SEPL_spatial: 8.41, OCCO_spatial: 6.19, MV3D: 8.51, TREV: 6.96, LOHO: 8.12, ATDY: 5.25, SEPL_ms: 8.64, OCCO_ms: 5.97, SEMV: 9.49, "3DLO": 8.40, OCMO: 9.25, MAZE: 4.17 },
+                { model: "Kling", AVG: 7.40, SUAT: 4.11, LCED: 8.19, MCON: 5.63, WLIN: 9.10, SLEV: 5.17, STOR: 5.53, SEPL_spatial: 8.72, OCCO_spatial: 7.88, MV3D: 9.32, TREV: 7.08, LOHO: 8.71, ATDY: 6.58, SEPL_ms: 8.20, OCCO_ms: 6.79, SEMV: 9.44, "3DLO": 8.08, OCMO: 9.30, MAZE: 5.30 },
+
+                // Closed-Source Image-Generation Models
+                { model: "GPT-image-1", AVG: 8.04, SUAT: 7.37, LCED: 8.96, MCON: 7.96, WLIN: 9.14, SLEV: 7.75, STOR: 5.68, SEPL_spatial: 8.09, OCCO_spatial: 7.43, MV3D: 9.26, TREV: 6.95, LOHO: 9.28, ATDY: 7.22, SEPL_ms: 9.00, OCCO_ms: 6.83, SEMV: 9.79, "3DLO": 8.46, OCMO: 8.22, MAZE: 7.24 },
+                { model: "Seedream-4-0", AVG: 7.13, SUAT: 5.73, LCED: 7.57, MCON: 6.73, WLIN: 8.63, SLEV: 6.25, STOR: 6.27, SEPL_spatial: 6.09, OCCO_spatial: 6.84, MV3D: 8.82, TREV: 6.70, LOHO: 8.63, ATDY: 6.77, SEPL_ms: 8.12, OCCO_ms: 7.36, SEMV: 9.50, "3DLO": 8.13, OCMO: 6.78, MAZE: 3.48 },
+                { model: "Seedream-4-5", AVG: 7.38, SUAT: 6.69, LCED: 7.78, MCON: 6.91, WLIN: 8.77, SLEV: 7.46, STOR: 6.76, SEPL_spatial: 6.27, OCCO_spatial: 7.21, MV3D: 9.06, TREV: 7.17, LOHO: 9.11, ATDY: 6.77, SEPL_ms: 8.04, OCCO_ms: 7.27, SEMV: 9.59, "3DLO": 8.23, OCMO: 7.51, MAZE: 2.28 },
+                { model: "Nano Banana", AVG: 7.84, SUAT: 7.19, LCED: 8.47, MCON: 5.63, WLIN: 8.87, SLEV: 7.86, STOR: 6.71, SEPL_spatial: 7.64, OCCO_spatial: 7.84, MV3D: 9.34, TREV: 7.33, LOHO: 9.66, ATDY: 6.67, SEPL_ms: 8.68, OCCO_ms: 7.95, SEMV: 9.20, "3DLO": 8.13, OCMO: 8.76, MAZE: 5.16 },
+                { model: "Nano Banana Pro", AVG: 8.26, SUAT: 7.39, LCED: 8.81, MCON: 6.98, WLIN: 8.88, SLEV: 8.39, STOR: 7.48, SEPL_spatial: 8.10, OCCO_spatial: 8.48, MV3D: 9.61, TREV: 7.84, LOHO: 9.56, ATDY: 7.36, SEPL_ms: 9.51, OCCO_ms: 9.17, SEMV: 9.10, "3DLO": 8.86, OCMO: 8.65, MAZE: 4.46 },
+                { model: "GPT-image-1.5", AVG: 8.56, SUAT: 7.75, LCED: 8.99, MCON: 8.34, WLIN: 9.23, SLEV: 8.65, STOR: 7.14, SEPL_spatial: 8.32, OCCO_spatial: 8.53, MV3D: 9.32, TREV: 8.13, LOHO: 9.74, ATDY: 8.05, SEPL_ms: 9.45, OCCO_ms: 8.69, SEMV: 9.79, "3DLO": 8.54, OCMO: 8.20, MAZE: 7.26 },
+
+                // Open-Source Video-Generation Models
+                { model: "Allegro", AVG: 5.27, SUAT: 1.97, LCED: 5.79, MCON: 4.41, WLIN: 7.03, SLEV: 1.91, STOR: 3.33, SEPL_spatial: 6.82, OCCO_spatial: 5.75, MV3D: 7.89, TREV: 4.72, LOHO: 7.67, ATDY: 4.80, SEPL_ms: 4.22, OCCO_ms: 5.30, SEMV: 7.19, "3DLO": 6.87, OCMO: 7.27, MAZE: 1.86 },
+                { model: "HunyuanVideo", AVG: 5.46, SUAT: 2.91, LCED: 6.89, MCON: 2.41, WLIN: 8.62, SLEV: 3.06, STOR: 2.94, SEPL_spatial: 6.52, OCCO_spatial: 5.67, MV3D: 6.04, TREV: 4.01, LOHO: 9.52, ATDY: 3.66, SEPL_ms: 5.83, OCCO_ms: 4.78, SEMV: 9.64, "3DLO": 6.97, OCMO: 6.79, MAZE: 2.08 },
+                { model: "LTX-Video", AVG: 5.72, SUAT: 3.59, LCED: 6.78, MCON: 4.54, WLIN: 8.53, SLEV: 3.67, STOR: 3.20, SEPL_spatial: 6.83, OCCO_spatial: 6.17, MV3D: 6.49, TREV: 4.76, LOHO: 7.34, ATDY: 4.95, SEPL_ms: 5.48, OCCO_ms: 5.13, SEMV: 8.77, "3DLO": 6.73, OCMO: 8.67, MAZE: 1.24 },
+                { model: "CogVideoX", AVG: 5.87, SUAT: 3.75, LCED: 5.90, MCON: 5.82, WLIN: 8.29, SLEV: 4.13, STOR: 3.72, SEPL_spatial: 6.61, OCCO_spatial: 5.55, MV3D: 5.70, TREV: 5.15, LOHO: 8.66, ATDY: 5.29, SEPL_ms: 6.44, OCCO_ms: 5.01, SEMV: 8.93, "3DLO": 6.37, OCMO: 8.23, MAZE: 2.04 },
+                { model: "Easy Animate", AVG: 6.12, SUAT: 3.78, LCED: 7.11, MCON: 5.10, WLIN: 8.70, SLEV: 4.33, STOR: 3.59, SEPL_spatial: 7.35, OCCO_spatial: 6.36, MV3D: 7.81, TREV: 4.94, LOHO: 7.85, ATDY: 5.29, SEPL_ms: 6.01, OCCO_ms: 5.58, SEMV: 7.95, "3DLO": 6.78, OCMO: 8.71, MAZE: 2.98 },
+                { model: "Wan2.2-I2V-14B", AVG: 6.18, SUAT: 3.32, LCED: 7.61, MCON: 6.57, WLIN: 8.54, SLEV: 4.00, STOR: 3.80, SEPL_spatial: 7.37, OCCO_spatial: 6.10, MV3D: 6.27, TREV: 5.33, LOHO: 8.37, ATDY: 5.24, SEPL_ms: 6.69, OCCO_ms: 6.17, SEMV: 9.51, "3DLO": 7.11, OCMO: 6.84, MAZE: 2.46 },
+                { model: "SkyReels-V2", AVG: 6.54, SUAT: 3.16, LCED: 7.45, MCON: 5.29, WLIN: 8.89, SLEV: 4.03, STOR: 3.74, SEPL_spatial: 7.92, OCCO_spatial: 5.80, MV3D: 7.93, TREV: 5.39, LOHO: 8.87, ATDY: 5.66, SEPL_ms: 7.70, OCCO_ms: 6.75, SEMV: 9.07, "3DLO": 8.18, OCMO: 8.18, MAZE: 3.66 },
+
+                // Open-Source Image-Generation Models
+                { model: "Qwen", AVG: 1.78, SUAT: 0.72, LCED: 2.21, MCON: 7.73, WLIN: 2.10, SLEV: 0.41, STOR: 1.64, SEPL_spatial: 1.89, OCCO_spatial: 1.70, MV3D: 1.35, TREV: 1.72, LOHO: 0.84, ATDY: 1.61, SEPL_ms: 1.69, OCCO_ms: 0.61, SEMV: 1.71, "3DLO": 2.96, OCMO: 0.77, MAZE: 0.32 },
+                { model: "BAGEL", AVG: 5.93, SUAT: 5.01, LCED: 5.86, MCON: 5.53, WLIN: 6.27, SLEV: 5.01, STOR: 3.96, SEPL_spatial: 5.33, OCCO_spatial: 6.43, MV3D: 7.68, TREV: 4.45, LOHO: 8.60, ATDY: 4.91, SEPL_ms: 7.08, OCCO_ms: 5.22, SEMV: 8.89, "3DLO": 5.51, OCMO: 6.00, MAZE: 5.08 },
+                { model: "UniVideo", AVG: 6.00, SUAT: 4.07, LCED: 7.27, MCON: 4.14, WLIN: 8.58, SLEV: 3.87, STOR: 3.08, SEPL_spatial: 6.84, OCCO_spatial: 6.15, MV3D: 6.81, TREV: 4.29, LOHO: 8.72, ATDY: 5.69, SEPL_ms: 6.26, OCCO_ms: 5.09, SEMV: 9.08, "3DLO": 7.34, OCMO: 7.49, MAZE: 3.16 },
+                { model: "Emu3.5", AVG: 7.78, SUAT: 6.15, LCED: 8.76, MCON: 8.61, WLIN: 8.77, SLEV: 5.31, STOR: 4.72, SEPL_spatial: 8.81, OCCO_spatial: 8.62, MV3D: 8.77, TREV: 5.70, LOHO: 9.42, ATDY: 6.10, SEPL_ms: 8.47, OCCO_ms: 8.61, SEMV: 9.76, "3DLO": 8.58, OCMO: 9.22, MAZE: 5.58 }
+            ];
+
+            let sortState = { key: 'AVG', dir: 'desc' };
+
+            function renderLeaderboard(data) {
+                const tableBody = document.getElementById('leaderboardBody');
+                if (!tableBody) return;
+                tableBody.innerHTML = '';
+
+                data.forEach((model, index) => {
+                    const row = document.createElement('tr');
+                    row.className = "hover:bg-gray-50 transition-colors border-b last:border-0";
+
+                    // Color coding for ranking (Gold, Silver, Bronze for top 3)
+                    let rankBadge = '';
+                    if (index === 0 && sortState.key === 'AVG') rankBadge = '🥇';
+                    else if (index === 1 && sortState.key === 'AVG') rankBadge = '🥈';
+                    else if (index === 2 && sortState.key === 'AVG') rankBadge = '🥉';
+
+                    // Helper for safe number formatting
+                    const fmt = (val) => typeof val === 'number' ? val.toFixed(2) : 'N/A';
+
+                    row.innerHTML = `
+                        <td class="px-6 py-3 border-b font-semibold text-gray-900 sticky left-0 bg-white z-10 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.1)]">
+                            <div class="flex items-center">
+                                <span class="w-6 inline-block text-center mr-2">${rankBadge}</span>
+                                ${model.model}
+                            </div>
+                        </td>
+                        <td class="px-4 py-3 border-b text-center font-bold text-blue-600 bg-blue-50/20">${fmt(model.AVG)}</td>
+                        
+                        <td class="px-2 py-3 border-b border-l border-gray-100 text-center text-gray-600">${fmt(model.SUAT)}</td>
+                        <td class="px-2 py-3 border-b text-center text-gray-600">${fmt(model.LCED)}</td>
+                        <td class="px-2 py-3 border-b text-center text-gray-600">${fmt(model.MCON)}</td>
+                        
+                        <td class="px-2 py-3 border-b border-l border-gray-100 text-center text-gray-600">${fmt(model.WLIN)}</td>
+                        <td class="px-2 py-3 border-b text-center text-gray-600">${fmt(model.SLEV)}</td>
+                        <td class="px-2 py-3 border-b text-center text-gray-600">${fmt(model.STOR)}</td>
+                        
+                        <td class="px-2 py-3 border-b border-l border-gray-100 text-center text-gray-600">${fmt(model.SEPL_spatial)}</td>
+                        <td class="px-2 py-3 border-b text-center text-gray-600">${fmt(model.OCCO_spatial)}</td>
+                        <td class="px-2 py-3 border-b text-center text-gray-600">${fmt(model.MV3D)}</td>
+
+                        <td class="px-2 py-3 border-b border-l border-gray-100 text-center text-gray-400 hidden lg:table-cell">${fmt(model.TREV)}</td>
+                        <td class="px-2 py-3 border-b text-center text-gray-400 hidden lg:table-cell">${fmt(model.LOHO)}</td>
+                        <td class="px-2 py-3 border-b text-center text-gray-400 hidden lg:table-cell">${fmt(model.ATDY)}</td>
+                        
+                        <td class="px-2 py-3 border-b border-l border-gray-100 text-center text-gray-400 hidden lg:table-cell">${fmt(model.SEPL_ms)}</td>
+                        <td class="px-2 py-3 border-b text-center text-gray-400 hidden lg:table-cell">${fmt(model.OCCO_ms)}</td>
+                        <td class="px-2 py-3 border-b text-center text-gray-400 hidden lg:table-cell">${fmt(model.SEMV)}</td>
+                        
+                        <td class="px-2 py-3 border-b border-l border-gray-100 text-center text-gray-400 hidden lg:table-cell">${fmt(model["3DLO"])}</td>
+                        <td class="px-2 py-3 border-b text-center text-gray-400 hidden lg:table-cell">${fmt(model.OCMO)}</td>
+                        <td class="px-2 py-3 border-b text-center text-gray-400 hidden lg:table-cell">${fmt(model.MAZE)}</td>
+                    `;
+                    tableBody.appendChild(row);
+                });
+
+                // Re-init Lucide icons for new content
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
+                }
+            }
+
+            window.sortTable = function (key) {
+                // Toggle direction if clicking same key, otherwise default to desc
+                if (sortState.key === key) {
+                    sortState.dir = sortState.dir === 'desc' ? 'asc' : 'desc';
+                } else {
+                    sortState.key = key;
+                    sortState.dir = 'desc'; // Default to high score first
+                }
+
+                // Sort data
+                const sortedData = [...fullLeaderboardData].sort((a, b) => {
+                    if (key === 'model') {
+                        return sortState.dir === 'asc'
+                            ? a.model.localeCompare(b.model)
+                            : b.model.localeCompare(a.model);
+                    }
+                    return sortState.dir === 'asc' ? a[key] - b[key] : b[key] - a[key];
+                });
+
+                // Filter if search is active
+                const searchInput = document.getElementById('leaderboardSearch');
+                if (searchInput) {
+                    const searchTerm = searchInput.value.toLowerCase();
+                    const filteredData = sortedData.filter(item =>
+                        item.model.toLowerCase().includes(searchTerm)
+                    );
+                    renderLeaderboard(filteredData);
+                } else {
+                    renderLeaderboard(sortedData);
+                }
+
+                // Update UI indicators (simplified)
+                document.querySelectorAll('th i').forEach(icon => icon.classList.remove('text-blue-600'));
+                // In a real app, we'd update the specific header icon
+            }
+
+            // Search Functionality
+            const searchInput = document.getElementById('leaderboardSearch');
+            if (searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    window.sortTable(sortState.key); // Re-render with current sort and new filter
+                });
+            }
+
+            // Export CSV Functionality
+            window.exportCSV = function () {
+                const headers = ["Model", "AVG", "SUAT", "LCED", "MCON", "WLIN", "SLEV", "STOR", "SEPL", "OCCO", "MV3D", "TREV", "LOHO", "ATDY", "SEPL_ms", "OCCO_ms", "SEMV", "3DLO", "OCMO", "MAZE"];
+                const csvRows = [headers.join(",")];
+
+                fullLeaderboardData.forEach(row => {
+                    const values = headers.map(header => {
+                        const val = row[header === "SEPL" ? "SEPL_spatial" : header === "OCCO" ? "OCCO_spatial" : header] || row[header];
+                        return `"${val}"`;
+                    });
+                    csvRows.push(values.join(","));
+                });
+
+                const csvContent = "data:text/csv;charset=utf-8," + csvRows.join("\n");
+                const encodedUri = encodeURI(csvContent);
+                const link = document.createElement("a");
+                link.setAttribute("href", encodedUri);
+                link.setAttribute("download", "cow_bench_leaderboard.csv");
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+
+            // Initial Render (Sorted by AVG desc)
+            fullLeaderboardData.sort((a, b) => b.AVG - a.AVG);
+            renderLeaderboard(fullLeaderboardData);
+
+        } catch (e) {
+            console.error("Leaderboard init failed:", e);
+        }
+
+        // ==========================================
+        // Video Slider Logic
+        // ==========================================
+        const sliderContainer = document.getElementById('videoSlider');
+        if (sliderContainer) {
+            const overlay = document.getElementById('videoOverlay');
+            let isDown = false;
+
+            sliderContainer.addEventListener('mousedown', () => isDown = true);
+            window.addEventListener('mouseup', () => isDown = false);
+            sliderContainer.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                const rect = sliderContainer.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const width = Math.max(0, Math.min(x, rect.width));
+                const percentage = (width / rect.width) * 100;
+                overlay.style.width = `${percentage}%`;
+            });
+
+            // Touch support for slider
+            sliderContainer.addEventListener('touchstart', () => isDown = true);
+            window.addEventListener('touchend', () => isDown = false);
+            sliderContainer.addEventListener('touchmove', (e) => {
+                if (!isDown) return;
+                const rect = sliderContainer.getBoundingClientRect();
+                const touch = e.touches[0];
+                const x = touch.clientX - rect.left;
+                const width = Math.max(0, Math.min(x, rect.width));
+                const percentage = (width / rect.width) * 100;
+                overlay.style.width = `${percentage}%`;
+            });
         }
     </script>
 </body>

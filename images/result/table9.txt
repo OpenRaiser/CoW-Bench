@@ -1,0 +1,274 @@
+// Chart.js-friendly "table" dataset (headers + rows)
+// - headerGroups: top header row with colspans
+// - columns: second header row (leaf columns), each has group + label
+// - rows: includes section rows and data rows
+export const cowBenchTable = {
+  caption: {
+    title:
+      "Main results on CoW-Bench over 18 sub-tasks (higher is better); MEAN averages all sub-tasks.",
+    abbrev:
+      "SUAT=Subj-Attr, LCED=Local-Edit, MCON=Multi-Const; WLIN=Worldline, SLEV=Slow-Evol, STOR=Stage-Order; SEPL=Sem-Planar, OCCO=Occ/Contain; MV3D=MV-3D; TREV=Trigger-Event; LOHO=Long-Horizon, ATDY=Attr-Dyn; SEMV=Sem-MV; 3DLO=3D-Loop; OCMO=Occ-Motion; MAZE=Maze-2D."
+  },
+
+  headerGroups: [
+    { label: "Model", colspan: 1 },
+    { label: "Modal", colspan: 3 },
+    { label: "Temporal", colspan: 3 },
+    { label: "Spatial", colspan: 3 },
+    { label: "Modal-Temporal", colspan: 3 },
+    { label: "Modal-Spatial", colspan: 3 },
+    { label: "Temporal-Spatial", colspan: 3 },
+    { label: "AVG", colspan: 1 }
+  ],
+
+  // leaf columns in the exact visual order
+  columns: [
+    { id: "model", label: "Model", group: "Model" },
+
+    { id: "SUAT", label: "SUAT", group: "Modal" },
+    { id: "LCED", label: "LCED", group: "Modal" },
+    { id: "MCON", label: "MCON", group: "Modal" },
+
+    { id: "WLIN", label: "WLIN", group: "Temporal" },
+    { id: "SLEV", label: "SLEV", group: "Temporal" },
+    { id: "STOR", label: "STOR", group: "Temporal" },
+
+    { id: "SEPL_spatial", label: "SEPL", group: "Spatial" },
+    { id: "OCCO_spatial", label: "OCCO", group: "Spatial" },
+    { id: "MV3D", label: "MV3D", group: "Spatial" },
+
+    { id: "TREV", label: "TREV", group: "Modal-Temporal" },
+    { id: "LOHO", label: "LOHO", group: "Modal-Temporal" },
+    { id: "ATDY", label: "ATDY", group: "Modal-Temporal" },
+
+    { id: "SEPL_ms", label: "SEPL", group: "Modal-Spatial" },
+    { id: "OCCO_ms", label: "OCCO", group: "Modal-Spatial" },
+    { id: "SEMV", label: "SEMV", group: "Modal-Spatial" },
+
+    { id: "3DLO", label: "3DLO", group: "Temporal-Spatial" },
+    { id: "OCMO", label: "OCMO", group: "Temporal-Spatial" },
+    { id: "MAZE", label: "MAZE", group: "Temporal-Spatial" },
+
+    { id: "AVG", label: "AVG", group: "AVG" }
+  ],
+
+  // rows: section rows + data rows
+  rows: [
+    { type: "section", label: "Closed-Source Video-Generation Models" },
+    {
+      type: "data",
+      model: "Sora",
+      SUAT: 5.16, LCED: 8.35, MCON: 8.38,
+      WLIN: 9.32, SLEV: 5.80, STOR: 6.22,
+      SEPL_spatial: 8.41, OCCO_spatial: 6.19, MV3D: 8.51,
+      TREV: 6.96, LOHO: 8.12, ATDY: 5.25,
+      SEPL_ms: 8.64, OCCO_ms: 5.97, SEMV: 9.49,
+      "3DLO": 8.40, OCMO: 9.25, MAZE: 4.17,
+      AVG: 7.37
+    },
+    {
+      type: "data",
+      model: "Kling",
+      SUAT: 4.11, LCED: 8.19, MCON: 5.63,
+      WLIN: 9.10, SLEV: 5.17, STOR: 5.53,
+      SEPL_spatial: 8.72, OCCO_spatial: 7.88, MV3D: 9.32,
+      TREV: 7.08, LOHO: 8.71, ATDY: 6.58,
+      SEPL_ms: 8.20, OCCO_ms: 6.79, SEMV: 9.44,
+      "3DLO": 8.08, OCMO: 9.30, MAZE: 5.30,
+      AVG: 7.40
+    },
+
+    { type: "section", label: "Closed-Source Image-Generation Models" },
+    {
+      type: "data",
+      model: "GPT-image-1",
+      SUAT: 7.37, LCED: 8.96, MCON: 7.96,
+      WLIN: 9.14, SLEV: 7.75, STOR: 5.68,
+      SEPL_spatial: 8.09, OCCO_spatial: 7.43, MV3D: 9.26,
+      TREV: 6.95, LOHO: 9.28, ATDY: 7.22,
+      SEPL_ms: 9.00, OCCO_ms: 6.83, SEMV: 9.79,
+      "3DLO": 8.46, OCMO: 8.22, MAZE: 7.24,
+      AVG: 8.04
+    },
+    {
+      type: "data",
+      model: "Seedream-4-0",
+      SUAT: 5.73, LCED: 7.57, MCON: 6.73,
+      WLIN: 8.63, SLEV: 6.25, STOR: 6.27,
+      SEPL_spatial: 6.09, OCCO_spatial: 6.84, MV3D: 8.82,
+      TREV: 6.70, LOHO: 8.63, ATDY: 6.77,
+      SEPL_ms: 8.12, OCCO_ms: 7.36, SEMV: 9.50,
+      "3DLO": 8.13, OCMO: 6.78, MAZE: 3.48,
+      AVG: 7.13
+    },
+    {
+      type: "data",
+      model: "Seedream-4-5",
+      SUAT: 6.69, LCED: 7.78, MCON: 6.91,
+      WLIN: 8.77, SLEV: 7.46, STOR: 6.76,
+      SEPL_spatial: 6.27, OCCO_spatial: 7.21, MV3D: 9.06,
+      TREV: 7.17, LOHO: 9.11, ATDY: 6.77,
+      SEPL_ms: 8.04, OCCO_ms: 7.27, SEMV: 9.59,
+      "3DLO": 8.23, OCMO: 7.51, MAZE: 2.28,
+      AVG: 7.38
+    },
+    {
+      type: "data",
+      model: "Nano Banana",
+      SUAT: 7.19, LCED: 8.47, MCON: 5.63,
+      WLIN: 8.87, SLEV: 7.86, STOR: 6.71,
+      SEPL_spatial: 7.64, OCCO_spatial: 7.84, MV3D: 9.34,
+      TREV: 7.33, LOHO: 9.66, ATDY: 6.67,
+      SEPL_ms: 8.68, OCCO_ms: 7.95, SEMV: 9.20,
+      "3DLO": 8.13, OCMO: 8.76, MAZE: 5.16,
+      AVG: 7.84
+    },
+    {
+      type: "data",
+      model: "Nano Banana Pro",
+      SUAT: 7.39, LCED: 8.81, MCON: 6.98,
+      WLIN: 8.88, SLEV: 8.39, STOR: 7.48,
+      SEPL_spatial: 8.10, OCCO_spatial: 8.48, MV3D: 9.61,
+      TREV: 7.84, LOHO: 9.56, ATDY: 7.36,
+      SEPL_ms: 9.51, OCCO_ms: 9.17, SEMV: 9.10,
+      "3DLO": 8.86, OCMO: 8.65, MAZE: 4.46,
+      AVG: 8.26
+    },
+    {
+      type: "data",
+      model: "GPT-image-1.5",
+      SUAT: 7.75, LCED: 8.99, MCON: 8.34,
+      WLIN: 9.23, SLEV: 8.65, STOR: 7.14,
+      SEPL_spatial: 8.32, OCCO_spatial: 8.53, MV3D: 9.32,
+      TREV: 8.13, LOHO: 9.74, ATDY: 8.05,
+      SEPL_ms: 9.45, OCCO_ms: 8.69, SEMV: 9.79,
+      "3DLO": 8.54, OCMO: 8.20, MAZE: 7.26,
+      AVG: 8.56
+    },
+
+    { type: "section", label: "Open-Source Video-Generation Models" },
+    {
+      type: "data",
+      model: "Allegro",
+      SUAT: 1.97, LCED: 5.79, MCON: 4.41,
+      WLIN: 7.03, SLEV: 1.91, STOR: 3.33,
+      SEPL_spatial: 6.82, OCCO_spatial: 5.75, MV3D: 7.89,
+      TREV: 4.72, LOHO: 7.67, ATDY: 4.80,
+      SEPL_ms: 4.22, OCCO_ms: 5.30, SEMV: 7.19,
+      "3DLO": 6.87, OCMO: 7.27, MAZE: 1.86,
+      AVG: 5.27
+    },
+    {
+      type: "data",
+      model: "HunyuanVideo",
+      SUAT: 2.91, LCED: 6.89, MCON: 2.41,
+      WLIN: 8.62, SLEV: 3.06, STOR: 2.94,
+      SEPL_spatial: 6.52, OCCO_spatial: 5.67, MV3D: 6.04,
+      TREV: 4.01, LOHO: 9.52, ATDY: 3.66,
+      SEPL_ms: 5.83, OCCO_ms: 4.78, SEMV: 9.64,
+      "3DLO": 6.97, OCMO: 6.79, MAZE: 2.08,
+      AVG: 5.46
+    },
+    {
+      type: "data",
+      model: "LTX-Video",
+      SUAT: 3.59, LCED: 6.78, MCON: 4.54,
+      WLIN: 8.53, SLEV: 3.67, STOR: 3.20,
+      SEPL_spatial: 6.83, OCCO_spatial: 6.17, MV3D: 6.49,
+      TREV: 4.76, LOHO: 7.34, ATDY: 4.95,
+      SEPL_ms: 5.48, OCCO_ms: 5.13, SEMV: 8.77,
+      "3DLO": 6.73, OCMO: 8.67, MAZE: 1.24,
+      AVG: 5.72
+    },
+    {
+      type: "data",
+      model: "CogVideoX",
+      SUAT: 3.75, LCED: 5.90, MCON: 5.82,
+      WLIN: 8.29, SLEV: 4.13, STOR: 3.72,
+      SEPL_spatial: 6.61, OCCO_spatial: 5.55, MV3D: 5.70,
+      TREV: 5.15, LOHO: 8.66, ATDY: 5.29,
+      SEPL_ms: 6.44, OCCO_ms: 5.01, SEMV: 8.93,
+      "3DLO": 6.37, OCMO: 8.23, MAZE: 2.04,
+      AVG: 5.87
+    },
+    {
+      type: "data",
+      model: "Easy Animate",
+      SUAT: 3.78, LCED: 7.11, MCON: 5.10,
+      WLIN: 8.70, SLEV: 4.33, STOR: 3.59,
+      SEPL_spatial: 7.35, OCCO_spatial: 6.36, MV3D: 7.81,
+      TREV: 4.94, LOHO: 7.85, ATDY: 5.29,
+      SEPL_ms: 6.01, OCCO_ms: 5.58, SEMV: 7.95,
+      "3DLO": 6.78, OCMO: 8.71, MAZE: 2.98,
+      AVG: 6.12
+    },
+    {
+      type: "data",
+      model: "Wan2.2-I2V-14B",
+      SUAT: 3.32, LCED: 7.61, MCON: 6.57,
+      WLIN: 8.54, SLEV: 4.00, STOR: 3.80,
+      SEPL_spatial: 7.37, OCCO_spatial: 6.10, MV3D: 6.27,
+      TREV: 5.33, LOHO: 8.37, ATDY: 5.24,
+      SEPL_ms: 6.69, OCCO_ms: 6.17, SEMV: 9.51,
+      "3DLO": 7.11, OCMO: 6.84, MAZE: 2.46,
+      AVG: 6.18
+    },
+    {
+      type: "data",
+      model: "SkyReels-V2",
+      SUAT: 3.16, LCED: 7.45, MCON: 5.29,
+      WLIN: 8.89, SLEV: 4.03, STOR: 3.74,
+      SEPL_spatial: 7.92, OCCO_spatial: 5.80, MV3D: 7.93,
+      TREV: 5.39, LOHO: 8.87, ATDY: 5.66,
+      SEPL_ms: 7.70, OCCO_ms: 6.75, SEMV: 9.07,
+      "3DLO": 8.18, OCMO: 8.18, MAZE: 3.66,
+      AVG: 6.54
+    },
+
+    { type: "section", label: "Open-Source Image-Generation Models" },
+    {
+      type: "data",
+      model: "Qwen",
+      SUAT: 0.72, LCED: 2.21, MCON: 7.73,
+      WLIN: 2.10, SLEV: 0.41, STOR: 1.64,
+      SEPL_spatial: 1.89, OCCO_spatial: 1.70, MV3D: 1.35,
+      TREV: 1.72, LOHO: 0.84, ATDY: 1.61,
+      SEPL_ms: 1.69, OCCO_ms: 0.61, SEMV: 1.71,
+      "3DLO": 2.96, OCMO: 0.77, MAZE: 0.32,
+      AVG: 1.78
+    },
+    {
+      type: "data",
+      model: "BAGEL",
+      SUAT: 5.01, LCED: 5.86, MCON: 5.53,
+      WLIN: 6.27, SLEV: 5.01, STOR: 3.96,
+      SEPL_spatial: 5.33, OCCO_spatial: 6.43, MV3D: 7.68,
+      TREV: 4.45, LOHO: 8.60, ATDY: 4.91,
+      SEPL_ms: 7.08, OCCO_ms: 5.22, SEMV: 8.89,
+      "3DLO": 5.51, OCMO: 6.00, MAZE: 5.08,
+      AVG: 5.93
+    },
+    {
+      type: "data",
+      model: "UniVideo",
+      SUAT: 4.07, LCED: 7.27, MCON: 4.14,
+      WLIN: 8.58, SLEV: 3.87, STOR: 3.08,
+      SEPL_spatial: 6.84, OCCO_spatial: 6.15, MV3D: 6.81,
+      TREV: 4.29, LOHO: 8.72, ATDY: 5.69,
+      SEPL_ms: 6.26, OCCO_ms: 5.09, SEMV: 9.08,
+      "3DLO": 7.34, OCMO: 7.49, MAZE: 3.16,
+      AVG: 6.00
+    },
+    {
+      type: "data",
+      model: "Emu3.5",
+      SUAT: 6.15, LCED: 8.76, MCON: 8.61,
+      WLIN: 8.77, SLEV: 5.31, STOR: 4.72,
+      SEPL_spatial: 8.81, OCCO_spatial: 8.62, MV3D: 8.77,
+      TREV: 5.70, LOHO: 9.42, ATDY: 6.10,
+      SEPL_ms: 8.47, OCCO_ms: 8.61, SEMV: 9.76,
+      "3DLO": 8.58, OCMO: 9.22, MAZE: 5.58,
+      AVG: 7.78
+    }
+  ]
+};
