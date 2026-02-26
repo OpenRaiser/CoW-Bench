@@ -342,24 +342,42 @@
                 </h1>
 
                 <!-- Authors -->
-                <div class="flex flex-wrap justify-center gap-4 text-lg text-gray-700 mb-4">
-                    <a href="#"
-                        class="hover:text-blue-600 border-b border-transparent hover:border-blue-600 transition-all">Jingxuan
-                        Wei</a>
-                    <a href="#"
-                        class="hover:text-blue-600 border-b border-transparent hover:border-blue-600 transition-all">Siyuan
-                        Li</a>
-                    <a href="#"
-                        class="hover:text-blue-600 border-b border-transparent hover:border-blue-600 transition-all">Cheng
-                        Tan</a>
+                <div
+                    class="flex flex-wrap justify-center gap-x-4 gap-y-2 text-lg text-gray-800 mb-6 max-w-5xl mx-auto leading-relaxed">
+                    <span class="hover:text-blue-600 transition-colors">Jingxuan Wei<sup>2</sup></span>
+                    <span class="hover:text-blue-600 transition-colors">Siyuan Li<sup>3</sup></span>
+                    <span class="hover:text-blue-600 transition-colors">Yuhang Xu<sup>2</sup></span>
+                    <span class="hover:text-blue-600 transition-colors">Zheng Sun<sup>2</sup></span>
+                    <span class="hover:text-blue-600 transition-colors">Junjie Jiang<sup>2</sup></span>
+                    <span class="hover:text-blue-600 transition-colors">Hexuan Jin<sup>2</sup></span>
+                    <span class="hover:text-blue-600 transition-colors">Caijun Jia<sup>2</sup></span>
+                    <span class="hover:text-blue-600 transition-colors">Honghao He<sup>2</sup></span>
+                    <span class="hover:text-blue-600 transition-colors">Xinglong Xu<sup>2</sup></span>
+                    <span class="hover:text-blue-600 transition-colors">Xi Bai<sup>2</sup></span>
+                    <span class="hover:text-blue-600 transition-colors">Chang Yu<sup>3</sup></span>
+                    <span class="hover:text-blue-600 transition-colors">Junnan Zhu<sup>2</sup></span>
+                    <span class="hover:text-blue-600 transition-colors">Xuanhe Zhou<sup>5</sup></span>
+                    <span class="hover:text-blue-600 transition-colors">Jintao Chen<sup>6</sup></span>
+                    <span class="hover:text-blue-600 transition-colors">Xiaobin Hu<sup>4</sup></span>
+                    <span class="hover:text-blue-600 transition-colors">Shancheng Pang<sup>7</sup></span>
+                    <span class="hover:text-blue-600 transition-colors">Bihui Yu<sup>2</sup></span>
+                    <span class="hover:text-blue-600 transition-colors">Ran He<sup>2</sup></span>
+                    <span class="hover:text-blue-600 transition-colors">Zhen Lei<sup>2</sup></span>
+                    <span class="hover:text-blue-600 transition-colors">Stan Z. Li<sup>3</sup></span>
+                    <span class="hover:text-blue-600 transition-colors">Conghui He<sup>1</sup></span>
+                    <span class="hover:text-blue-600 transition-colors">Shuicheng Yan<sup>4</sup></span>
+                    <span class="hover:text-blue-600 transition-colors">Cheng Tan<sup>1</sup></span>
                 </div>
 
                 <!-- Affiliations -->
-                <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-500 mb-8">
-                    <span class="flex items-center"><i data-lucide="building-2" class="w-4 h-4 mr-1"></i> University of
-                        Chinese Academy of Sciences</span>
-                    <span class="flex items-center"><i data-lucide="flask-conical" class="w-4 h-4 mr-1"></i> Shanghai AI
-                        Laboratory</span>
+                <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-500 mb-8 max-w-4xl mx-auto">
+                    <span class="flex items-center"><sup>1</sup> Shanghai Artificial Intelligence Laboratory</span>
+                    <span class="flex items-center"><sup>2</sup> University of Chinese Academy of Sciences</span>
+                    <span class="flex items-center"><sup>3</sup> Westlake University</span>
+                    <span class="flex items-center"><sup>4</sup> National University of Singapore</span>
+                    <span class="flex items-center"><sup>5</sup> Shanghai Jiaotong University</span>
+                    <span class="flex items-center"><sup>6</sup> Zhejiang University</span>
+                    <span class="flex items-center"><sup>7</sup> China University of Petroleum (East China)</span>
                 </div>
 
                 <!-- Action Buttons -->
@@ -575,44 +593,332 @@
                 </div>
 
                 <!-- Tabs -->
-                <div class="flex justify-center mb-8 space-x-2">
-                    <button class="px-4 py-2 rounded-full bg-blue-600 text-white font-medium shadow-sm">All
-                        Tasks</button>
-                    <button
-                        class="px-4 py-2 rounded-full bg-white text-gray-600 hover:bg-gray-100 font-medium border border-gray-200">Object
-                        State</button>
-                    <button
-                        class="px-4 py-2 rounded-full bg-white text-gray-600 hover:bg-gray-100 font-medium border border-gray-200">Physics
-                        Dynamics</button>
-                    <button
-                        class="px-4 py-2 rounded-full bg-white text-gray-600 hover:bg-gray-100 font-medium border border-gray-200">Spatio-temporal</button>
+                <div class="flex justify-center flex-wrap gap-2 mb-8" id="taskTabs">
+                    <button onclick="renderGrid()"
+                        class="px-4 py-2 rounded-full bg-blue-600 text-white font-medium shadow-sm transition-all hover:shadow-md"
+                        data-tab="all">All Tasks</button>
+                    <!-- Other tabs will be generated by JS -->
                 </div>
 
-                <!-- Task Gallery (Grid) -->
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                    <!-- Generating placeholders for 18 tasks -->
-                    <!-- In a real scenario, these would be specific GIFs -->
-                    <script>
-                        const tasks = [
-                            "Gravity", "Collision", "Friction", "Rigidity", "Fluid", "Light",
-                            "Perspective", "Occlusion", "Permanence", "Counting", "Color", "Material",
-                            "Action", "Sequence", "Causality", "Transition", "Speed", "Trajectory"
-                        ];
+                <!-- Task Gallery Container -->
+                <div id="taskGalleryContainer" class="min-h-[400px]">
+                    <!-- Content will be injected here -->
+                </div>
 
-                        tasks.forEach((task, index) => {
-                            document.write(`
-                                <div class="group relative aspect-square bg-gray-200 rounded-lg overflow-hidden cursor-pointer hover:ring-2 hover:ring-blue-500 transition-all" onclick="openModal('${task}')">
-                                    <div class="absolute inset-0 flex items-center justify-center text-gray-400">
-                                        <i data-lucide="play-circle" class="w-8 h-8 opacity-50 group-hover:opacity-100 transition-opacity"></i>
-                                    </div>
-                                    <div class="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs py-1 px-2 text-center backdrop-blur-sm">
-                                        ${task}
-                                    </div>
-                                </div>
-                            `);
+                <script>
+                    // ==========================================
+                    // Data Maps (Moved to top for availability)
+                    // ==========================================
+
+                    // Task Prompts Map
+                    window.taskPrompts = {
+                        "Subj-Attr": "Generate a fish with the same material.",
+                        "Minor-Ctrl": "Change only the digital clock display: Simulate the digital clock transi-tioning from 12:00 to 12:30 over a few seconds. All other aspects of the image must remain completely unchanged.",
+                        "Multi-Req": "Gray-hoodied A (backpack L) gives B a bottle (R); orange-shirt B (skateboard R) gives A a hat (L). A brown squirrel on a branch watches B. No others; no text/logos/watermarks.",
+                        "2D-Rel": "The cat on the left moves to the left. The cat on the right moves to the right. Keep the camera fixed.",
+                        "2D-Layed": "Slowly close the drawer. As the drawer closes, the books should gradually become occluded.",
+                        "3D": "Move and rotate the camera to the left to display three views of the same bedroom. Ensure structural rigidity and correct occlusion relations during the perspective switches.",
+                        "Consist": "The ceiling fan rotates continuously for five minutes, with the blades spinning smoothly and the body remaining stationary.",
+                        "Slow-Evol": "Time lapse: An hour passes.",
+                        "State": "Demolish a house made of building blocks.",
+                        "Sem-SEPL": "The car with the blue roof moves to the right. The remaining three cars move to the left. Maintain vehicle identity.",
+                        "Sem-OCCO": "Place only the apples into the bowl. The pears must remain outside the bowl and fully visible.",
+                        "SEMV": "Static scene, 4 views, slight left camera rotation. Foreground: small 'STOP' sign. Background: book (left), pen (right). Maintain strict depth and relative spatial arrangement.",
+                        "LOHO": "Car driving on a road with a blue side stripe. Constraint: The stripe must remain strictly static in color and position during motion.",
+                        "ATDY": "Fixed camera, dark room. A floating sphere rotates slowly, cycling colors (Red → Orange → Green → Blue → Red) in a continuous 4-second loop, starting at Red.",
+                        "TREV": "Smartphone with visible power button, initially black screen. Action: Press button. Result: Screen instantly wakes to lock screen. (Stay off until interaction).",
+                        "MAZE": "A red dot moves from the bottom-left corner to the green dot in the top-right corner, generating a red path trajectory.",
+                        "OCMO": "The camera tracks alongside a car driving to the left in a suburban environment.",
+                        "3DLO": "Daylight balcony reveal of city skyline. Action: Camera pans back. Transition: Light shifts to twilight with twinkling lights, seamlessly merging back into the bedroom."
+                    };
+
+                    // Failure Case Images Map
+                    window.taskFailureImages = {
+                        "SUAT": "images/sample_analysis/failure_case_gif/M_Subj-Attr.gif",
+                        "LCED": "images/sample_analysis/failure_case_gif/M_Minor-Ctrl.gif",
+                        "MCON": "images/sample_analysis/failure_case_gif/M_Multi-Req.gif",
+                        "SEPL": "images/sample_analysis/failure_case_gif/S_2D-Rel.gif",
+                        "OCCO": "images/sample_analysis/failure_case_gif/S_2D-Layed.gif",
+                        "MV3D": "images/sample_analysis/failure_case_gif/S_3D.gif",
+                        "WLIN": "images/sample_analysis/failure_case_gif/T_Consist.gif",
+                        "SLEV": "images/sample_analysis/failure_case_gif/T_Slow-Evol.gif",
+                        "STOR": "images/sample_analysis/failure_case_gif/T_State.gif",
+                        "Sem-SEPL": "images/sample_analysis/failure_case_gif/MS_2D-Rel.gif",
+                        "Sem-OCCO": "images/sample_analysis/failure_case_gif/MS_2D-Layed.gif",
+                        "SEMV": "images/sample_analysis/failure_case_gif/MS_3D-POV.gif",
+                        "LOHO": "images/sample_analysis/failure_case_gif/MT_Prop-Cons.gif",
+                        "ATDY": "images/sample_analysis/failure_case_gif/MT_Prop-Var.gif",
+                        "TREV": "images/sample_analysis/failure_case_gif/MT_Event-Rsp.gif",
+                        "MAZE": "images/sample_analysis/failure_case_gif/TS_Maze-2D.gif",
+                        "OCMO": "images/sample_analysis/failure_case_gif/TS_Cam-Mask.gif",
+                        "3DLO": "images/sample_analysis/failure_case_gif/TS_3D-Recon.gif"
+                    };
+
+                    // Reference Images Map
+                    window.taskReferenceImages = {
+                        "SUAT": "images/sample_analysis/sample_img/M_Subj-Attr.png",
+                        "LCED": "images/sample_analysis/sample_img/M_Minor-Ctrl.png",
+                        "MCON": "images/sample_analysis/sample_img/M_Multi-Req.png",
+                        "SEPL": "images/sample_analysis/sample_img/S_2D-Rel.png",
+                        "OCCO": "images/sample_analysis/sample_img/S_2D-Layed.png",
+                        "MV3D": "images/sample_analysis/sample_img/S_3D.png",
+                        "WLIN": "images/sample_analysis/sample_img/T_Consist.png",
+                        "SLEV": "images/sample_analysis/sample_img/T_Slow-Evol.png",
+                        "STOR": "images/sample_analysis/sample_img/T_State.png",
+                        "Sem-SEPL": "images/sample_analysis/sample_img/MS_2D-Rel.png",
+                        "Sem-OCCO": "images/sample_analysis/sample_img/MS_2D-Layed.png",
+                        "SEMV": "images/sample_analysis/sample_img/MS_3D-POV.png",
+                        "LOHO": "images/sample_analysis/sample_img/MT_Prop-Cons.png",
+                        "ATDY": "images/sample_analysis/sample_img/MT_Prop-Var.png",
+                        "TREV": "images/sample_analysis/sample_img/MT_Event-Rsp.png",
+                        "MAZE": "images/sample_analysis/sample_img/TS_Maze-2D.png",
+                        "OCMO": "images/sample_analysis/sample_img/TS_Cam-Mask.png",
+                        "3DLO": "images/sample_analysis/sample_img/TS_3D-Recon.png"
+                    };
+
+                    // Success Case Images Map
+                    window.taskSuccessImages = {
+                        "SUAT": "images/sample_analysis/success_case_gif/M_Subj-Attr.gif",
+                        "LCED": "images/sample_analysis/success_case_gif/M_Minor-Ctrl.gif",
+                        "MCON": "images/sample_analysis/success_case_gif/M_Multi-Req.gif",
+                        "SEPL": "images/sample_analysis/success_case_gif/S_2D-Rel.gif",
+                        "OCCO": "images/sample_analysis/success_case_gif/S_2D-Layed.gif",
+                        "MV3D": "images/sample_analysis/success_case_gif/S_3D-POV.gif",
+                        "WLIN": "images/sample_analysis/success_case_gif/T_Consist.gif",
+                        "SLEV": "images/sample_analysis/success_case_gif/T_Slow-Evol.gif",
+                        "STOR": "images/sample_analysis/success_case_gif/T_State.gif",
+                        "Sem-SEPL": "images/sample_analysis/success_case_gif/MS_2D-Rel.gif",
+                        "Sem-OCCO": "images/sample_analysis/success_case_gif/MS_2D-Layed.gif",
+                        "SEMV": "images/sample_analysis/success_case_gif/MS_3D-POV.gif",
+                        "LOHO": "images/sample_analysis/success_case_gif/MT_Prop-Cons.gif",
+                        "ATDY": "images/sample_analysis/success_case_gif/MT_Prop-Var.gif",
+                        "TREV": "images/sample_analysis/success_case_gif/MT_Event-Rsp.gif",
+                        "MAZE": "images/sample_analysis/success_case_gif/TS_Maze-2D.gif",
+                        "OCMO": "images/sample_analysis/success_case_gif/TS_Cam-Mask.gif",
+                        "3DLO": "images/sample_analysis/success_case_gif/TS_3D-Recon.gif"
+                    };
+
+                    const taskCategories = [
+                        {
+                            name: "Modal",
+                            color: "bg-blue-100 text-blue-800",
+                            btnColor: "hover:bg-blue-50 text-blue-700 border-blue-200",
+                            activeColor: "bg-blue-600 text-white border-blue-600",
+                            tasks: [
+                                { name: "Subj-Attr", abbr: "SUAT", img: "images/sample_analysis/sample_img/M_Subj-Attr.png" },
+                                { name: "Minor-Ctrl", abbr: "LCED", img: "images/sample_analysis/sample_img/M_Minor-Ctrl.png" },
+                                { name: "Multi-Req", abbr: "MCON", img: "images/sample_analysis/sample_img/M_Multi-Req.png" }
+                            ]
+                        },
+                        {
+                            name: "Spatial",
+                            color: "bg-green-100 text-green-800",
+                            btnColor: "hover:bg-green-50 text-green-700 border-green-200",
+                            activeColor: "bg-green-600 text-white border-green-600",
+                            tasks: [
+                                { name: "2D-Rel", abbr: "SEPL", img: "images/sample_analysis/sample_img/S_2D-Rel.png" },
+                                { name: "2D-Layed", abbr: "OCCO", img: "images/sample_analysis/sample_img/S_2D-Layed.png" },
+                                { name: "3D", abbr: "MV3D", img: "images/sample_analysis/sample_img/S_3D.png" }
+                            ]
+                        },
+                        {
+                            name: "Temporal",
+                            color: "bg-orange-100 text-orange-800",
+                            btnColor: "hover:bg-orange-50 text-orange-700 border-orange-200",
+                            activeColor: "bg-orange-600 text-white border-orange-600",
+                            tasks: [
+                                { name: "Consist", abbr: "WLIN", img: "images/sample_analysis/sample_img/T_Consist.png" },
+                                { name: "Slow-Evol", abbr: "SLEV", img: "images/sample_analysis/sample_img/T_Slow-Evol.png" },
+                                { name: "State", abbr: "STOR", img: "images/sample_analysis/sample_img/T_State.png" }
+                            ]
+                        },
+                        {
+                            name: "Modal × Space",
+                            color: "bg-indigo-100 text-indigo-800",
+                            btnColor: "hover:bg-indigo-50 text-indigo-700 border-indigo-200",
+                            activeColor: "bg-indigo-600 text-white border-indigo-600",
+                            tasks: [
+                                { name: "2D-Rel", abbr: "Sem-SEPL", img: "images/sample_analysis/sample_img/MS_2D-Rel.png" },
+                                { name: "2D-Layed", abbr: "Sem-OCCO", img: "images/sample_analysis/sample_img/MS_2D-Layed.png" },
+                                { name: "3D-POV", abbr: "SEMV", img: "images/sample_analysis/sample_img/MS_3D-POV.png" }
+                            ]
+                        },
+                        {
+                            name: "Modal × Time",
+                            color: "bg-purple-100 text-purple-800",
+                            btnColor: "hover:bg-purple-50 text-purple-700 border-purple-200",
+                            activeColor: "bg-purple-600 text-white border-purple-600",
+                            tasks: [
+                                { name: "Prop-Cons", abbr: "LOHO", img: "images/sample_analysis/sample_img/MT_Prop-Cons.png" },
+                                { name: "Prop-Var", abbr: "ATDY", img: "images/sample_analysis/sample_img/MT_Prop-Var.png" },
+                                { name: "Event-Rsp", abbr: "TREV", img: "images/sample_analysis/sample_img/MT_Event-Rsp.png" }
+                            ]
+                        },
+                        {
+                            name: "Time × Space",
+                            color: "bg-rose-100 text-rose-800",
+                            btnColor: "hover:bg-rose-50 text-rose-700 border-rose-200",
+                            activeColor: "bg-rose-600 text-white border-rose-600",
+                            tasks: [
+                                { name: "Maze-2D", abbr: "MAZE", img: "images/sample_analysis/sample_img/TS_Maze-2D.png" },
+                                { name: "Cam-Mask", abbr: "OCMO", img: "images/sample_analysis/sample_img/TS_Cam-Mask.png" },
+                                { name: "3D-Recon", abbr: "3DLO", img: "images/sample_analysis/sample_img/TS_3D-Recon.png" }
+                            ]
+                        }
+                    ];
+
+                    // Initialize Buttons
+                    const tabsContainer = document.getElementById('taskTabs');
+                    taskCategories.forEach((cat, index) => {
+                        const btn = document.createElement('button');
+                        btn.className = `px-4 py-2 rounded-full font-medium border transition-all ${cat.btnColor}`;
+                        btn.innerText = cat.name;
+                        btn.onclick = () => renderList(index);
+                        btn.dataset.tab = `cat-${index}`;
+                        tabsContainer.appendChild(btn);
+                    });
+
+                    const container = document.getElementById('taskGalleryContainer');
+
+                    function setActiveTab(tabId) {
+                        const buttons = tabsContainer.querySelectorAll('button');
+                        buttons.forEach(btn => {
+                            if (btn.dataset.tab === tabId) {
+                                // Apply active styles
+                                if (tabId === 'all') {
+                                    btn.className = "px-4 py-2 rounded-full bg-blue-600 text-white font-medium shadow-sm transition-all hover:shadow-md";
+                                } else {
+                                    const index = parseInt(tabId.split('-')[1]);
+                                    const cat = taskCategories[index];
+                                    btn.className = `px-4 py-2 rounded-full font-medium border transition-all shadow-sm ${cat.activeColor}`;
+                                }
+                            } else {
+                                // Reset to default styles
+                                if (btn.dataset.tab === 'all') {
+                                    btn.className = "px-4 py-2 rounded-full bg-white text-gray-600 hover:bg-gray-100 font-medium border border-gray-200 transition-all";
+                                } else {
+                                    const index = parseInt(btn.dataset.tab.split('-')[1]);
+                                    const cat = taskCategories[index];
+                                    btn.className = `px-4 py-2 rounded-full font-medium border border-transparent bg-white transition-all ${cat.btnColor}`;
+                                }
+                            }
                         });
-                    </script>
-                </div>
+                    }
+
+                    function renderGrid() {
+                        setActiveTab('all');
+                        container.innerHTML = '<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 animate-fade-in"></div>';
+                        const grid = container.querySelector('div');
+
+                        taskCategories.forEach(cat => {
+                            cat.tasks.forEach(task => {
+                                grid.innerHTML += `
+                                    <div class="group relative aspect-square bg-white rounded-xl overflow-hidden cursor-pointer border border-gray-200 hover:border-blue-500 transition-all hover:shadow-md" onclick="openModal('${task.name}', '${task.abbr}')">
+                                        <div class="absolute top-2 right-2 z-10">
+                                            <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${cat.color} opacity-90">${cat.name}</span>
+                                        </div>
+                                        <div class="absolute inset-0 flex items-center justify-center bg-gray-50">
+                                            <img src="${task.img}" alt="${task.name}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                            <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
+                                            <i data-lucide="play-circle" class="absolute w-10 h-10 text-white opacity-0 group-hover:opacity-100 transition-all z-20"></i>
+                                        </div>
+                                        <div class="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-t border-gray-100 p-2.5 text-center z-10">
+                                            <div class="text-sm font-bold text-gray-900 leading-tight">${task.name}</div>
+                                            <div class="text-[10px] text-gray-500 font-mono mt-0.5">${task.abbr}</div>
+                                        </div>
+                                    </div>
+                                `;
+                            });
+                        });
+                        if (typeof lucide !== 'undefined') lucide.createIcons();
+                    }
+
+                    function renderList(catIndex) {
+                        setActiveTab(`cat-${catIndex}`);
+                        const cat = taskCategories[catIndex];
+
+                        // Show Loading
+                        container.innerHTML = `
+                            <div class="flex flex-col items-center justify-center h-64 text-gray-400">
+                                <i data-lucide="loader" class="w-10 h-10 animate-spin mb-4 text-blue-500"></i>
+                                <p>Loading ${cat.name} tasks...</p>
+                            </div>
+                        `;
+                        if (typeof lucide !== 'undefined') lucide.createIcons();
+
+                        setTimeout(() => {
+                            let html = `<div class="space-y-6 animate-fade-in">`;
+
+                            cat.tasks.forEach(task => {
+                                // Retrieve data from global maps (defined at bottom of script)
+                                // Note: We need to ensure global maps are accessible here. 
+                                // Since this script runs before the bottom script, we might need to move maps up or access them safely.
+                                // However, in HTML structure, bottom script runs after this.
+                                // Solution: We will rely on window.taskPrompts etc. or move logic.
+                                // Better: Since we can't easily move the bottom big script block, let's access them from window if available, 
+                                // or we just re-declare the access logic inside a try-catch or ensure execution order.
+                                // Actually, standard HTML parsing executes scripts in order. 
+                                // The bottom script is where prompts are defined. We should access them lazily or assume they are ready when user clicks.
+                                // User clicks happen after page load, so bottom script should be executed.
+
+                                const prompt = (window.taskPrompts && (window.taskPrompts[task.abbr] || window.taskPrompts[task.name])) || "Prompt loading...";
+                                const failureImg = (window.taskFailureImages && window.taskFailureImages[task.abbr]) || "";
+                                const successImg = (window.taskSuccessImages && window.taskSuccessImages[task.abbr]) || "";
+                                const refImg = (window.taskReferenceImages && window.taskReferenceImages[task.abbr]) || task.img;
+
+                                html += `
+                                    <div class="bg-white rounded-xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition-shadow">
+                                        <div class="flex flex-col lg:flex-row gap-6">
+                                            <!-- Info Section -->
+                                            <div class="flex-1 min-w-0">
+                                                <div class="flex items-center gap-3 mb-3">
+                                                    <span class="px-2.5 py-0.5 rounded-full text-xs font-bold ${cat.color}">${cat.name}</span>
+                                                    <h3 class="text-xl font-bold text-gray-900">${task.name} <span class="text-gray-400 font-mono text-sm font-normal ml-2">${task.abbr}</span></h3>
+                                                </div>
+                                                <div class="bg-gray-50 rounded-lg p-4 border border-gray-100">
+                                                    <span class="text-xs font-bold text-gray-400 uppercase tracking-wider block mb-1">Prompt</span>
+                                                    <p class="text-gray-700 leading-relaxed text-sm">${prompt}</p>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Visuals Section -->
+                                            <div class="flex gap-4 overflow-x-auto pb-2 lg:pb-0 scrollbar-hide">
+                                                <!-- Failure -->
+                                                <div class="flex-shrink-0 w-48 relative group">
+                                                    <div class="aspect-square rounded-lg bg-gray-100 overflow-hidden border border-gray-200 relative">
+                                                        ${failureImg ? `<img src="${failureImg}" class="w-full h-full object-fill">` : '<div class="w-full h-full flex items-center justify-center text-gray-300"><i data-lucide="image-off"></i></div>'}
+                                                        <div class="absolute top-1 left-1 bg-white/90 backdrop-blur px-1.5 py-0.5 rounded text-[10px] font-bold text-red-500 shadow-sm">Failure</div>
+                                                    </div>
+                                                </div>
+                                                <!-- Reference -->
+                                                <div class="flex-shrink-0 w-48 relative group">
+                                                    <div class="aspect-square rounded-lg bg-gray-100 overflow-hidden border-2 border-blue-100 relative shadow-inner">
+                                                        <img src="${refImg}" class="w-full h-full object-cover">
+                                                        <div class="absolute top-1 left-1 bg-blue-600/90 backdrop-blur px-1.5 py-0.5 rounded text-[10px] font-bold text-white shadow-sm">Reference</div>
+                                                    </div>
+                                                </div>
+                                                <!-- Success -->
+                                                <div class="flex-shrink-0 w-48 relative group">
+                                                    <div class="aspect-square rounded-lg bg-gray-100 overflow-hidden border border-gray-200 relative">
+                                                        ${successImg ? `<img src="${successImg}" class="w-full h-full object-fill">` : '<div class="w-full h-full flex items-center justify-center text-gray-300"><i data-lucide="image-off"></i></div>'}
+                                                        <div class="absolute top-1 left-1 bg-white/90 backdrop-blur px-1.5 py-0.5 rounded text-[10px] font-bold text-green-500 shadow-sm">Success</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                `;
+                            });
+
+                            html += `</div>`;
+                            container.innerHTML = html;
+                            if (typeof lucide !== 'undefined') lucide.createIcons();
+                        }, 600); // 600ms fake loading
+                    }
+
+                    // Initial Render
+                    renderGrid();
+                </script>
             </div>
         </section>
 
@@ -638,9 +944,9 @@
                     <!-- Figure 2 -->
                     <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col">
                         <h3 class="text-lg font-bold mb-4 text-gray-800">Overall Performance Comparison</h3>
-                        <div class="flex-grow flex items-center justify-center bg-gray-50 rounded-xl p-4">
+                        <div class="flex-grow flex items-center justify-center bg-gray-50 rounded-xl overflow-hidden">
                             <img src="images/result/figure2.png" alt="Performance Comparison of Mainstream Models"
-                                class="max-h-[400px] w-full object-contain">
+                                class="w-full h-full object-contain">
                         </div>
                     </div>
                 </div>
@@ -733,7 +1039,7 @@
                         </div>
                     </div>
 
-                    <div class="overflow-x-auto rounded-xl shadow-sm border border-gray-200 bg-white max-h-[600px] overflow-y-auto relative custom-scrollbar"
+                    <div class="overflow-x-auto rounded-xl shadow-sm border border-gray-200 bg-white relative custom-scrollbar"
                         id="leaderboardContainer">
                         <table class="min-w-full text-sm" id="leaderboardTable">
                             <thead
@@ -823,12 +1129,6 @@
                             </tbody>
                         </table>
                     </div>
-
-                    <!-- Back to Top Button (inside container context) -->
-                    <button onclick="document.getElementById('leaderboardContainer').scrollTop = 0"
-                        class="mt-4 mx-auto flex items-center gap-2 text-sm text-gray-500 hover:text-blue-600 transition-colors">
-                        <i data-lucide="arrow-up" class="w-4 h-4"></i> Back to Top of Table
-                    </button>
                 </div>
 
                 <!-- Part 4: Key Takeaway (Subtle Style) -->
@@ -906,12 +1206,12 @@
                         <h3 class="text-xl font-bold mb-4 text-blue-200 uppercase tracking-widest text-xs">Ultimate
                             Outlook</h3>
                         <p class="text-lg md:text-xl text-white leading-relaxed font-light italic">
-                            "The path forward lies in the <span
-                                class="font-semibold text-blue-300">Prompt-as-Action</span> enabled by UMMs. By
-                            leveraging the reasoning capacity of LLMs to translate high-dimensional natural language
-                            intents into precise spatiotemporal dynamics, the World Model transcends content generation
-                            to become a <span class="font-bold text-white">General World Simulator</span>—a computable
-                            reality bridging digital imagination and physical law."
+                            "A <span class="font-semibold text-blue-300">Prompt-as-Action</span> paradigm in which UMMs
+                            with modality consistency and video generation
+                            models with spatial–temporal consistency are unified. Equipped with an internal semantic
+                            compiler, such models can interpret high-dimensional natural-language prompts and translate
+                            them into universal spatiotemporal simulations that adhere to the <span
+                                class="font-semibold text-blue-300">Trinity of Consistency</span>."
                         </p>
                     </div>
                 </div>
@@ -990,7 +1290,7 @@
     <div id="taskModal" class="fixed inset-0 z-[100] hidden">
         <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeModal()"></div>
         <div
-            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-2xl w-full max-w-3xl overflow-hidden shadow-2xl">
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-2xl w-full max-w-6xl overflow-hidden shadow-2xl">
             <div class="p-6 border-b border-gray-100 flex justify-between items-center">
                 <h3 id="modalTitle" class="text-2xl font-bold text-gray-900">Task Details</h3>
                 <button onclick="closeModal()" class="text-gray-400 hover:text-gray-900">
@@ -1003,16 +1303,46 @@
                     <span class="text-blue-700" id="modalPrompt">A ball drops from height and accelerates due to
                         gravity.</span>
                 </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="bg-gray-100 rounded-lg aspect-video flex items-center justify-center relative">
-                        <span class="text-red-500 font-bold">Failure Case</span>
-                        <div class="absolute bottom-2 left-2 text-xs bg-black/50 text-white px-2 py-1 rounded">Model A
+                <div class="grid grid-cols-3 gap-6">
+                    <!-- Failure Case -->
+                    <div
+                        class="bg-gray-100 rounded-lg aspect-square flex items-center justify-center relative overflow-hidden group">
+                        <div class="absolute inset-0 flex items-center justify-center text-gray-400">
+                            <i data-lucide="alert-triangle" class="w-12 h-12 opacity-50"></i>
                         </div>
+                        <img id="modalFailureImage" src="" alt="Failure Case"
+                            class="absolute inset-0 w-full h-full object-fill bg-gray-100 hidden">
+                        <span
+                            class="absolute top-2 left-2 text-red-500 font-bold bg-white/80 px-2 py-1 rounded backdrop-blur-sm shadow-sm z-10">Failure
+                            Case</span>
+
                     </div>
-                    <div class="bg-gray-100 rounded-lg aspect-video flex items-center justify-center relative">
-                        <span class="text-green-500 font-bold">Success Case</span>
-                        <div class="absolute bottom-2 left-2 text-xs bg-black/50 text-white px-2 py-1 rounded">Model B
+
+                    <!-- Reference Sample -->
+                    <div
+                        class="bg-gray-100 rounded-lg aspect-square flex items-center justify-center relative overflow-hidden group border-2 border-blue-100 shadow-inner">
+                        <div class="absolute inset-0 flex items-center justify-center text-blue-300">
+                            <i data-lucide="file-video" class="w-12 h-12 opacity-50"></i>
                         </div>
+                        <img id="modalReferenceImage" src="" alt="Reference Sample"
+                            class="absolute inset-0 w-full h-full object-cover bg-gray-100 hidden">
+                        <span
+                            class="absolute top-2 left-2 text-blue-600 font-bold bg-white/80 px-2 py-1 rounded backdrop-blur-sm shadow-sm z-10">Reference</span>
+
+                    </div>
+
+                    <!-- Success Case -->
+                    <div
+                        class="bg-gray-100 rounded-lg aspect-square flex items-center justify-center relative overflow-hidden group">
+                        <div class="absolute inset-0 flex items-center justify-center text-gray-400">
+                            <i data-lucide="check-circle" class="w-12 h-12 opacity-50"></i>
+                        </div>
+                        <img id="modalSuccessImage" src="" alt="Success Case"
+                            class="absolute inset-0 w-full h-full object-fill bg-gray-100 hidden">
+                        <span
+                            class="absolute top-2 left-2 text-green-500 font-bold bg-white/80 px-2 py-1 rounded backdrop-blur-sm shadow-sm z-10">Success
+                            Case</span>
+
                     </div>
                 </div>
             </div>
@@ -1064,10 +1394,49 @@
         const modal = document.getElementById('taskModal');
         const modalTitle = document.getElementById('modalTitle');
         const modalPrompt = document.getElementById('modalPrompt');
+        const modalFailureImage = document.getElementById('modalFailureImage');
+        const modalReferenceImage = document.getElementById('modalReferenceImage');
+        const modalSuccessImage = document.getElementById('modalSuccessImage');
 
-        window.openModal = function (taskName) {
-            modalTitle.textContent = taskName;
-            modalPrompt.textContent = `Detailed prompt for ${taskName} task: "A realistic video demonstrating ${taskName.toLowerCase()} principles..."`;
+        window.openModal = function (name, abbr) {
+            // Try looking up by abbr first (for Modal x Space etc.), then by name
+            const prompt = (window.taskPrompts && (window.taskPrompts[abbr] || window.taskPrompts[name])) || `Detailed prompt for ${name} task...`;
+
+            // Look up images by abbreviation
+            const failureImgSrc = (window.taskFailureImages && window.taskFailureImages[abbr]);
+            const referenceImgSrc = (window.taskReferenceImages && window.taskReferenceImages[abbr]);
+            const successImgSrc = (window.taskSuccessImages && window.taskSuccessImages[abbr]);
+
+            modalTitle.textContent = name;
+            modalPrompt.textContent = prompt;
+
+            // Handle Failure Image
+            if (failureImgSrc) {
+                modalFailureImage.src = failureImgSrc;
+                modalFailureImage.classList.remove('hidden');
+            } else {
+                modalFailureImage.src = '';
+                modalFailureImage.classList.add('hidden');
+            }
+
+            // Handle Reference Image
+            if (referenceImgSrc) {
+                modalReferenceImage.src = referenceImgSrc;
+                modalReferenceImage.classList.remove('hidden');
+            } else {
+                modalReferenceImage.src = '';
+                modalReferenceImage.classList.add('hidden');
+            }
+
+            // Handle Success Image
+            if (successImgSrc) {
+                modalSuccessImage.src = successImgSrc;
+                modalSuccessImage.classList.remove('hidden');
+            } else {
+                modalSuccessImage.src = '';
+                modalSuccessImage.classList.add('hidden');
+            }
+
             modal.classList.remove('hidden');
         }
 
