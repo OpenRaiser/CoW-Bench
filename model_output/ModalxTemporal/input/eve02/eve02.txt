@@ -1,0 +1,1 @@
+When a hand is detected under the sensor, the faucet turns on instantly and water flows. 

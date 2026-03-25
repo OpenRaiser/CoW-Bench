@@ -1,0 +1,1 @@
+Move the camera to the left and rotate it to show three viewpoints of the same bedroom. Ensure structural rigidity and proper occlusion as the viewpoint changes.

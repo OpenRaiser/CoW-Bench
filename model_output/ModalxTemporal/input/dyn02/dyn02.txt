@@ -1,0 +1,1 @@
+The sun sets, stars appear, and the moon rises. This cycle takes 10 seconds. The sky must change color: blue at daytime → orange at sunset → dark with stars at night → light at dawn, with smooth transitions. Keep the camera fixed on the horizon.

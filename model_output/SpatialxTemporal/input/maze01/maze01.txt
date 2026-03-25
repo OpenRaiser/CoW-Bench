@@ -1,0 +1,1 @@
+This is a maze diagram. The objective is to guide the red dot from the bottom-left corner to the green dot in the top-right corner, generating a red path trace. The maze structure must remain unchanged, and the trace must not touch any black walls.

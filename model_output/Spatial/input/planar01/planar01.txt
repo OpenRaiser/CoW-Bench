@@ -1,0 +1,1 @@
+The left cat moves to the left, and the right cat moves to the right. Keep the camera fixed.

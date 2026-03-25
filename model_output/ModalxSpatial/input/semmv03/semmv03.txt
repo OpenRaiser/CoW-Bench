@@ -1,0 +1,1 @@
+ As the camera rotates to the left, generate a sequence where the apple must remain the closest object, even from angles where perspective might make other objects appear closer. Emphasize depth consistency.

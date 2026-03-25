@@ -1,0 +1,1 @@
+A spinning top on a table. The top's color must cycle in this exact order: blue → green → red → yellow, repeating smoothly. Additionally, the spinning speed increases over time. Keep the camera fixed.

@@ -1,0 +1,1 @@
+Only change the digital clock display: simulate the time on the digital clock changing from 12:00 to 12:30 over a few seconds. 

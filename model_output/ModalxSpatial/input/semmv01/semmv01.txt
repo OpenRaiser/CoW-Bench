@@ -1,0 +1,1 @@
+Rotate the camera 360 degrees to display multiple viewpoints from different angles. The 'CAUTION' sign must always be the closest object in all viewpoints, and the relative positions of the smartphone, keyboard, and printer should remain consistent.

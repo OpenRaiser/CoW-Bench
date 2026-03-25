@@ -1,0 +1,1 @@
+Navigate through the hallway into a sequence of connected rooms—a bedroom, a bathroom, and a study—visiting each in a designated order, then return to the starting point without teleporting, making sure no room is missed.

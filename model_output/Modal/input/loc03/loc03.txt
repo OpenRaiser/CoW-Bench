@@ -1,0 +1,1 @@
+Only make the clock's hands rotate: simulate the hands moving as if time is passing, but the clock face and everything else (wall, furniture, decorations) must remain exactly the same as in the initial image.

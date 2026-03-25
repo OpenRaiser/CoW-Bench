@@ -1,0 +1,1 @@
+ Rotate and pan the camera to the left and slightly downward to show three different viewpoints of the same static kitchen. The objects must maintain consistent 3D positions; only the viewpoint changes, with proper occlusion changes.

@@ -1,0 +1,1 @@
+A floating sphere in a dark room. The sphere is red in the first frame. The sphere rotates slowly, and its color cycles in this order: red → orange → green → blue → red

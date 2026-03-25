@@ -1,0 +1,1 @@
+The lantern must stay closed until it gets dark. At the moment it gets dark, the person opens the lantern instantly and keeps it open.

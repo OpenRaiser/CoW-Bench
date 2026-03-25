@@ -1,0 +1,1 @@
+First, put the red ball inside the box. Then, without moving the yellow block, ensure only the red ball is inside. The yellow block and green toy car must remain outside.

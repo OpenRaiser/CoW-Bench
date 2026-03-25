@@ -1,0 +1,1 @@
+Camera tracks alongside a moving car to the left in a suburban environment.

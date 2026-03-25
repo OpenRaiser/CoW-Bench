@@ -1,0 +1,1 @@
+Camera remains static, but a foreground car moves horizontally from left to right.

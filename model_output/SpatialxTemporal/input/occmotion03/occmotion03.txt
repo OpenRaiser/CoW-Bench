@@ -1,0 +1,1 @@
+Camera zooms in during rain, with raindrops on a windshield.

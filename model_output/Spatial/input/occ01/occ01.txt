@@ -1,0 +1,1 @@
+Slowly close the drawer. The book should be gradually occluded as the drawer closes.

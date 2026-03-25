@@ -1,0 +1,1 @@
+Only make the clock's hands rotate: simulate the clock's minute hand moving from 12 to 9 over a few seconds, while the hour hand adjusts accordingly.

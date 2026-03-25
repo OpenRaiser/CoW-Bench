@@ -1,0 +1,1 @@
+Rotate the camera and zoom in to show four viewpoints of the same static office. Ensure structural rigidity and accurate occlusion as the viewpoint changes
