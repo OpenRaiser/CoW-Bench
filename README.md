@@ -1313,9 +1313,6 @@ Input image
   <img src="model_output/Modal/input/inv01/inv01.jpg" width="180" style="margin-right: 8px;" />
 </div>
 
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
-
 <a name="modal--subj-attr01--gpt-image-15"></a>
 
 ##### GPT image 1.5
@@ -1503,8 +1500,6 @@ Input image
   <img src="model_output/Modal/Qwen-Image/Subj-Attr01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="modal--subj-attr02--prompt"></a>
@@ -1522,9 +1517,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Modal/input/inv02/inv02.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modal--subj-attr02--gpt-image-15"></a>
 
@@ -1713,8 +1705,6 @@ Input image
   <img src="model_output/Modal/Qwen-Image/Subj-Attr02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="modal--subj-attr03--prompt"></a>
@@ -1732,9 +1722,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Modal/input/inv03/inv03.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modal--subj-attr03--gpt-image-15"></a>
 
@@ -1923,8 +1910,6 @@ Input image
   <img src="model_output/Modal/Qwen-Image/Subj-Attr03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="modal--local-edit"></a>
@@ -1946,9 +1931,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Modal/input/loc01/loc01.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modal--local-edit01--gpt-image-15"></a>
 
@@ -2137,8 +2119,6 @@ Input image
   <img src="model_output/Modal/Qwen-Image/Local-Edit01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="modal--local-edit02--prompt"></a>
@@ -2156,9 +2136,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Modal/input/loc02/loc02.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modal--local-edit02--gpt-image-15"></a>
 
@@ -2347,8 +2324,6 @@ Input image
   <img src="model_output/Modal/Qwen-Image/Local-Edit02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="modal--local-edit03--prompt"></a>
@@ -2366,9 +2341,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Modal/input/loc03/loc03.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modal--local-edit03--gpt-image-15"></a>
 
@@ -2557,8 +2529,6 @@ Input image
   <img src="model_output/Modal/Qwen-Image/Local-Edit03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="modal--multi-const"></a>
@@ -2574,9 +2544,6 @@ Prompt
 ```text
 Generate a realistic image containing only three subjects, and satisfy all bindings: Person A: wearing a gray hoodie, holding a backpack in the left hand, and giving a water bottle to Person B with the right hand. Person B: wearing a orange t-shirt, holding a skateboard in the right hand, and giving a cap to Person A with the left hand. A squirrel: with brown fur, sitting on a tree branch, and looking at Person B. Negative constraints: No other people or animals;
 ```
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modal--multi-const01--gpt-image-15"></a>
 
@@ -2765,8 +2732,6 @@ Generate a realistic image containing only three subjects, and satisfy all bindi
   <img src="model_output/Modal/Qwen-Image/Multi-Const01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="modal--multi-const02--prompt"></a>
@@ -2778,9 +2743,6 @@ Prompt
 ```text
 Generate a realistic image containing only three subjects, and satisfy all bindings: Person A: wearing a yellow jacket, holding a camera in the left hand, and giving a hat to Person B with the right hand. Person B: wearing a purple sweater, holding a map in the right hand, and giving a scarf to Person A with the left hand. A bird: with red feathers, standing on a perch, and looking at Person B. Negative constraints: No other people or animals;
 ```
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modal--multi-const02--gpt-image-15"></a>
 
@@ -2969,8 +2931,6 @@ Generate a realistic image containing only three subjects, and satisfy all bindi
   <img src="model_output/Modal/Qwen-Image/Multi-Const02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="modal--multi-const03--prompt"></a>
@@ -2982,9 +2942,6 @@ Prompt
 ```text
 Produce a realistic image containing exactly three subjects: Gardener C: wearing gardening gloves, trimming a bush with shears in the right hand, and holding a watering can in the left hand. Child D: wearing a sun hat, watering flowers with a hose in the right hand, and holding a toy in the left hand. A bird: with blue feathers, perched on a branch, and watching Child D. Negative constraints: No gardening tools other than specified; no labels or writing on any item; the scene must use only green and brown colors.
 ```
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modal--multi-const03--gpt-image-15"></a>
 
@@ -3173,8 +3130,6 @@ Produce a realistic image containing exactly three subjects: Gardener C: wearing
   <img src="model_output/Modal/Qwen-Image/Multi-Const03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="modalxspatial"></a>
@@ -3200,9 +3155,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxSpatial/input/semmv01/semmv01.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxspatial--sem-mv01--gpt-image-15"></a>
 
@@ -3391,8 +3343,6 @@ Input image
   <img src="model_output/ModalxSpatial/Qwen-Image/Sem-MV01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="modalxspatial--sem-mv02--prompt"></a>
@@ -3410,9 +3360,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxSpatial/input/semmv02/semmv02.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxspatial--sem-mv02--gpt-image-15"></a>
 
@@ -3601,8 +3548,6 @@ Input image
   <img src="model_output/ModalxSpatial/Qwen-Image/Sem-MV02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="modalxspatial--sem-mv03--prompt"></a>
@@ -3620,9 +3565,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxSpatial/input/semmv03/semmv03.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxspatial--sem-mv03--gpt-image-15"></a>
 
@@ -3811,8 +3753,6 @@ Input image
   <img src="model_output/ModalxSpatial/Qwen-Image/Sem-MV03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="modalxspatial--sem-hier"></a>
@@ -3834,9 +3774,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxSpatial/input/semocc01/semocc01.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxspatial--sem-hier01--gpt-image-15"></a>
 
@@ -4025,8 +3962,6 @@ Input image
   <img src="model_output/ModalxSpatial/Qwen-Image/Sem-Hier01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="modalxspatial--sem-hier02--prompt"></a>
@@ -4044,9 +3979,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxSpatial/input/semocc02/semocc02.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxspatial--sem-hier02--gpt-image-15"></a>
 
@@ -4235,8 +4167,6 @@ Input image
   <img src="model_output/ModalxSpatial/Qwen-Image/Sem-Hier02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="modalxspatial--sem-hier03--prompt"></a>
@@ -4254,9 +4184,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxSpatial/input/semocc03/semocc03.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxspatial--sem-hier03--gpt-image-15"></a>
 
@@ -4445,8 +4372,6 @@ Input image
   <img src="model_output/ModalxSpatial/Qwen-Image/Sem-Hier03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="modalxspatial--sem-planar"></a>
@@ -4468,9 +4393,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxSpatial/input/semplanar01/semplanar01.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxspatial--sem-planar01--gpt-image-15"></a>
 
@@ -4659,8 +4581,6 @@ Input image
   <img src="model_output/ModalxSpatial/Qwen-Image/Sem-Planar01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="modalxspatial--sem-planar02--prompt"></a>
@@ -4678,9 +4598,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxSpatial/input/semplanar02/semplanar02.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxspatial--sem-planar02--gpt-image-15"></a>
 
@@ -4869,8 +4786,6 @@ Input image
   <img src="model_output/ModalxSpatial/Qwen-Image/Sem-Planar02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="modalxspatial--sem-planar03--prompt"></a>
@@ -4888,9 +4803,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxSpatial/input/semplanar03/semplanar03.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxspatial--sem-planar03--gpt-image-15"></a>
 
@@ -5079,8 +4991,6 @@ Input image
   <img src="model_output/ModalxSpatial/Qwen-Image/Sem-Planar03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="modalxtemporal"></a>
@@ -5106,9 +5016,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxTemporal/input/dyn01/dyn01.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxtemporal--attr-dyn01--gpt-image-15"></a>
 
@@ -5297,8 +5204,6 @@ Input image
   <img src="model_output/ModalxTemporal/Qwen-Image/Attr-Dyn01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="modalxtemporal--attr-dyn02--prompt"></a>
@@ -5316,9 +5221,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxTemporal/input/dyn02/dyn02.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxtemporal--attr-dyn02--gpt-image-15"></a>
 
@@ -5507,8 +5409,6 @@ Input image
   <img src="model_output/ModalxTemporal/Qwen-Image/Attr-Dyn02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="modalxtemporal--attr-dyn03--prompt"></a>
@@ -5526,9 +5426,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxTemporal/input/dyn03/dyn03.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxtemporal--attr-dyn03--gpt-image-15"></a>
 
@@ -5717,8 +5614,6 @@ Input image
   <img src="model_output/ModalxTemporal/Qwen-Image/Attr-Dyn03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="modalxtemporal--trigger-event"></a>
@@ -5740,9 +5635,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxTemporal/input/eve01/eve01.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxtemporal--trigger-event01--gpt-image-15"></a>
 
@@ -5931,8 +5823,6 @@ Input image
   <img src="model_output/ModalxTemporal/Qwen-Image/Trigger-Event01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="modalxtemporal--trigger-event02--prompt"></a>
@@ -5950,9 +5840,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxTemporal/input/eve02/eve02.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxtemporal--trigger-event02--gpt-image-15"></a>
 
@@ -6141,8 +6028,6 @@ Input image
   <img src="model_output/ModalxTemporal/Qwen-Image/Trigger-Event02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="modalxtemporal--trigger-event03--prompt"></a>
@@ -6160,9 +6045,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxTemporal/input/eve03/eve03.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxtemporal--trigger-event03--gpt-image-15"></a>
 
@@ -6351,8 +6233,6 @@ Input image
   <img src="model_output/ModalxTemporal/Qwen-Image/Trigger-Event03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="modalxtemporal--long-horizon"></a>
@@ -6374,9 +6254,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxTemporal/input/long01/long01.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxtemporal--long-horizon01--gpt-image-15"></a>
 
@@ -6565,8 +6442,6 @@ Input image
   <img src="model_output/ModalxTemporal/Qwen-Image/Long-Horizon01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="modalxtemporal--long-horizon02--prompt"></a>
@@ -6584,9 +6459,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxTemporal/input/long02/long02.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxtemporal--long-horizon02--gpt-image-15"></a>
 
@@ -6775,8 +6647,6 @@ Input image
   <img src="model_output/ModalxTemporal/Qwen-Image/Long-Horizon02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="modalxtemporal--long-horizon03--prompt"></a>
@@ -6794,9 +6664,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxTemporal/input/long03/long03.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxtemporal--long-horizon03--gpt-image-15"></a>
 
@@ -6985,8 +6852,6 @@ Input image
   <img src="model_output/ModalxTemporal/Qwen-Image/Long-Horizon03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="spatial"></a>
@@ -7012,9 +6877,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Spatial/input/mv3d01/mv3d01.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatial--mv-3d01--gpt-image-15"></a>
 
@@ -7198,8 +7060,6 @@ Input image
   <img src="model_output/Spatial/Qwen-Image/MV-3D01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="spatial--mv-3d02--prompt"></a>
@@ -7217,9 +7077,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Spatial/input/mv3d02/mv3d02.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatial--mv-3d02--gpt-image-15"></a>
 
@@ -7408,8 +7265,6 @@ Input image
   <img src="model_output/Spatial/Qwen-Image/MV-3D02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="spatial--mv-3d03--prompt"></a>
@@ -7427,9 +7282,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Spatial/input/mv3d03/mv3d03.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatial--mv-3d03--gpt-image-15"></a>
 
@@ -7618,8 +7470,6 @@ Input image
   <img src="model_output/Spatial/Qwen-Image/MV-3D03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="spatial--occ-contain"></a>
@@ -7641,9 +7491,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Spatial/input/occ01/occ01.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatial--occ-contain01--gpt-image-15"></a>
 
@@ -7832,8 +7679,6 @@ Input image
   <img src="model_output/Spatial/Qwen-Image/Occ-Contain01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="spatial--occ-contain02--prompt"></a>
@@ -7851,9 +7696,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Spatial/input/occ02/occ02.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatial--occ-contain02--gpt-image-15"></a>
 
@@ -8042,8 +7884,6 @@ Input image
   <img src="model_output/Spatial/Qwen-Image/Occ-Contain02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="spatial--occ-contain03--prompt"></a>
@@ -8061,9 +7901,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Spatial/input/occ03/occ03.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatial--occ-contain03--gpt-image-15"></a>
 
@@ -8252,8 +8089,6 @@ Input image
   <img src="model_output/Spatial/Qwen-Image/Occ-Contain03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="spatial--planar-2d"></a>
@@ -8275,9 +8110,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Spatial/input/planar01/planar01.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatial--planar-2d01--gpt-image-15"></a>
 
@@ -8466,8 +8298,6 @@ Input image
   <img src="model_output/Spatial/Qwen-Image/Planar-2D01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="spatial--planar-2d02--prompt"></a>
@@ -8485,9 +8315,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Spatial/input/planar02/planar02.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatial--planar-2d02--gpt-image-15"></a>
 
@@ -8676,8 +8503,6 @@ Input image
   <img src="model_output/Spatial/Qwen-Image/Planar-2D02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="spatial--planar-2d03--prompt"></a>
@@ -8695,9 +8520,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Spatial/input/planar03/planar03.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatial--planar-2d03--gpt-image-15"></a>
 
@@ -8886,8 +8708,6 @@ Input image
   <img src="model_output/Spatial/Qwen-Image/Planar-2D03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="spatialxtemporal"></a>
@@ -8913,9 +8733,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/SpatialxTemporal/input/3d01/3d01.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatialxtemporal--3d-loop01--gpt-image-15"></a>
 
@@ -9104,8 +8921,6 @@ Input image
   <img src="model_output/SpatialxTemporal/Qwen-Image/3D-Loop01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="spatialxtemporal--3d-loop02--prompt"></a>
@@ -9123,9 +8938,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/SpatialxTemporal/input/3d02/3d02.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatialxtemporal--3d-loop02--gpt-image-15"></a>
 
@@ -9314,8 +9126,6 @@ Input image
   <img src="model_output/SpatialxTemporal/Qwen-Image/3D-Loop02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="spatialxtemporal--3d-loop03--prompt"></a>
@@ -9333,9 +9143,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/SpatialxTemporal/input/3d03/3d03.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatialxtemporal--3d-loop03--gpt-image-15"></a>
 
@@ -9524,8 +9331,6 @@ Input image
   <img src="model_output/SpatialxTemporal/Qwen-Image/3D-Loop03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="spatialxtemporal--maze"></a>
@@ -9547,9 +9352,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/SpatialxTemporal/input/maze01/maze01.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatialxtemporal--maze01--gpt-image-15"></a>
 
@@ -9738,8 +9540,6 @@ Input image
   <img src="model_output/SpatialxTemporal/Qwen-Image/Maze01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="spatialxtemporal--maze02--prompt"></a>
@@ -9757,9 +9557,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/SpatialxTemporal/input/maze02/maze02.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatialxtemporal--maze02--gpt-image-15"></a>
 
@@ -9948,8 +9745,6 @@ Input image
   <img src="model_output/SpatialxTemporal/Qwen-Image/Maze02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="spatialxtemporal--maze03--prompt"></a>
@@ -9967,9 +9762,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/SpatialxTemporal/input/maze03/maze03.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatialxtemporal--maze03--gpt-image-15"></a>
 
@@ -10158,8 +9950,6 @@ Input image
   <img src="model_output/SpatialxTemporal/Qwen-Image/Maze03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="spatialxtemporal--occ-motion"></a>
@@ -10181,9 +9971,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/SpatialxTemporal/input/occmotion01/occmotion01.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatialxtemporal--occ-motion01--gpt-image-15"></a>
 
@@ -10372,8 +10159,6 @@ Input image
   <img src="model_output/SpatialxTemporal/Qwen-Image/Occ-Motion01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="spatialxtemporal--occ-motion02--prompt"></a>
@@ -10391,9 +10176,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/SpatialxTemporal/input/occmotion02/occmotion02.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatialxtemporal--occ-motion02--gpt-image-15"></a>
 
@@ -10582,8 +10364,6 @@ Input image
   <img src="model_output/SpatialxTemporal/Qwen-Image/Occ-Motion02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="spatialxtemporal--occ-motion03--prompt"></a>
@@ -10601,9 +10381,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/SpatialxTemporal/input/occmotion03/occmotion03.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatialxtemporal--occ-motion03--gpt-image-15"></a>
 
@@ -10792,8 +10569,6 @@ Input image
   <img src="model_output/SpatialxTemporal/Qwen-Image/Occ-Motion03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="temporal"></a>
@@ -10819,9 +10594,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Temporal/input/Slow-Evol01/Slow-Evol01.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="temporal--slow-evol01--gpt-image-15"></a>
 
@@ -11010,8 +10782,6 @@ Input image
   <img src="model_output/Temporal/Qwen-Image/Slow-Evol01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="temporal--slow-evol02--prompt"></a>
@@ -11029,9 +10799,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Temporal/input/Slow-Evol02/Slow-Evol02.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="temporal--slow-evol02--gpt-image-15"></a>
 
@@ -11220,8 +10987,6 @@ Input image
   <img src="model_output/Temporal/Qwen-Image/Slow-Evol02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="temporal--slow-evol03--prompt"></a>
@@ -11239,9 +11004,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Temporal/input/Slow-Evol03/Slow-Evol03.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="temporal--slow-evol03--gpt-image-15"></a>
 
@@ -11430,8 +11192,6 @@ Input image
   <img src="model_output/Temporal/Qwen-Image/Slow-Evol03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="temporal--stage-order"></a>
@@ -11453,9 +11213,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Temporal/input/Stage01/Stage01.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="temporal--stage-order01--gpt-image-15"></a>
 
@@ -11644,8 +11401,6 @@ Input image
   <img src="model_output/Temporal/Qwen-Image/Stage-Order01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="temporal--stage-order02--prompt"></a>
@@ -11663,9 +11418,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Temporal/input/Stage02/Stage02.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="temporal--stage-order02--gpt-image-15"></a>
 
@@ -11849,8 +11601,6 @@ Input image
   <img src="model_output/Temporal/Qwen-Image/Stage-Order02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="temporal--stage-order03--prompt"></a>
@@ -11868,9 +11618,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Temporal/input/Stage03/Stage03.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="temporal--stage-order03--gpt-image-15"></a>
 
@@ -12059,8 +11806,6 @@ Input image
   <img src="model_output/Temporal/Qwen-Image/Stage-Order03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="temporal--worldline"></a>
@@ -12082,9 +11827,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Temporal/input/Worldline01/Worldline01.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="temporal--worldline01--gpt-image-15"></a>
 
@@ -12273,8 +12015,6 @@ Input image
   <img src="model_output/Temporal/Qwen-Image/Worldline01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="temporal--worldline02--prompt"></a>
@@ -12292,9 +12032,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Temporal/input/Worldline02/Worldline02.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="temporal--worldline02--gpt-image-15"></a>
 
@@ -12483,8 +12220,6 @@ Input image
   <img src="model_output/Temporal/Qwen-Image/Worldline02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
-</details>
-
 ---
 
 <a name="temporal--worldline03--prompt"></a>
@@ -12502,9 +12237,6 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Temporal/input/Worldline03/Worldline03.jpg" width="180" style="margin-right: 8px;" />
 </div>
-
-<details>
-<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="temporal--worldline03--gpt-image-15"></a>
 
@@ -12692,8 +12424,6 @@ Input image
   <img src="model_output/Temporal/Qwen-Image/Worldline03_3.jpg" width="180" style="margin-right: 8px;" />
   <img src="model_output/Temporal/Qwen-Image/Worldline03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
-
-</details>
 
 ---
 
