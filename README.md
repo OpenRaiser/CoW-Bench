@@ -2,1004 +2,1226 @@
 
 ## Table of Contents
 
-Click a category, task, prompt, or model name to jump.
+Click a prompt to expand/collapse model list.
 
-- [**Modal**](#modal)
+- **[Modal](#modal)**
   - [Subj-Attr](#modal--subj-attr)
-    - [*Generate a fish with the same material.*](#modal--subj-attr01--prompt)
-      - [GPT image 1.5](#modal--subj-attr01--gpt-image-15)
-      - [Nano Banana Pro](#modal--subj-attr01--nano-banana-pro)
-      - [Veo 3.1](#modal--subj-attr01--veo-31)
-      - [Seedream 5.0](#modal--subj-attr01--seedream-50)
-      - [GPT image 1](#modal--subj-attr01--gpt-image-1)
-      - [Nano Banana](#modal--subj-attr01--nano-banana)
-      - [Nano Banana 2](#modal--subj-attr01--nano-banana-2)
-      - [Emu3.5](#modal--subj-attr01--emu35)
-      - [kling](#modal--subj-attr01--kling)
-      - [Seedream 4.5](#modal--subj-attr01--seedream-45)
-      - [sora](#modal--subj-attr01--sora)
-      - [Seedream 4.0](#modal--subj-attr01--seedream-40)
-      - [SkyReels-V2](#modal--subj-attr01--skyreels-v2)
-      - [Wan2.2-I2V-14B](#modal--subj-attr01--wan22-i2v-14b)
-      - [BAGEL](#modal--subj-attr01--bagel)
-      - [HunyuanVideo](#modal--subj-attr01--hunyuanvideo)
-      - [Qwen-Image](#modal--subj-attr01--qwen-image)
-    - [*Generate a car with the same style.*](#modal--subj-attr02--prompt)
-      - [GPT image 1.5](#modal--subj-attr02--gpt-image-15)
-      - [Nano Banana Pro](#modal--subj-attr02--nano-banana-pro)
-      - [Veo 3.1](#modal--subj-attr02--veo-31)
-      - [Seedream 5.0](#modal--subj-attr02--seedream-50)
-      - [GPT image 1](#modal--subj-attr02--gpt-image-1)
-      - [Nano Banana](#modal--subj-attr02--nano-banana)
-      - [Nano Banana 2](#modal--subj-attr02--nano-banana-2)
-      - [Emu3.5](#modal--subj-attr02--emu35)
-      - [kling](#modal--subj-attr02--kling)
-      - [Seedream 4.5](#modal--subj-attr02--seedream-45)
-      - [sora](#modal--subj-attr02--sora)
-      - [Seedream 4.0](#modal--subj-attr02--seedream-40)
-      - [SkyReels-V2](#modal--subj-attr02--skyreels-v2)
-      - [Wan2.2-I2V-14B](#modal--subj-attr02--wan22-i2v-14b)
-      - [BAGEL](#modal--subj-attr02--bagel)
-      - [HunyuanVideo](#modal--subj-attr02--hunyuanvideo)
-      - [Qwen-Image](#modal--subj-attr02--qwen-image)
-    - [*Generate a dog with the same style.*](#modal--subj-attr03--prompt)
-      - [GPT image 1.5](#modal--subj-attr03--gpt-image-15)
-      - [Nano Banana Pro](#modal--subj-attr03--nano-banana-pro)
-      - [Veo 3.1](#modal--subj-attr03--veo-31)
-      - [Seedream 5.0](#modal--subj-attr03--seedream-50)
-      - [GPT image 1](#modal--subj-attr03--gpt-image-1)
-      - [Nano Banana](#modal--subj-attr03--nano-banana)
-      - [Nano Banana 2](#modal--subj-attr03--nano-banana-2)
-      - [Emu3.5](#modal--subj-attr03--emu35)
-      - [kling](#modal--subj-attr03--kling)
-      - [Seedream 4.5](#modal--subj-attr03--seedream-45)
-      - [sora](#modal--subj-attr03--sora)
-      - [Seedream 4.0](#modal--subj-attr03--seedream-40)
-      - [SkyReels-V2](#modal--subj-attr03--skyreels-v2)
-      - [Wan2.2-I2V-14B](#modal--subj-attr03--wan22-i2v-14b)
-      - [BAGEL](#modal--subj-attr03--bagel)
-      - [HunyuanVideo](#modal--subj-attr03--hunyuanvideo)
-      - [Qwen-Image](#modal--subj-attr03--qwen-image)
+    <details>
+    <summary><em>Generate a fish with the same material.</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr01--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr01--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr01--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr01--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr01--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr01--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr01--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr01--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr01--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr01--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr01--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr01--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr01--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr01--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr01--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr01--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr01--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>Generate a car with the same style.</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr02--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr02--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr02--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr02--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr02--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr02--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr02--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr02--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr02--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr02--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr02--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr02--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr02--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr02--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr02--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr02--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr02--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>Generate a dog with the same style.</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr03--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr03--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr03--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr03--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr03--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr03--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr03--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr03--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr03--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr03--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr03--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr03--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr03--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr03--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr03--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr03--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--subj-attr03--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
   - [Local-Edit](#modal--local-edit)
-    - [*Only change the digital clock display: simulate the time on the digital clock ch…*](#modal--local-edit01--prompt)
-      - [GPT image 1.5](#modal--local-edit01--gpt-image-15)
-      - [Nano Banana Pro](#modal--local-edit01--nano-banana-pro)
-      - [Veo 3.1](#modal--local-edit01--veo-31)
-      - [Seedream 5.0](#modal--local-edit01--seedream-50)
-      - [GPT image 1](#modal--local-edit01--gpt-image-1)
-      - [Nano Banana](#modal--local-edit01--nano-banana)
-      - [Nano Banana 2](#modal--local-edit01--nano-banana-2)
-      - [Emu3.5](#modal--local-edit01--emu35)
-      - [kling](#modal--local-edit01--kling)
-      - [Seedream 4.5](#modal--local-edit01--seedream-45)
-      - [sora](#modal--local-edit01--sora)
-      - [Seedream 4.0](#modal--local-edit01--seedream-40)
-      - [SkyReels-V2](#modal--local-edit01--skyreels-v2)
-      - [Wan2.2-I2V-14B](#modal--local-edit01--wan22-i2v-14b)
-      - [BAGEL](#modal--local-edit01--bagel)
-      - [HunyuanVideo](#modal--local-edit01--hunyuanvideo)
-      - [Qwen-Image](#modal--local-edit01--qwen-image)
-    - [*Only make the clock's hands rotate: simulate the clock's minute hand moving from…*](#modal--local-edit02--prompt)
-      - [GPT image 1.5](#modal--local-edit02--gpt-image-15)
-      - [Nano Banana Pro](#modal--local-edit02--nano-banana-pro)
-      - [Veo 3.1](#modal--local-edit02--veo-31)
-      - [Seedream 5.0](#modal--local-edit02--seedream-50)
-      - [GPT image 1](#modal--local-edit02--gpt-image-1)
-      - [Nano Banana](#modal--local-edit02--nano-banana)
-      - [Nano Banana 2](#modal--local-edit02--nano-banana-2)
-      - [Emu3.5](#modal--local-edit02--emu35)
-      - [kling](#modal--local-edit02--kling)
-      - [Seedream 4.5](#modal--local-edit02--seedream-45)
-      - [sora](#modal--local-edit02--sora)
-      - [Seedream 4.0](#modal--local-edit02--seedream-40)
-      - [SkyReels-V2](#modal--local-edit02--skyreels-v2)
-      - [Wan2.2-I2V-14B](#modal--local-edit02--wan22-i2v-14b)
-      - [BAGEL](#modal--local-edit02--bagel)
-      - [HunyuanVideo](#modal--local-edit02--hunyuanvideo)
-      - [Qwen-Image](#modal--local-edit02--qwen-image)
-    - [*Only make the clock's hands rotate: simulate the hands moving as if time is pass…*](#modal--local-edit03--prompt)
-      - [GPT image 1.5](#modal--local-edit03--gpt-image-15)
-      - [Nano Banana Pro](#modal--local-edit03--nano-banana-pro)
-      - [Veo 3.1](#modal--local-edit03--veo-31)
-      - [Seedream 5.0](#modal--local-edit03--seedream-50)
-      - [GPT image 1](#modal--local-edit03--gpt-image-1)
-      - [Nano Banana](#modal--local-edit03--nano-banana)
-      - [Nano Banana 2](#modal--local-edit03--nano-banana-2)
-      - [Emu3.5](#modal--local-edit03--emu35)
-      - [kling](#modal--local-edit03--kling)
-      - [Seedream 4.5](#modal--local-edit03--seedream-45)
-      - [sora](#modal--local-edit03--sora)
-      - [Seedream 4.0](#modal--local-edit03--seedream-40)
-      - [SkyReels-V2](#modal--local-edit03--skyreels-v2)
-      - [Wan2.2-I2V-14B](#modal--local-edit03--wan22-i2v-14b)
-      - [BAGEL](#modal--local-edit03--bagel)
-      - [HunyuanVideo](#modal--local-edit03--hunyuanvideo)
-      - [Qwen-Image](#modal--local-edit03--qwen-image)
+    <details>
+    <summary><em>Only change the digital clock display: simulate the time on the digital clock ch…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit01--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit01--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit01--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit01--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit01--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit01--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit01--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit01--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit01--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit01--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit01--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit01--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit01--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit01--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit01--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit01--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit01--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>Only make the clock's hands rotate: simulate the clock's minute hand moving from…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit02--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit02--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit02--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit02--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit02--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit02--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit02--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit02--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit02--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit02--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit02--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit02--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit02--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit02--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit02--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit02--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit02--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>Only make the clock's hands rotate: simulate the hands moving as if time is pass…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit03--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit03--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit03--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit03--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit03--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit03--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit03--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit03--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit03--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit03--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit03--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit03--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit03--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit03--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit03--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit03--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--local-edit03--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
   - [Multi-Const](#modal--multi-const)
-    - [*Generate a realistic image containing only three subjects, and satisfy all bindi…*](#modal--multi-const01--prompt)
-      - [GPT image 1.5](#modal--multi-const01--gpt-image-15)
-      - [Nano Banana Pro](#modal--multi-const01--nano-banana-pro)
-      - [Veo 3.1](#modal--multi-const01--veo-31)
-      - [Seedream 5.0](#modal--multi-const01--seedream-50)
-      - [GPT image 1](#modal--multi-const01--gpt-image-1)
-      - [Nano Banana](#modal--multi-const01--nano-banana)
-      - [Nano Banana 2](#modal--multi-const01--nano-banana-2)
-      - [Emu3.5](#modal--multi-const01--emu35)
-      - [kling](#modal--multi-const01--kling)
-      - [Seedream 4.5](#modal--multi-const01--seedream-45)
-      - [sora](#modal--multi-const01--sora)
-      - [Seedream 4.0](#modal--multi-const01--seedream-40)
-      - [SkyReels-V2](#modal--multi-const01--skyreels-v2)
-      - [Wan2.2-I2V-14B](#modal--multi-const01--wan22-i2v-14b)
-      - [BAGEL](#modal--multi-const01--bagel)
-      - [HunyuanVideo](#modal--multi-const01--hunyuanvideo)
-      - [Qwen-Image](#modal--multi-const01--qwen-image)
-    - [*Generate a realistic image containing only three subjects, and satisfy all bindi…*](#modal--multi-const02--prompt)
-      - [GPT image 1.5](#modal--multi-const02--gpt-image-15)
-      - [Nano Banana Pro](#modal--multi-const02--nano-banana-pro)
-      - [Veo 3.1](#modal--multi-const02--veo-31)
-      - [Seedream 5.0](#modal--multi-const02--seedream-50)
-      - [GPT image 1](#modal--multi-const02--gpt-image-1)
-      - [Nano Banana](#modal--multi-const02--nano-banana)
-      - [Nano Banana 2](#modal--multi-const02--nano-banana-2)
-      - [Emu3.5](#modal--multi-const02--emu35)
-      - [kling](#modal--multi-const02--kling)
-      - [Seedream 4.5](#modal--multi-const02--seedream-45)
-      - [sora](#modal--multi-const02--sora)
-      - [Seedream 4.0](#modal--multi-const02--seedream-40)
-      - [SkyReels-V2](#modal--multi-const02--skyreels-v2)
-      - [Wan2.2-I2V-14B](#modal--multi-const02--wan22-i2v-14b)
-      - [BAGEL](#modal--multi-const02--bagel)
-      - [HunyuanVideo](#modal--multi-const02--hunyuanvideo)
-      - [Qwen-Image](#modal--multi-const02--qwen-image)
-    - [*Produce a realistic image containing exactly three subjects: Gardener C: wearing…*](#modal--multi-const03--prompt)
-      - [GPT image 1.5](#modal--multi-const03--gpt-image-15)
-      - [Nano Banana Pro](#modal--multi-const03--nano-banana-pro)
-      - [Veo 3.1](#modal--multi-const03--veo-31)
-      - [Seedream 5.0](#modal--multi-const03--seedream-50)
-      - [GPT image 1](#modal--multi-const03--gpt-image-1)
-      - [Nano Banana](#modal--multi-const03--nano-banana)
-      - [Nano Banana 2](#modal--multi-const03--nano-banana-2)
-      - [Emu3.5](#modal--multi-const03--emu35)
-      - [kling](#modal--multi-const03--kling)
-      - [Seedream 4.5](#modal--multi-const03--seedream-45)
-      - [sora](#modal--multi-const03--sora)
-      - [Seedream 4.0](#modal--multi-const03--seedream-40)
-      - [SkyReels-V2](#modal--multi-const03--skyreels-v2)
-      - [Wan2.2-I2V-14B](#modal--multi-const03--wan22-i2v-14b)
-      - [BAGEL](#modal--multi-const03--bagel)
-      - [HunyuanVideo](#modal--multi-const03--hunyuanvideo)
-      - [Qwen-Image](#modal--multi-const03--qwen-image)
-- [**ModalxSpatial**](#modalxspatial)
+    <details>
+    <summary><em>Generate a realistic image containing only three subjects, and satisfy all bindi…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const01--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const01--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const01--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const01--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const01--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const01--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const01--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const01--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const01--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const01--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const01--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const01--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const01--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const01--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const01--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const01--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const01--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>Generate a realistic image containing only three subjects, and satisfy all bindi…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const02--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const02--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const02--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const02--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const02--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const02--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const02--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const02--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const02--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const02--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const02--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const02--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const02--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const02--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const02--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const02--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const02--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>Produce a realistic image containing exactly three subjects: Gardener C: wearing…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const03--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const03--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const03--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const03--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const03--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const03--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const03--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const03--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const03--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const03--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const03--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const03--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const03--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const03--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const03--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const03--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modal--multi-const03--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+
+- **[ModalxSpatial](#modalxspatial)**
   - [Sem-MV](#modalxspatial--sem-mv)
-    - [*Rotate the camera 360 degrees to display multiple viewpoints from different angl…*](#modalxspatial--sem-mv01--prompt)
-      - [GPT image 1.5](#modalxspatial--sem-mv01--gpt-image-15)
-      - [Nano Banana Pro](#modalxspatial--sem-mv01--nano-banana-pro)
-      - [Veo 3.1](#modalxspatial--sem-mv01--veo-31)
-      - [Seedream 5.0](#modalxspatial--sem-mv01--seedream-50)
-      - [GPT image 1](#modalxspatial--sem-mv01--gpt-image-1)
-      - [Nano Banana](#modalxspatial--sem-mv01--nano-banana)
-      - [Nano Banana 2](#modalxspatial--sem-mv01--nano-banana-2)
-      - [Emu3.5](#modalxspatial--sem-mv01--emu35)
-      - [kling](#modalxspatial--sem-mv01--kling)
-      - [Seedream 4.5](#modalxspatial--sem-mv01--seedream-45)
-      - [sora](#modalxspatial--sem-mv01--sora)
-      - [Seedream 4.0](#modalxspatial--sem-mv01--seedream-40)
-      - [SkyReels-V2](#modalxspatial--sem-mv01--skyreels-v2)
-      - [Wan2.2-I2V-14B](#modalxspatial--sem-mv01--wan22-i2v-14b)
-      - [BAGEL](#modalxspatial--sem-mv01--bagel)
-      - [HunyuanVideo](#modalxspatial--sem-mv01--hunyuanvideo)
-      - [Qwen-Image](#modalxspatial--sem-mv01--qwen-image)
-    - [*Rotate the camera slightly to the left to show four discrete viewpoints of the s…*](#modalxspatial--sem-mv02--prompt)
-      - [GPT image 1.5](#modalxspatial--sem-mv02--gpt-image-15)
-      - [Nano Banana Pro](#modalxspatial--sem-mv02--nano-banana-pro)
-      - [Veo 3.1](#modalxspatial--sem-mv02--veo-31)
-      - [Seedream 5.0](#modalxspatial--sem-mv02--seedream-50)
-      - [GPT image 1](#modalxspatial--sem-mv02--gpt-image-1)
-      - [Nano Banana](#modalxspatial--sem-mv02--nano-banana)
-      - [Nano Banana 2](#modalxspatial--sem-mv02--nano-banana-2)
-      - [Emu3.5](#modalxspatial--sem-mv02--emu35)
-      - [kling](#modalxspatial--sem-mv02--kling)
-      - [Seedream 4.5](#modalxspatial--sem-mv02--seedream-45)
-      - [sora](#modalxspatial--sem-mv02--sora)
-      - [Seedream 4.0](#modalxspatial--sem-mv02--seedream-40)
-      - [SkyReels-V2](#modalxspatial--sem-mv02--skyreels-v2)
-      - [Wan2.2-I2V-14B](#modalxspatial--sem-mv02--wan22-i2v-14b)
-      - [BAGEL](#modalxspatial--sem-mv02--bagel)
-      - [HunyuanVideo](#modalxspatial--sem-mv02--hunyuanvideo)
-      - [Qwen-Image](#modalxspatial--sem-mv02--qwen-image)
-    - [*As the camera rotates to the left, generate a sequence where the apple must rema…*](#modalxspatial--sem-mv03--prompt)
-      - [GPT image 1.5](#modalxspatial--sem-mv03--gpt-image-15)
-      - [Nano Banana Pro](#modalxspatial--sem-mv03--nano-banana-pro)
-      - [Veo 3.1](#modalxspatial--sem-mv03--veo-31)
-      - [Seedream 5.0](#modalxspatial--sem-mv03--seedream-50)
-      - [GPT image 1](#modalxspatial--sem-mv03--gpt-image-1)
-      - [Nano Banana](#modalxspatial--sem-mv03--nano-banana)
-      - [Nano Banana 2](#modalxspatial--sem-mv03--nano-banana-2)
-      - [Emu3.5](#modalxspatial--sem-mv03--emu35)
-      - [kling](#modalxspatial--sem-mv03--kling)
-      - [Seedream 4.5](#modalxspatial--sem-mv03--seedream-45)
-      - [sora](#modalxspatial--sem-mv03--sora)
-      - [Seedream 4.0](#modalxspatial--sem-mv03--seedream-40)
-      - [SkyReels-V2](#modalxspatial--sem-mv03--skyreels-v2)
-      - [Wan2.2-I2V-14B](#modalxspatial--sem-mv03--wan22-i2v-14b)
-      - [BAGEL](#modalxspatial--sem-mv03--bagel)
-      - [HunyuanVideo](#modalxspatial--sem-mv03--hunyuanvideo)
-      - [Qwen-Image](#modalxspatial--sem-mv03--qwen-image)
+    <details>
+    <summary><em>Rotate the camera 360 degrees to display multiple viewpoints from different angl…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv01--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv01--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv01--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv01--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv01--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv01--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv01--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv01--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv01--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv01--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv01--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv01--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv01--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv01--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv01--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv01--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv01--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>Rotate the camera slightly to the left to show four discrete viewpoints of the s…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv02--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv02--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv02--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv02--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv02--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv02--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv02--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv02--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv02--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv02--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv02--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv02--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv02--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv02--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv02--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv02--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv02--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>As the camera rotates to the left, generate a sequence where the apple must rema…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv03--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv03--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv03--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv03--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv03--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv03--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv03--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv03--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv03--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv03--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv03--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv03--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv03--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv03--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv03--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv03--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-mv03--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
   - [Sem-Hier](#modalxspatial--sem-hier)
-    - [*Put only the pear inside the bowl. The orange and banana must remain outside and…*](#modalxspatial--sem-hier01--prompt)
-      - [GPT image 1.5](#modalxspatial--sem-hier01--gpt-image-15)
-      - [Nano Banana Pro](#modalxspatial--sem-hier01--nano-banana-pro)
-      - [Veo 3.1](#modalxspatial--sem-hier01--veo-31)
-      - [Seedream 5.0](#modalxspatial--sem-hier01--seedream-50)
-      - [GPT image 1](#modalxspatial--sem-hier01--gpt-image-1)
-      - [Nano Banana](#modalxspatial--sem-hier01--nano-banana)
-      - [Nano Banana 2](#modalxspatial--sem-hier01--nano-banana-2)
-      - [Emu3.5](#modalxspatial--sem-hier01--emu35)
-      - [kling](#modalxspatial--sem-hier01--kling)
-      - [Seedream 4.5](#modalxspatial--sem-hier01--seedream-45)
-      - [sora](#modalxspatial--sem-hier01--sora)
-      - [Seedream 4.0](#modalxspatial--sem-hier01--seedream-40)
-      - [SkyReels-V2](#modalxspatial--sem-hier01--skyreels-v2)
-      - [Wan2.2-I2V-14B](#modalxspatial--sem-hier01--wan22-i2v-14b)
-      - [BAGEL](#modalxspatial--sem-hier01--bagel)
-      - [HunyuanVideo](#modalxspatial--sem-hier01--hunyuanvideo)
-      - [Qwen-Image](#modalxspatial--sem-hier01--qwen-image)
-    - [*First, put the red ball inside the box. Then, without moving the yellow block, e…*](#modalxspatial--sem-hier02--prompt)
-      - [GPT image 1.5](#modalxspatial--sem-hier02--gpt-image-15)
-      - [Nano Banana Pro](#modalxspatial--sem-hier02--nano-banana-pro)
-      - [Veo 3.1](#modalxspatial--sem-hier02--veo-31)
-      - [Seedream 5.0](#modalxspatial--sem-hier02--seedream-50)
-      - [GPT image 1](#modalxspatial--sem-hier02--gpt-image-1)
-      - [Nano Banana](#modalxspatial--sem-hier02--nano-banana)
-      - [Nano Banana 2](#modalxspatial--sem-hier02--nano-banana-2)
-      - [Emu3.5](#modalxspatial--sem-hier02--emu35)
-      - [kling](#modalxspatial--sem-hier02--kling)
-      - [Seedream 4.5](#modalxspatial--sem-hier02--seedream-45)
-      - [sora](#modalxspatial--sem-hier02--sora)
-      - [Seedream 4.0](#modalxspatial--sem-hier02--seedream-40)
-      - [SkyReels-V2](#modalxspatial--sem-hier02--skyreels-v2)
-      - [Wan2.2-I2V-14B](#modalxspatial--sem-hier02--wan22-i2v-14b)
-      - [BAGEL](#modalxspatial--sem-hier02--bagel)
-      - [HunyuanVideo](#modalxspatial--sem-hier02--hunyuanvideo)
-      - [Qwen-Image](#modalxspatial--sem-hier02--qwen-image)
-    - [*Take only the apple out of the bowl and place it next to the bowl. The banana an…*](#modalxspatial--sem-hier03--prompt)
-      - [GPT image 1.5](#modalxspatial--sem-hier03--gpt-image-15)
-      - [Nano Banana Pro](#modalxspatial--sem-hier03--nano-banana-pro)
-      - [Veo 3.1](#modalxspatial--sem-hier03--veo-31)
-      - [Seedream 5.0](#modalxspatial--sem-hier03--seedream-50)
-      - [GPT image 1](#modalxspatial--sem-hier03--gpt-image-1)
-      - [Nano Banana](#modalxspatial--sem-hier03--nano-banana)
-      - [Nano Banana 2](#modalxspatial--sem-hier03--nano-banana-2)
-      - [Emu3.5](#modalxspatial--sem-hier03--emu35)
-      - [kling](#modalxspatial--sem-hier03--kling)
-      - [Seedream 4.5](#modalxspatial--sem-hier03--seedream-45)
-      - [sora](#modalxspatial--sem-hier03--sora)
-      - [Seedream 4.0](#modalxspatial--sem-hier03--seedream-40)
-      - [SkyReels-V2](#modalxspatial--sem-hier03--skyreels-v2)
-      - [Wan2.2-I2V-14B](#modalxspatial--sem-hier03--wan22-i2v-14b)
-      - [BAGEL](#modalxspatial--sem-hier03--bagel)
-      - [HunyuanVideo](#modalxspatial--sem-hier03--hunyuanvideo)
-      - [Qwen-Image](#modalxspatial--sem-hier03--qwen-image)
+    <details>
+    <summary><em>Put only the pear inside the bowl. The orange and banana must remain outside and…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier01--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier01--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier01--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier01--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier01--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier01--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier01--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier01--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier01--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier01--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier01--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier01--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier01--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier01--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier01--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier01--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier01--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>First, put the red ball inside the box. Then, without moving the yellow block, e…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier02--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier02--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier02--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier02--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier02--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier02--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier02--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier02--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier02--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier02--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier02--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier02--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier02--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier02--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier02--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier02--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier02--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>Take only the apple out of the bowl and place it next to the bowl. The banana an…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier03--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier03--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier03--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier03--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier03--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier03--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier03--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier03--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier03--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier03--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier03--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier03--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier03--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier03--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier03--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier03--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-hier03--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
   - [Sem-Planar](#modalxspatial--sem-planar)
-    - [*The yellow star moves upward. The red star moves rightward. The blue star moves…*](#modalxspatial--sem-planar01--prompt)
-      - [GPT image 1.5](#modalxspatial--sem-planar01--gpt-image-15)
-      - [Nano Banana Pro](#modalxspatial--sem-planar01--nano-banana-pro)
-      - [Veo 3.1](#modalxspatial--sem-planar01--veo-31)
-      - [Seedream 5.0](#modalxspatial--sem-planar01--seedream-50)
-      - [GPT image 1](#modalxspatial--sem-planar01--gpt-image-1)
-      - [Nano Banana](#modalxspatial--sem-planar01--nano-banana)
-      - [Nano Banana 2](#modalxspatial--sem-planar01--nano-banana-2)
-      - [Emu3.5](#modalxspatial--sem-planar01--emu35)
-      - [kling](#modalxspatial--sem-planar01--kling)
-      - [Seedream 4.5](#modalxspatial--sem-planar01--seedream-45)
-      - [sora](#modalxspatial--sem-planar01--sora)
-      - [Seedream 4.0](#modalxspatial--sem-planar01--seedream-40)
-      - [SkyReels-V2](#modalxspatial--sem-planar01--skyreels-v2)
-      - [Wan2.2-I2V-14B](#modalxspatial--sem-planar01--wan22-i2v-14b)
-      - [BAGEL](#modalxspatial--sem-planar01--bagel)
-      - [HunyuanVideo](#modalxspatial--sem-planar01--hunyuanvideo)
-      - [Qwen-Image](#modalxspatial--sem-planar01--qwen-image)
-    - [*The feathered bird flies upward and then stops. The other two birds fly downward…*](#modalxspatial--sem-planar02--prompt)
-      - [GPT image 1.5](#modalxspatial--sem-planar02--gpt-image-15)
-      - [Nano Banana Pro](#modalxspatial--sem-planar02--nano-banana-pro)
-      - [Veo 3.1](#modalxspatial--sem-planar02--veo-31)
-      - [Seedream 5.0](#modalxspatial--sem-planar02--seedream-50)
-      - [GPT image 1](#modalxspatial--sem-planar02--gpt-image-1)
-      - [Nano Banana](#modalxspatial--sem-planar02--nano-banana)
-      - [Nano Banana 2](#modalxspatial--sem-planar02--nano-banana-2)
-      - [Emu3.5](#modalxspatial--sem-planar02--emu35)
-      - [kling](#modalxspatial--sem-planar02--kling)
-      - [Seedream 4.5](#modalxspatial--sem-planar02--seedream-45)
-      - [sora](#modalxspatial--sem-planar02--sora)
-      - [Seedream 4.0](#modalxspatial--sem-planar02--seedream-40)
-      - [SkyReels-V2](#modalxspatial--sem-planar02--skyreels-v2)
-      - [Wan2.2-I2V-14B](#modalxspatial--sem-planar02--wan22-i2v-14b)
-      - [BAGEL](#modalxspatial--sem-planar02--bagel)
-      - [HunyuanVideo](#modalxspatial--sem-planar02--hunyuanvideo)
-      - [Qwen-Image](#modalxspatial--sem-planar02--qwen-image)
-    - [*The dog with the collar moves to the right. The other two dogs move to the left.*](#modalxspatial--sem-planar03--prompt)
-      - [GPT image 1.5](#modalxspatial--sem-planar03--gpt-image-15)
-      - [Nano Banana Pro](#modalxspatial--sem-planar03--nano-banana-pro)
-      - [Veo 3.1](#modalxspatial--sem-planar03--veo-31)
-      - [Seedream 5.0](#modalxspatial--sem-planar03--seedream-50)
-      - [GPT image 1](#modalxspatial--sem-planar03--gpt-image-1)
-      - [Nano Banana](#modalxspatial--sem-planar03--nano-banana)
-      - [Nano Banana 2](#modalxspatial--sem-planar03--nano-banana-2)
-      - [Emu3.5](#modalxspatial--sem-planar03--emu35)
-      - [kling](#modalxspatial--sem-planar03--kling)
-      - [Seedream 4.5](#modalxspatial--sem-planar03--seedream-45)
-      - [sora](#modalxspatial--sem-planar03--sora)
-      - [Seedream 4.0](#modalxspatial--sem-planar03--seedream-40)
-      - [SkyReels-V2](#modalxspatial--sem-planar03--skyreels-v2)
-      - [Wan2.2-I2V-14B](#modalxspatial--sem-planar03--wan22-i2v-14b)
-      - [BAGEL](#modalxspatial--sem-planar03--bagel)
-      - [HunyuanVideo](#modalxspatial--sem-planar03--hunyuanvideo)
-      - [Qwen-Image](#modalxspatial--sem-planar03--qwen-image)
-- [**ModalxTemporal**](#modalxtemporal)
+    <details>
+    <summary><em>The yellow star moves upward. The red star moves rightward. The blue star moves…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar01--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar01--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar01--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar01--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar01--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar01--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar01--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar01--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar01--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar01--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar01--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar01--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar01--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar01--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar01--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar01--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar01--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>The feathered bird flies upward and then stops. The other two birds fly downward…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar02--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar02--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar02--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar02--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar02--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar02--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar02--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar02--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar02--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar02--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar02--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar02--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar02--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar02--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar02--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar02--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar02--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>The dog with the collar moves to the right. The other two dogs move to the left.</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar03--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar03--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar03--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar03--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar03--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar03--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar03--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar03--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar03--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar03--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar03--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar03--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar03--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar03--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar03--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar03--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxspatial--sem-planar03--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+
+- **[ModalxTemporal](#modalxtemporal)**
   - [Attr-Dyn](#modalxtemporal--attr-dyn)
-    - [*A floating sphere in a dark room. The sphere is red in the first frame. The sphe…*](#modalxtemporal--attr-dyn01--prompt)
-      - [GPT image 1.5](#modalxtemporal--attr-dyn01--gpt-image-15)
-      - [Nano Banana Pro](#modalxtemporal--attr-dyn01--nano-banana-pro)
-      - [Veo 3.1](#modalxtemporal--attr-dyn01--veo-31)
-      - [Seedream 5.0](#modalxtemporal--attr-dyn01--seedream-50)
-      - [GPT image 1](#modalxtemporal--attr-dyn01--gpt-image-1)
-      - [Nano Banana](#modalxtemporal--attr-dyn01--nano-banana)
-      - [Nano Banana 2](#modalxtemporal--attr-dyn01--nano-banana-2)
-      - [Emu3.5](#modalxtemporal--attr-dyn01--emu35)
-      - [kling](#modalxtemporal--attr-dyn01--kling)
-      - [Seedream 4.5](#modalxtemporal--attr-dyn01--seedream-45)
-      - [sora](#modalxtemporal--attr-dyn01--sora)
-      - [Seedream 4.0](#modalxtemporal--attr-dyn01--seedream-40)
-      - [SkyReels-V2](#modalxtemporal--attr-dyn01--skyreels-v2)
-      - [Wan2.2-I2V-14B](#modalxtemporal--attr-dyn01--wan22-i2v-14b)
-      - [BAGEL](#modalxtemporal--attr-dyn01--bagel)
-      - [HunyuanVideo](#modalxtemporal--attr-dyn01--hunyuanvideo)
-      - [Qwen-Image](#modalxtemporal--attr-dyn01--qwen-image)
-    - [*The sun sets, stars appear, and the moon rises. This cycle takes 10 seconds. The…*](#modalxtemporal--attr-dyn02--prompt)
-      - [GPT image 1.5](#modalxtemporal--attr-dyn02--gpt-image-15)
-      - [Nano Banana Pro](#modalxtemporal--attr-dyn02--nano-banana-pro)
-      - [Veo 3.1](#modalxtemporal--attr-dyn02--veo-31)
-      - [Seedream 5.0](#modalxtemporal--attr-dyn02--seedream-50)
-      - [GPT image 1](#modalxtemporal--attr-dyn02--gpt-image-1)
-      - [Nano Banana](#modalxtemporal--attr-dyn02--nano-banana)
-      - [Nano Banana 2](#modalxtemporal--attr-dyn02--nano-banana-2)
-      - [Emu3.5](#modalxtemporal--attr-dyn02--emu35)
-      - [kling](#modalxtemporal--attr-dyn02--kling)
-      - [Seedream 4.5](#modalxtemporal--attr-dyn02--seedream-45)
-      - [sora](#modalxtemporal--attr-dyn02--sora)
-      - [Seedream 4.0](#modalxtemporal--attr-dyn02--seedream-40)
-      - [SkyReels-V2](#modalxtemporal--attr-dyn02--skyreels-v2)
-      - [Wan2.2-I2V-14B](#modalxtemporal--attr-dyn02--wan22-i2v-14b)
-      - [BAGEL](#modalxtemporal--attr-dyn02--bagel)
-      - [HunyuanVideo](#modalxtemporal--attr-dyn02--hunyuanvideo)
-      - [Qwen-Image](#modalxtemporal--attr-dyn02--qwen-image)
-    - [*A spinning top on a table. The top's color must cycle in this exact order: blue…*](#modalxtemporal--attr-dyn03--prompt)
-      - [GPT image 1.5](#modalxtemporal--attr-dyn03--gpt-image-15)
-      - [Nano Banana Pro](#modalxtemporal--attr-dyn03--nano-banana-pro)
-      - [Veo 3.1](#modalxtemporal--attr-dyn03--veo-31)
-      - [Seedream 5.0](#modalxtemporal--attr-dyn03--seedream-50)
-      - [GPT image 1](#modalxtemporal--attr-dyn03--gpt-image-1)
-      - [Nano Banana](#modalxtemporal--attr-dyn03--nano-banana)
-      - [Nano Banana 2](#modalxtemporal--attr-dyn03--nano-banana-2)
-      - [Emu3.5](#modalxtemporal--attr-dyn03--emu35)
-      - [kling](#modalxtemporal--attr-dyn03--kling)
-      - [Seedream 4.5](#modalxtemporal--attr-dyn03--seedream-45)
-      - [sora](#modalxtemporal--attr-dyn03--sora)
-      - [Seedream 4.0](#modalxtemporal--attr-dyn03--seedream-40)
-      - [SkyReels-V2](#modalxtemporal--attr-dyn03--skyreels-v2)
-      - [Wan2.2-I2V-14B](#modalxtemporal--attr-dyn03--wan22-i2v-14b)
-      - [BAGEL](#modalxtemporal--attr-dyn03--bagel)
-      - [HunyuanVideo](#modalxtemporal--attr-dyn03--hunyuanvideo)
-      - [Qwen-Image](#modalxtemporal--attr-dyn03--qwen-image)
+    <details>
+    <summary><em>A floating sphere in a dark room. The sphere is red in the first frame. The sphe…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn01--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn01--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn01--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn01--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn01--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn01--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn01--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn01--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn01--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn01--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn01--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn01--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn01--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn01--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn01--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn01--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn01--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>The sun sets, stars appear, and the moon rises. This cycle takes 10 seconds. The…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn02--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn02--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn02--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn02--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn02--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn02--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn02--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn02--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn02--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn02--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn02--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn02--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn02--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn02--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn02--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn02--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn02--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>A spinning top on a table. The top's color must cycle in this exact order: blue…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn03--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn03--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn03--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn03--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn03--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn03--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn03--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn03--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn03--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn03--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn03--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn03--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn03--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn03--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn03--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn03--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--attr-dyn03--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
   - [Trigger-Event](#modalxtemporal--trigger-event)
-    - [*The phone must stay off until the power button is pressed. At the moment the but…*](#modalxtemporal--trigger-event01--prompt)
-      - [GPT image 1.5](#modalxtemporal--trigger-event01--gpt-image-15)
-      - [Nano Banana Pro](#modalxtemporal--trigger-event01--nano-banana-pro)
-      - [Veo 3.1](#modalxtemporal--trigger-event01--veo-31)
-      - [Seedream 5.0](#modalxtemporal--trigger-event01--seedream-50)
-      - [GPT image 1](#modalxtemporal--trigger-event01--gpt-image-1)
-      - [Nano Banana](#modalxtemporal--trigger-event01--nano-banana)
-      - [Nano Banana 2](#modalxtemporal--trigger-event01--nano-banana-2)
-      - [Emu3.5](#modalxtemporal--trigger-event01--emu35)
-      - [kling](#modalxtemporal--trigger-event01--kling)
-      - [Seedream 4.5](#modalxtemporal--trigger-event01--seedream-45)
-      - [sora](#modalxtemporal--trigger-event01--sora)
-      - [Seedream 4.0](#modalxtemporal--trigger-event01--seedream-40)
-      - [SkyReels-V2](#modalxtemporal--trigger-event01--skyreels-v2)
-      - [Wan2.2-I2V-14B](#modalxtemporal--trigger-event01--wan22-i2v-14b)
-      - [BAGEL](#modalxtemporal--trigger-event01--bagel)
-      - [HunyuanVideo](#modalxtemporal--trigger-event01--hunyuanvideo)
-      - [Qwen-Image](#modalxtemporal--trigger-event01--qwen-image)
-    - [*When a hand is detected under the sensor, the faucet turns on instantly and wate…*](#modalxtemporal--trigger-event02--prompt)
-      - [GPT image 1.5](#modalxtemporal--trigger-event02--gpt-image-15)
-      - [Nano Banana Pro](#modalxtemporal--trigger-event02--nano-banana-pro)
-      - [Veo 3.1](#modalxtemporal--trigger-event02--veo-31)
-      - [Seedream 5.0](#modalxtemporal--trigger-event02--seedream-50)
-      - [GPT image 1](#modalxtemporal--trigger-event02--gpt-image-1)
-      - [Nano Banana](#modalxtemporal--trigger-event02--nano-banana)
-      - [Nano Banana 2](#modalxtemporal--trigger-event02--nano-banana-2)
-      - [Emu3.5](#modalxtemporal--trigger-event02--emu35)
-      - [kling](#modalxtemporal--trigger-event02--kling)
-      - [Seedream 4.5](#modalxtemporal--trigger-event02--seedream-45)
-      - [sora](#modalxtemporal--trigger-event02--sora)
-      - [Seedream 4.0](#modalxtemporal--trigger-event02--seedream-40)
-      - [SkyReels-V2](#modalxtemporal--trigger-event02--skyreels-v2)
-      - [Wan2.2-I2V-14B](#modalxtemporal--trigger-event02--wan22-i2v-14b)
-      - [BAGEL](#modalxtemporal--trigger-event02--bagel)
-      - [HunyuanVideo](#modalxtemporal--trigger-event02--hunyuanvideo)
-      - [Qwen-Image](#modalxtemporal--trigger-event02--qwen-image)
-    - [*The lantern must stay closed until it gets dark. At the moment it gets dark, the…*](#modalxtemporal--trigger-event03--prompt)
-      - [GPT image 1.5](#modalxtemporal--trigger-event03--gpt-image-15)
-      - [Nano Banana Pro](#modalxtemporal--trigger-event03--nano-banana-pro)
-      - [Veo 3.1](#modalxtemporal--trigger-event03--veo-31)
-      - [Seedream 5.0](#modalxtemporal--trigger-event03--seedream-50)
-      - [GPT image 1](#modalxtemporal--trigger-event03--gpt-image-1)
-      - [Nano Banana](#modalxtemporal--trigger-event03--nano-banana)
-      - [Nano Banana 2](#modalxtemporal--trigger-event03--nano-banana-2)
-      - [Emu3.5](#modalxtemporal--trigger-event03--emu35)
-      - [kling](#modalxtemporal--trigger-event03--kling)
-      - [Seedream 4.5](#modalxtemporal--trigger-event03--seedream-45)
-      - [sora](#modalxtemporal--trigger-event03--sora)
-      - [Seedream 4.0](#modalxtemporal--trigger-event03--seedream-40)
-      - [SkyReels-V2](#modalxtemporal--trigger-event03--skyreels-v2)
-      - [Wan2.2-I2V-14B](#modalxtemporal--trigger-event03--wan22-i2v-14b)
-      - [BAGEL](#modalxtemporal--trigger-event03--bagel)
-      - [HunyuanVideo](#modalxtemporal--trigger-event03--hunyuanvideo)
-      - [Qwen-Image](#modalxtemporal--trigger-event03--qwen-image)
+    <details>
+    <summary><em>The phone must stay off until the power button is pressed. At the moment the but…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event01--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event01--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event01--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event01--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event01--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event01--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event01--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event01--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event01--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event01--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event01--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event01--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event01--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event01--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event01--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event01--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event01--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>When a hand is detected under the sensor, the faucet turns on instantly and wate…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event02--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event02--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event02--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event02--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event02--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event02--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event02--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event02--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event02--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event02--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event02--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event02--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event02--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event02--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event02--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event02--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event02--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>The lantern must stay closed until it gets dark. At the moment it gets dark, the…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event03--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event03--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event03--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event03--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event03--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event03--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event03--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event03--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event03--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event03--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event03--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event03--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event03--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event03--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event03--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event03--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--trigger-event03--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
   - [Long-Horizon](#modalxtemporal--long-horizon)
-    - [*The dog runs in a park. The red collar must remain exactly the same*](#modalxtemporal--long-horizon01--prompt)
-      - [GPT image 1.5](#modalxtemporal--long-horizon01--gpt-image-15)
-      - [Nano Banana Pro](#modalxtemporal--long-horizon01--nano-banana-pro)
-      - [Veo 3.1](#modalxtemporal--long-horizon01--veo-31)
-      - [Seedream 5.0](#modalxtemporal--long-horizon01--seedream-50)
-      - [GPT image 1](#modalxtemporal--long-horizon01--gpt-image-1)
-      - [Nano Banana](#modalxtemporal--long-horizon01--nano-banana)
-      - [Nano Banana 2](#modalxtemporal--long-horizon01--nano-banana-2)
-      - [Emu3.5](#modalxtemporal--long-horizon01--emu35)
-      - [kling](#modalxtemporal--long-horizon01--kling)
-      - [Seedream 4.5](#modalxtemporal--long-horizon01--seedream-45)
-      - [sora](#modalxtemporal--long-horizon01--sora)
-      - [Seedream 4.0](#modalxtemporal--long-horizon01--seedream-40)
-      - [SkyReels-V2](#modalxtemporal--long-horizon01--skyreels-v2)
-      - [Wan2.2-I2V-14B](#modalxtemporal--long-horizon01--wan22-i2v-14b)
-      - [BAGEL](#modalxtemporal--long-horizon01--bagel)
-      - [HunyuanVideo](#modalxtemporal--long-horizon01--hunyuanvideo)
-      - [Qwen-Image](#modalxtemporal--long-horizon01--qwen-image)
-    - [*The car drives along the road. The blue stripe must remain exactly the same*](#modalxtemporal--long-horizon02--prompt)
-      - [GPT image 1.5](#modalxtemporal--long-horizon02--gpt-image-15)
-      - [Nano Banana Pro](#modalxtemporal--long-horizon02--nano-banana-pro)
-      - [Veo 3.1](#modalxtemporal--long-horizon02--veo-31)
-      - [Seedream 5.0](#modalxtemporal--long-horizon02--seedream-50)
-      - [GPT image 1](#modalxtemporal--long-horizon02--gpt-image-1)
-      - [Nano Banana](#modalxtemporal--long-horizon02--nano-banana)
-      - [Nano Banana 2](#modalxtemporal--long-horizon02--nano-banana-2)
-      - [Emu3.5](#modalxtemporal--long-horizon02--emu35)
-      - [kling](#modalxtemporal--long-horizon02--kling)
-      - [Seedream 4.5](#modalxtemporal--long-horizon02--seedream-45)
-      - [sora](#modalxtemporal--long-horizon02--sora)
-      - [Seedream 4.0](#modalxtemporal--long-horizon02--seedream-40)
-      - [SkyReels-V2](#modalxtemporal--long-horizon02--skyreels-v2)
-      - [Wan2.2-I2V-14B](#modalxtemporal--long-horizon02--wan22-i2v-14b)
-      - [BAGEL](#modalxtemporal--long-horizon02--bagel)
-      - [HunyuanVideo](#modalxtemporal--long-horizon02--hunyuanvideo)
-      - [Qwen-Image](#modalxtemporal--long-horizon02--qwen-image)
-    - [*The car speeds through straightaways and curves. The logo must remain exactly th…*](#modalxtemporal--long-horizon03--prompt)
-      - [GPT image 1.5](#modalxtemporal--long-horizon03--gpt-image-15)
-      - [Nano Banana Pro](#modalxtemporal--long-horizon03--nano-banana-pro)
-      - [Veo 3.1](#modalxtemporal--long-horizon03--veo-31)
-      - [Seedream 5.0](#modalxtemporal--long-horizon03--seedream-50)
-      - [GPT image 1](#modalxtemporal--long-horizon03--gpt-image-1)
-      - [Nano Banana](#modalxtemporal--long-horizon03--nano-banana)
-      - [Nano Banana 2](#modalxtemporal--long-horizon03--nano-banana-2)
-      - [Emu3.5](#modalxtemporal--long-horizon03--emu35)
-      - [kling](#modalxtemporal--long-horizon03--kling)
-      - [Seedream 4.5](#modalxtemporal--long-horizon03--seedream-45)
-      - [sora](#modalxtemporal--long-horizon03--sora)
-      - [Seedream 4.0](#modalxtemporal--long-horizon03--seedream-40)
-      - [SkyReels-V2](#modalxtemporal--long-horizon03--skyreels-v2)
-      - [Wan2.2-I2V-14B](#modalxtemporal--long-horizon03--wan22-i2v-14b)
-      - [BAGEL](#modalxtemporal--long-horizon03--bagel)
-      - [HunyuanVideo](#modalxtemporal--long-horizon03--hunyuanvideo)
-      - [Qwen-Image](#modalxtemporal--long-horizon03--qwen-image)
-- [**Spatial**](#spatial)
+    <details>
+    <summary><em>The dog runs in a park. The red collar must remain exactly the same</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon01--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon01--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon01--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon01--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon01--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon01--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon01--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon01--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon01--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon01--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon01--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon01--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon01--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon01--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon01--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon01--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon01--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>The car drives along the road. The blue stripe must remain exactly the same</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon02--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon02--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon02--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon02--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon02--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon02--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon02--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon02--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon02--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon02--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon02--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon02--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon02--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon02--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon02--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon02--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon02--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>The car speeds through straightaways and curves. The logo must remain exactly th…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon03--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon03--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon03--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon03--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon03--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon03--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon03--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon03--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon03--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon03--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon03--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon03--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon03--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon03--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon03--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon03--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#modalxtemporal--long-horizon03--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+
+- **[Spatial](#spatial)**
   - [MV-3D](#spatial--mv-3d)
-    - [*Rotate the camera and zoom in to show four viewpoints of the same static office.…*](#spatial--mv-3d01--prompt)
-      - [GPT image 1.5](#spatial--mv-3d01--gpt-image-15)
-      - [Nano Banana Pro](#spatial--mv-3d01--nano-banana-pro)
-      - [Veo 3.1](#spatial--mv-3d01--veo-31)
-      - [Seedream 5.0](#spatial--mv-3d01--seedream-50)
-      - [GPT image 1](#spatial--mv-3d01--gpt-image-1)
-      - [Nano Banana](#spatial--mv-3d01--nano-banana)
-      - [Nano Banana 2](#spatial--mv-3d01--nano-banana-2)
-      - [Emu3.5](#spatial--mv-3d01--emu35)
-      - [kling](#spatial--mv-3d01--kling)
-      - [Seedream 4.5](#spatial--mv-3d01--seedream-45)
-      - [sora](#spatial--mv-3d01--sora)
-      - [Seedream 4.0](#spatial--mv-3d01--seedream-40)
-      - [SkyReels-V2](#spatial--mv-3d01--skyreels-v2)
-      - [Wan2.2-I2V-14B](#spatial--mv-3d01--wan22-i2v-14b)
-      - [BAGEL](#spatial--mv-3d01--bagel)
-      - [HunyuanVideo](#spatial--mv-3d01--hunyuanvideo)
-      - [Qwen-Image](#spatial--mv-3d01--qwen-image)
-    - [*Move the camera to the left and rotate it to show three viewpoints of the same b…*](#spatial--mv-3d02--prompt)
-      - [GPT image 1.5](#spatial--mv-3d02--gpt-image-15)
-      - [Nano Banana Pro](#spatial--mv-3d02--nano-banana-pro)
-      - [Veo 3.1](#spatial--mv-3d02--veo-31)
-      - [Seedream 5.0](#spatial--mv-3d02--seedream-50)
-      - [GPT image 1](#spatial--mv-3d02--gpt-image-1)
-      - [Nano Banana](#spatial--mv-3d02--nano-banana)
-      - [Nano Banana 2](#spatial--mv-3d02--nano-banana-2)
-      - [Emu3.5](#spatial--mv-3d02--emu35)
-      - [kling](#spatial--mv-3d02--kling)
-      - [Seedream 4.5](#spatial--mv-3d02--seedream-45)
-      - [sora](#spatial--mv-3d02--sora)
-      - [Seedream 4.0](#spatial--mv-3d02--seedream-40)
-      - [SkyReels-V2](#spatial--mv-3d02--skyreels-v2)
-      - [Wan2.2-I2V-14B](#spatial--mv-3d02--wan22-i2v-14b)
-      - [BAGEL](#spatial--mv-3d02--bagel)
-      - [HunyuanVideo](#spatial--mv-3d02--hunyuanvideo)
-      - [Qwen-Image](#spatial--mv-3d02--qwen-image)
-    - [*Rotate and pan the camera to the left and slightly downward to show three differ…*](#spatial--mv-3d03--prompt)
-      - [GPT image 1.5](#spatial--mv-3d03--gpt-image-15)
-      - [Nano Banana Pro](#spatial--mv-3d03--nano-banana-pro)
-      - [Veo 3.1](#spatial--mv-3d03--veo-31)
-      - [Seedream 5.0](#spatial--mv-3d03--seedream-50)
-      - [GPT image 1](#spatial--mv-3d03--gpt-image-1)
-      - [Nano Banana](#spatial--mv-3d03--nano-banana)
-      - [Nano Banana 2](#spatial--mv-3d03--nano-banana-2)
-      - [Emu3.5](#spatial--mv-3d03--emu35)
-      - [kling](#spatial--mv-3d03--kling)
-      - [Seedream 4.5](#spatial--mv-3d03--seedream-45)
-      - [sora](#spatial--mv-3d03--sora)
-      - [Seedream 4.0](#spatial--mv-3d03--seedream-40)
-      - [SkyReels-V2](#spatial--mv-3d03--skyreels-v2)
-      - [Wan2.2-I2V-14B](#spatial--mv-3d03--wan22-i2v-14b)
-      - [BAGEL](#spatial--mv-3d03--bagel)
-      - [HunyuanVideo](#spatial--mv-3d03--hunyuanvideo)
-      - [Qwen-Image](#spatial--mv-3d03--qwen-image)
+    <details>
+    <summary><em>Rotate the camera and zoom in to show four viewpoints of the same static office.…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d01--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d01--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d01--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d01--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d01--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d01--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d01--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d01--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d01--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d01--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d01--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d01--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d01--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d01--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d01--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d01--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d01--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>Move the camera to the left and rotate it to show three viewpoints of the same b…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d02--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d02--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d02--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d02--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d02--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d02--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d02--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d02--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d02--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d02--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d02--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d02--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d02--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d02--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d02--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d02--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d02--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>Rotate and pan the camera to the left and slightly downward to show three differ…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d03--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d03--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d03--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d03--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d03--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d03--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d03--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d03--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d03--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d03--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d03--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d03--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d03--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d03--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d03--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d03--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--mv-3d03--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
   - [Occ-Contain](#spatial--occ-contain)
-    - [*Slowly close the drawer. The book should be gradually occluded as the drawer clo…*](#spatial--occ-contain01--prompt)
-      - [GPT image 1.5](#spatial--occ-contain01--gpt-image-15)
-      - [Nano Banana Pro](#spatial--occ-contain01--nano-banana-pro)
-      - [Veo 3.1](#spatial--occ-contain01--veo-31)
-      - [Seedream 5.0](#spatial--occ-contain01--seedream-50)
-      - [GPT image 1](#spatial--occ-contain01--gpt-image-1)
-      - [Nano Banana](#spatial--occ-contain01--nano-banana)
-      - [Nano Banana 2](#spatial--occ-contain01--nano-banana-2)
-      - [Emu3.5](#spatial--occ-contain01--emu35)
-      - [kling](#spatial--occ-contain01--kling)
-      - [Seedream 4.5](#spatial--occ-contain01--seedream-45)
-      - [sora](#spatial--occ-contain01--sora)
-      - [Seedream 4.0](#spatial--occ-contain01--seedream-40)
-      - [SkyReels-V2](#spatial--occ-contain01--skyreels-v2)
-      - [Wan2.2-I2V-14B](#spatial--occ-contain01--wan22-i2v-14b)
-      - [BAGEL](#spatial--occ-contain01--bagel)
-      - [HunyuanVideo](#spatial--occ-contain01--hunyuanvideo)
-      - [Qwen-Image](#spatial--occ-contain01--qwen-image)
-    - [*Move the box to the right. The book should be fully revealed.*](#spatial--occ-contain02--prompt)
-      - [GPT image 1.5](#spatial--occ-contain02--gpt-image-15)
-      - [Nano Banana Pro](#spatial--occ-contain02--nano-banana-pro)
-      - [Veo 3.1](#spatial--occ-contain02--veo-31)
-      - [Seedream 5.0](#spatial--occ-contain02--seedream-50)
-      - [GPT image 1](#spatial--occ-contain02--gpt-image-1)
-      - [Nano Banana](#spatial--occ-contain02--nano-banana)
-      - [Nano Banana 2](#spatial--occ-contain02--nano-banana-2)
-      - [Emu3.5](#spatial--occ-contain02--emu35)
-      - [kling](#spatial--occ-contain02--kling)
-      - [Seedream 4.5](#spatial--occ-contain02--seedream-45)
-      - [sora](#spatial--occ-contain02--sora)
-      - [Seedream 4.0](#spatial--occ-contain02--seedream-40)
-      - [SkyReels-V2](#spatial--occ-contain02--skyreels-v2)
-      - [Wan2.2-I2V-14B](#spatial--occ-contain02--wan22-i2v-14b)
-      - [BAGEL](#spatial--occ-contain02--bagel)
-      - [HunyuanVideo](#spatial--occ-contain02--hunyuanvideo)
-      - [Qwen-Image](#spatial--occ-contain02--qwen-image)
-    - [*Move the cloud slowly upward. The sun and mountains should be gradually revealed…*](#spatial--occ-contain03--prompt)
-      - [GPT image 1.5](#spatial--occ-contain03--gpt-image-15)
-      - [Nano Banana Pro](#spatial--occ-contain03--nano-banana-pro)
-      - [Veo 3.1](#spatial--occ-contain03--veo-31)
-      - [Seedream 5.0](#spatial--occ-contain03--seedream-50)
-      - [GPT image 1](#spatial--occ-contain03--gpt-image-1)
-      - [Nano Banana](#spatial--occ-contain03--nano-banana)
-      - [Nano Banana 2](#spatial--occ-contain03--nano-banana-2)
-      - [Emu3.5](#spatial--occ-contain03--emu35)
-      - [kling](#spatial--occ-contain03--kling)
-      - [Seedream 4.5](#spatial--occ-contain03--seedream-45)
-      - [sora](#spatial--occ-contain03--sora)
-      - [Seedream 4.0](#spatial--occ-contain03--seedream-40)
-      - [SkyReels-V2](#spatial--occ-contain03--skyreels-v2)
-      - [Wan2.2-I2V-14B](#spatial--occ-contain03--wan22-i2v-14b)
-      - [BAGEL](#spatial--occ-contain03--bagel)
-      - [HunyuanVideo](#spatial--occ-contain03--hunyuanvideo)
-      - [Qwen-Image](#spatial--occ-contain03--qwen-image)
+    <details>
+    <summary><em>Slowly close the drawer. The book should be gradually occluded as the drawer clo…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain01--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain01--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain01--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain01--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain01--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain01--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain01--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain01--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain01--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain01--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain01--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain01--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain01--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain01--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain01--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain01--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain01--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>Move the box to the right. The book should be fully revealed.</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain02--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain02--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain02--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain02--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain02--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain02--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain02--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain02--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain02--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain02--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain02--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain02--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain02--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain02--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain02--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain02--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain02--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>Move the cloud slowly upward. The sun and mountains should be gradually revealed…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain03--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain03--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain03--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain03--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain03--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain03--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain03--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain03--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain03--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain03--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain03--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain03--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain03--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain03--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain03--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain03--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--occ-contain03--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
   - [Planar-2D](#spatial--planar-2d)
-    - [*The left cat moves to the left, and the right cat moves to the right. Keep the c…*](#spatial--planar-2d01--prompt)
-      - [GPT image 1.5](#spatial--planar-2d01--gpt-image-15)
-      - [Nano Banana Pro](#spatial--planar-2d01--nano-banana-pro)
-      - [Veo 3.1](#spatial--planar-2d01--veo-31)
-      - [Seedream 5.0](#spatial--planar-2d01--seedream-50)
-      - [GPT image 1](#spatial--planar-2d01--gpt-image-1)
-      - [Nano Banana](#spatial--planar-2d01--nano-banana)
-      - [Nano Banana 2](#spatial--planar-2d01--nano-banana-2)
-      - [Emu3.5](#spatial--planar-2d01--emu35)
-      - [kling](#spatial--planar-2d01--kling)
-      - [Seedream 4.5](#spatial--planar-2d01--seedream-45)
-      - [sora](#spatial--planar-2d01--sora)
-      - [Seedream 4.0](#spatial--planar-2d01--seedream-40)
-      - [SkyReels-V2](#spatial--planar-2d01--skyreels-v2)
-      - [Wan2.2-I2V-14B](#spatial--planar-2d01--wan22-i2v-14b)
-      - [BAGEL](#spatial--planar-2d01--bagel)
-      - [HunyuanVideo](#spatial--planar-2d01--hunyuanvideo)
-      - [Qwen-Image](#spatial--planar-2d01--qwen-image)
-    - [*The left balloon moves upward, and the right balloon moves downward.*](#spatial--planar-2d02--prompt)
-      - [GPT image 1.5](#spatial--planar-2d02--gpt-image-15)
-      - [Nano Banana Pro](#spatial--planar-2d02--nano-banana-pro)
-      - [Veo 3.1](#spatial--planar-2d02--veo-31)
-      - [Seedream 5.0](#spatial--planar-2d02--seedream-50)
-      - [GPT image 1](#spatial--planar-2d02--gpt-image-1)
-      - [Nano Banana](#spatial--planar-2d02--nano-banana)
-      - [Nano Banana 2](#spatial--planar-2d02--nano-banana-2)
-      - [Emu3.5](#spatial--planar-2d02--emu35)
-      - [kling](#spatial--planar-2d02--kling)
-      - [Seedream 4.5](#spatial--planar-2d02--seedream-45)
-      - [sora](#spatial--planar-2d02--sora)
-      - [Seedream 4.0](#spatial--planar-2d02--seedream-40)
-      - [SkyReels-V2](#spatial--planar-2d02--skyreels-v2)
-      - [Wan2.2-I2V-14B](#spatial--planar-2d02--wan22-i2v-14b)
-      - [BAGEL](#spatial--planar-2d02--bagel)
-      - [HunyuanVideo](#spatial--planar-2d02--hunyuanvideo)
-      - [Qwen-Image](#spatial--planar-2d02--qwen-image)
-    - [*The left ball rolls to the left and stops, while the right ball rolls to the rig…*](#spatial--planar-2d03--prompt)
-      - [GPT image 1.5](#spatial--planar-2d03--gpt-image-15)
-      - [Nano Banana Pro](#spatial--planar-2d03--nano-banana-pro)
-      - [Veo 3.1](#spatial--planar-2d03--veo-31)
-      - [Seedream 5.0](#spatial--planar-2d03--seedream-50)
-      - [GPT image 1](#spatial--planar-2d03--gpt-image-1)
-      - [Nano Banana](#spatial--planar-2d03--nano-banana)
-      - [Nano Banana 2](#spatial--planar-2d03--nano-banana-2)
-      - [Emu3.5](#spatial--planar-2d03--emu35)
-      - [kling](#spatial--planar-2d03--kling)
-      - [Seedream 4.5](#spatial--planar-2d03--seedream-45)
-      - [sora](#spatial--planar-2d03--sora)
-      - [Seedream 4.0](#spatial--planar-2d03--seedream-40)
-      - [SkyReels-V2](#spatial--planar-2d03--skyreels-v2)
-      - [Wan2.2-I2V-14B](#spatial--planar-2d03--wan22-i2v-14b)
-      - [BAGEL](#spatial--planar-2d03--bagel)
-      - [HunyuanVideo](#spatial--planar-2d03--hunyuanvideo)
-      - [Qwen-Image](#spatial--planar-2d03--qwen-image)
-- [**SpatialxTemporal**](#spatialxtemporal)
+    <details>
+    <summary><em>The left cat moves to the left, and the right cat moves to the right. Keep the c…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d01--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d01--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d01--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d01--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d01--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d01--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d01--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d01--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d01--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d01--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d01--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d01--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d01--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d01--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d01--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d01--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d01--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>The left balloon moves upward, and the right balloon moves downward.</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d02--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d02--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d02--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d02--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d02--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d02--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d02--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d02--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d02--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d02--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d02--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d02--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d02--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d02--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d02--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d02--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d02--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>The left ball rolls to the left and stops, while the right ball rolls to the rig…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d03--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d03--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d03--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d03--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d03--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d03--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d03--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d03--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d03--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d03--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d03--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d03--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d03--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d03--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d03--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d03--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatial--planar-2d03--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+
+- **[SpatialxTemporal](#spatialxtemporal)**
   - [3D-Loop](#spatialxtemporal--3d-loop)
-    - [*Navigate through the hallway into a sequence of connected rooms—a bedroom, a bat…*](#spatialxtemporal--3d-loop01--prompt)
-      - [GPT image 1.5](#spatialxtemporal--3d-loop01--gpt-image-15)
-      - [Nano Banana Pro](#spatialxtemporal--3d-loop01--nano-banana-pro)
-      - [Veo 3.1](#spatialxtemporal--3d-loop01--veo-31)
-      - [Seedream 5.0](#spatialxtemporal--3d-loop01--seedream-50)
-      - [GPT image 1](#spatialxtemporal--3d-loop01--gpt-image-1)
-      - [Nano Banana](#spatialxtemporal--3d-loop01--nano-banana)
-      - [Nano Banana 2](#spatialxtemporal--3d-loop01--nano-banana-2)
-      - [Emu3.5](#spatialxtemporal--3d-loop01--emu35)
-      - [kling](#spatialxtemporal--3d-loop01--kling)
-      - [Seedream 4.5](#spatialxtemporal--3d-loop01--seedream-45)
-      - [sora](#spatialxtemporal--3d-loop01--sora)
-      - [Seedream 4.0](#spatialxtemporal--3d-loop01--seedream-40)
-      - [SkyReels-V2](#spatialxtemporal--3d-loop01--skyreels-v2)
-      - [Wan2.2-I2V-14B](#spatialxtemporal--3d-loop01--wan22-i2v-14b)
-      - [BAGEL](#spatialxtemporal--3d-loop01--bagel)
-      - [HunyuanVideo](#spatialxtemporal--3d-loop01--hunyuanvideo)
-      - [Qwen-Image](#spatialxtemporal--3d-loop01--qwen-image)
-    - [*Step out from the bedroom onto a balcony overlooking a city skyline during dayti…*](#spatialxtemporal--3d-loop02--prompt)
-      - [GPT image 1.5](#spatialxtemporal--3d-loop02--gpt-image-15)
-      - [Nano Banana Pro](#spatialxtemporal--3d-loop02--nano-banana-pro)
-      - [Veo 3.1](#spatialxtemporal--3d-loop02--veo-31)
-      - [Seedream 5.0](#spatialxtemporal--3d-loop02--seedream-50)
-      - [GPT image 1](#spatialxtemporal--3d-loop02--gpt-image-1)
-      - [Nano Banana](#spatialxtemporal--3d-loop02--nano-banana)
-      - [Nano Banana 2](#spatialxtemporal--3d-loop02--nano-banana-2)
-      - [Emu3.5](#spatialxtemporal--3d-loop02--emu35)
-      - [kling](#spatialxtemporal--3d-loop02--kling)
-      - [Seedream 4.5](#spatialxtemporal--3d-loop02--seedream-45)
-      - [sora](#spatialxtemporal--3d-loop02--sora)
-      - [Seedream 4.0](#spatialxtemporal--3d-loop02--seedream-40)
-      - [SkyReels-V2](#spatialxtemporal--3d-loop02--skyreels-v2)
-      - [Wan2.2-I2V-14B](#spatialxtemporal--3d-loop02--wan22-i2v-14b)
-      - [BAGEL](#spatialxtemporal--3d-loop02--bagel)
-      - [HunyuanVideo](#spatialxtemporal--3d-loop02--hunyuanvideo)
-      - [Qwen-Image](#spatialxtemporal--3d-loop02--qwen-image)
-    - [*Exit the warm cabin into a blizzard outdoors, experience snow and wind effects,…*](#spatialxtemporal--3d-loop03--prompt)
-      - [GPT image 1.5](#spatialxtemporal--3d-loop03--gpt-image-15)
-      - [Nano Banana Pro](#spatialxtemporal--3d-loop03--nano-banana-pro)
-      - [Veo 3.1](#spatialxtemporal--3d-loop03--veo-31)
-      - [Seedream 5.0](#spatialxtemporal--3d-loop03--seedream-50)
-      - [GPT image 1](#spatialxtemporal--3d-loop03--gpt-image-1)
-      - [Nano Banana](#spatialxtemporal--3d-loop03--nano-banana)
-      - [Nano Banana 2](#spatialxtemporal--3d-loop03--nano-banana-2)
-      - [Emu3.5](#spatialxtemporal--3d-loop03--emu35)
-      - [kling](#spatialxtemporal--3d-loop03--kling)
-      - [Seedream 4.5](#spatialxtemporal--3d-loop03--seedream-45)
-      - [sora](#spatialxtemporal--3d-loop03--sora)
-      - [Seedream 4.0](#spatialxtemporal--3d-loop03--seedream-40)
-      - [SkyReels-V2](#spatialxtemporal--3d-loop03--skyreels-v2)
-      - [Wan2.2-I2V-14B](#spatialxtemporal--3d-loop03--wan22-i2v-14b)
-      - [BAGEL](#spatialxtemporal--3d-loop03--bagel)
-      - [HunyuanVideo](#spatialxtemporal--3d-loop03--hunyuanvideo)
-      - [Qwen-Image](#spatialxtemporal--3d-loop03--qwen-image)
+    <details>
+    <summary><em>Navigate through the hallway into a sequence of connected rooms—a bedroom, a bat…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop01--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop01--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop01--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop01--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop01--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop01--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop01--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop01--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop01--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop01--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop01--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop01--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop01--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop01--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop01--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop01--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop01--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>Step out from the bedroom onto a balcony overlooking a city skyline during dayti…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop02--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop02--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop02--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop02--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop02--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop02--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop02--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop02--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop02--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop02--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop02--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop02--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop02--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop02--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop02--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop02--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop02--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>Exit the warm cabin into a blizzard outdoors, experience snow and wind effects,…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop03--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop03--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop03--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop03--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop03--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop03--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop03--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop03--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop03--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop03--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop03--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop03--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop03--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop03--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop03--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop03--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--3d-loop03--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
   - [maze](#spatialxtemporal--maze)
-    - [*This is a maze diagram. The objective is to guide the red dot from the bottom-le…*](#spatialxtemporal--maze01--prompt)
-      - [GPT image 1.5](#spatialxtemporal--maze01--gpt-image-15)
-      - [Nano Banana Pro](#spatialxtemporal--maze01--nano-banana-pro)
-      - [Veo 3.1](#spatialxtemporal--maze01--veo-31)
-      - [Seedream 5.0](#spatialxtemporal--maze01--seedream-50)
-      - [GPT image 1](#spatialxtemporal--maze01--gpt-image-1)
-      - [Nano Banana](#spatialxtemporal--maze01--nano-banana)
-      - [Nano Banana 2](#spatialxtemporal--maze01--nano-banana-2)
-      - [Emu3.5](#spatialxtemporal--maze01--emu35)
-      - [kling](#spatialxtemporal--maze01--kling)
-      - [Seedream 4.5](#spatialxtemporal--maze01--seedream-45)
-      - [sora](#spatialxtemporal--maze01--sora)
-      - [Seedream 4.0](#spatialxtemporal--maze01--seedream-40)
-      - [SkyReels-V2](#spatialxtemporal--maze01--skyreels-v2)
-      - [Wan2.2-I2V-14B](#spatialxtemporal--maze01--wan22-i2v-14b)
-      - [BAGEL](#spatialxtemporal--maze01--bagel)
-      - [HunyuanVideo](#spatialxtemporal--maze01--hunyuanvideo)
-      - [Qwen-Image](#spatialxtemporal--maze01--qwen-image)
-    - [*This is a maze diagram. The objective is to guide the red dot from the bottom-le…*](#spatialxtemporal--maze02--prompt)
-      - [GPT image 1.5](#spatialxtemporal--maze02--gpt-image-15)
-      - [Nano Banana Pro](#spatialxtemporal--maze02--nano-banana-pro)
-      - [Veo 3.1](#spatialxtemporal--maze02--veo-31)
-      - [Seedream 5.0](#spatialxtemporal--maze02--seedream-50)
-      - [GPT image 1](#spatialxtemporal--maze02--gpt-image-1)
-      - [Nano Banana](#spatialxtemporal--maze02--nano-banana)
-      - [Nano Banana 2](#spatialxtemporal--maze02--nano-banana-2)
-      - [Emu3.5](#spatialxtemporal--maze02--emu35)
-      - [kling](#spatialxtemporal--maze02--kling)
-      - [Seedream 4.5](#spatialxtemporal--maze02--seedream-45)
-      - [sora](#spatialxtemporal--maze02--sora)
-      - [Seedream 4.0](#spatialxtemporal--maze02--seedream-40)
-      - [SkyReels-V2](#spatialxtemporal--maze02--skyreels-v2)
-      - [Wan2.2-I2V-14B](#spatialxtemporal--maze02--wan22-i2v-14b)
-      - [BAGEL](#spatialxtemporal--maze02--bagel)
-      - [HunyuanVideo](#spatialxtemporal--maze02--hunyuanvideo)
-      - [Qwen-Image](#spatialxtemporal--maze02--qwen-image)
-    - [*This is a maze diagram. The objective is to guide the red dot from the bottom-le…*](#spatialxtemporal--maze03--prompt)
-      - [GPT image 1.5](#spatialxtemporal--maze03--gpt-image-15)
-      - [Nano Banana Pro](#spatialxtemporal--maze03--nano-banana-pro)
-      - [Veo 3.1](#spatialxtemporal--maze03--veo-31)
-      - [Seedream 5.0](#spatialxtemporal--maze03--seedream-50)
-      - [GPT image 1](#spatialxtemporal--maze03--gpt-image-1)
-      - [Nano Banana](#spatialxtemporal--maze03--nano-banana)
-      - [Nano Banana 2](#spatialxtemporal--maze03--nano-banana-2)
-      - [Emu3.5](#spatialxtemporal--maze03--emu35)
-      - [kling](#spatialxtemporal--maze03--kling)
-      - [Seedream 4.5](#spatialxtemporal--maze03--seedream-45)
-      - [sora](#spatialxtemporal--maze03--sora)
-      - [Seedream 4.0](#spatialxtemporal--maze03--seedream-40)
-      - [SkyReels-V2](#spatialxtemporal--maze03--skyreels-v2)
-      - [Wan2.2-I2V-14B](#spatialxtemporal--maze03--wan22-i2v-14b)
-      - [BAGEL](#spatialxtemporal--maze03--bagel)
-      - [HunyuanVideo](#spatialxtemporal--maze03--hunyuanvideo)
-      - [Qwen-Image](#spatialxtemporal--maze03--qwen-image)
+    <details>
+    <summary><em>This is a maze diagram. The objective is to guide the red dot from the bottom-le…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze01--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze01--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze01--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze01--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze01--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze01--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze01--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze01--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze01--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze01--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze01--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze01--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze01--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze01--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze01--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze01--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze01--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>This is a maze diagram. The objective is to guide the red dot from the bottom-le…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze02--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze02--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze02--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze02--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze02--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze02--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze02--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze02--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze02--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze02--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze02--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze02--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze02--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze02--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze02--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze02--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze02--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>This is a maze diagram. The objective is to guide the red dot from the bottom-le…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze03--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze03--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze03--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze03--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze03--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze03--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze03--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze03--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze03--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze03--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze03--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze03--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze03--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze03--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze03--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze03--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--maze03--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
   - [Occ-Motion](#spatialxtemporal--occ-motion)
-    - [*Camera remains static, but a foreground car moves horizontally from left to righ…*](#spatialxtemporal--occ-motion01--prompt)
-      - [GPT image 1.5](#spatialxtemporal--occ-motion01--gpt-image-15)
-      - [Nano Banana Pro](#spatialxtemporal--occ-motion01--nano-banana-pro)
-      - [Veo 3.1](#spatialxtemporal--occ-motion01--veo-31)
-      - [Seedream 5.0](#spatialxtemporal--occ-motion01--seedream-50)
-      - [GPT image 1](#spatialxtemporal--occ-motion01--gpt-image-1)
-      - [Nano Banana](#spatialxtemporal--occ-motion01--nano-banana)
-      - [Nano Banana 2](#spatialxtemporal--occ-motion01--nano-banana-2)
-      - [Emu3.5](#spatialxtemporal--occ-motion01--emu35)
-      - [kling](#spatialxtemporal--occ-motion01--kling)
-      - [Seedream 4.5](#spatialxtemporal--occ-motion01--seedream-45)
-      - [sora](#spatialxtemporal--occ-motion01--sora)
-      - [Seedream 4.0](#spatialxtemporal--occ-motion01--seedream-40)
-      - [SkyReels-V2](#spatialxtemporal--occ-motion01--skyreels-v2)
-      - [Wan2.2-I2V-14B](#spatialxtemporal--occ-motion01--wan22-i2v-14b)
-      - [BAGEL](#spatialxtemporal--occ-motion01--bagel)
-      - [HunyuanVideo](#spatialxtemporal--occ-motion01--hunyuanvideo)
-      - [Qwen-Image](#spatialxtemporal--occ-motion01--qwen-image)
-    - [*Camera tracks alongside a moving car to the left in a suburban environment.*](#spatialxtemporal--occ-motion02--prompt)
-      - [GPT image 1.5](#spatialxtemporal--occ-motion02--gpt-image-15)
-      - [Nano Banana Pro](#spatialxtemporal--occ-motion02--nano-banana-pro)
-      - [Veo 3.1](#spatialxtemporal--occ-motion02--veo-31)
-      - [Seedream 5.0](#spatialxtemporal--occ-motion02--seedream-50)
-      - [GPT image 1](#spatialxtemporal--occ-motion02--gpt-image-1)
-      - [Nano Banana](#spatialxtemporal--occ-motion02--nano-banana)
-      - [Nano Banana 2](#spatialxtemporal--occ-motion02--nano-banana-2)
-      - [Emu3.5](#spatialxtemporal--occ-motion02--emu35)
-      - [kling](#spatialxtemporal--occ-motion02--kling)
-      - [Seedream 4.5](#spatialxtemporal--occ-motion02--seedream-45)
-      - [sora](#spatialxtemporal--occ-motion02--sora)
-      - [Seedream 4.0](#spatialxtemporal--occ-motion02--seedream-40)
-      - [SkyReels-V2](#spatialxtemporal--occ-motion02--skyreels-v2)
-      - [Wan2.2-I2V-14B](#spatialxtemporal--occ-motion02--wan22-i2v-14b)
-      - [BAGEL](#spatialxtemporal--occ-motion02--bagel)
-      - [HunyuanVideo](#spatialxtemporal--occ-motion02--hunyuanvideo)
-      - [Qwen-Image](#spatialxtemporal--occ-motion02--qwen-image)
-    - [*Camera zooms in during rain, with raindrops on a windshield.*](#spatialxtemporal--occ-motion03--prompt)
-      - [GPT image 1.5](#spatialxtemporal--occ-motion03--gpt-image-15)
-      - [Nano Banana Pro](#spatialxtemporal--occ-motion03--nano-banana-pro)
-      - [Veo 3.1](#spatialxtemporal--occ-motion03--veo-31)
-      - [Seedream 5.0](#spatialxtemporal--occ-motion03--seedream-50)
-      - [GPT image 1](#spatialxtemporal--occ-motion03--gpt-image-1)
-      - [Nano Banana](#spatialxtemporal--occ-motion03--nano-banana)
-      - [Nano Banana 2](#spatialxtemporal--occ-motion03--nano-banana-2)
-      - [Emu3.5](#spatialxtemporal--occ-motion03--emu35)
-      - [kling](#spatialxtemporal--occ-motion03--kling)
-      - [Seedream 4.5](#spatialxtemporal--occ-motion03--seedream-45)
-      - [sora](#spatialxtemporal--occ-motion03--sora)
-      - [Seedream 4.0](#spatialxtemporal--occ-motion03--seedream-40)
-      - [SkyReels-V2](#spatialxtemporal--occ-motion03--skyreels-v2)
-      - [Wan2.2-I2V-14B](#spatialxtemporal--occ-motion03--wan22-i2v-14b)
-      - [BAGEL](#spatialxtemporal--occ-motion03--bagel)
-      - [HunyuanVideo](#spatialxtemporal--occ-motion03--hunyuanvideo)
-      - [Qwen-Image](#spatialxtemporal--occ-motion03--qwen-image)
-- [**Temporal**](#temporal)
+    <details>
+    <summary><em>Camera remains static, but a foreground car moves horizontally from left to righ…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion01--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion01--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion01--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion01--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion01--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion01--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion01--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion01--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion01--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion01--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion01--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion01--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion01--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion01--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion01--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion01--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion01--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>Camera tracks alongside a moving car to the left in a suburban environment.</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion02--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion02--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion02--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion02--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion02--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion02--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion02--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion02--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion02--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion02--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion02--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion02--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion02--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion02--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion02--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion02--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion02--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>Camera zooms in during rain, with raindrops on a windshield.</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion03--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion03--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion03--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion03--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion03--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion03--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion03--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion03--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion03--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion03--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion03--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion03--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion03--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion03--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion03--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion03--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#spatialxtemporal--occ-motion03--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+
+- **[Temporal](#temporal)**
   - [Slow-Evol](#temporal--slow-evol)
-    - [*One hour passes.*](#temporal--slow-evol01--prompt)
-      - [GPT image 1.5](#temporal--slow-evol01--gpt-image-15)
-      - [Nano Banana Pro](#temporal--slow-evol01--nano-banana-pro)
-      - [Veo 3.1](#temporal--slow-evol01--veo-31)
-      - [Seedream 5.0](#temporal--slow-evol01--seedream-50)
-      - [GPT image 1](#temporal--slow-evol01--gpt-image-1)
-      - [Nano Banana](#temporal--slow-evol01--nano-banana)
-      - [Nano Banana 2](#temporal--slow-evol01--nano-banana-2)
-      - [Emu3.5](#temporal--slow-evol01--emu35)
-      - [kling](#temporal--slow-evol01--kling)
-      - [Seedream 4.5](#temporal--slow-evol01--seedream-45)
-      - [sora](#temporal--slow-evol01--sora)
-      - [Seedream 4.0](#temporal--slow-evol01--seedream-40)
-      - [SkyReels-V2](#temporal--slow-evol01--skyreels-v2)
-      - [Wan2.2-I2V-14B](#temporal--slow-evol01--wan22-i2v-14b)
-      - [BAGEL](#temporal--slow-evol01--bagel)
-      - [HunyuanVideo](#temporal--slow-evol01--hunyuanvideo)
-      - [Qwen-Image](#temporal--slow-evol01--qwen-image)
-    - [*Several hours pass.*](#temporal--slow-evol02--prompt)
-      - [GPT image 1.5](#temporal--slow-evol02--gpt-image-15)
-      - [Nano Banana Pro](#temporal--slow-evol02--nano-banana-pro)
-      - [Veo 3.1](#temporal--slow-evol02--veo-31)
-      - [Seedream 5.0](#temporal--slow-evol02--seedream-50)
-      - [GPT image 1](#temporal--slow-evol02--gpt-image-1)
-      - [Nano Banana](#temporal--slow-evol02--nano-banana)
-      - [Nano Banana 2](#temporal--slow-evol02--nano-banana-2)
-      - [Emu3.5](#temporal--slow-evol02--emu35)
-      - [kling](#temporal--slow-evol02--kling)
-      - [Seedream 4.5](#temporal--slow-evol02--seedream-45)
-      - [sora](#temporal--slow-evol02--sora)
-      - [Seedream 4.0](#temporal--slow-evol02--seedream-40)
-      - [SkyReels-V2](#temporal--slow-evol02--skyreels-v2)
-      - [Wan2.2-I2V-14B](#temporal--slow-evol02--wan22-i2v-14b)
-      - [BAGEL](#temporal--slow-evol02--bagel)
-      - [HunyuanVideo](#temporal--slow-evol02--hunyuanvideo)
-      - [Qwen-Image](#temporal--slow-evol02--qwen-image)
-    - [*Thirty minutes pass.*](#temporal--slow-evol03--prompt)
-      - [GPT image 1.5](#temporal--slow-evol03--gpt-image-15)
-      - [Nano Banana Pro](#temporal--slow-evol03--nano-banana-pro)
-      - [Veo 3.1](#temporal--slow-evol03--veo-31)
-      - [Seedream 5.0](#temporal--slow-evol03--seedream-50)
-      - [GPT image 1](#temporal--slow-evol03--gpt-image-1)
-      - [Nano Banana](#temporal--slow-evol03--nano-banana)
-      - [Nano Banana 2](#temporal--slow-evol03--nano-banana-2)
-      - [Emu3.5](#temporal--slow-evol03--emu35)
-      - [kling](#temporal--slow-evol03--kling)
-      - [Seedream 4.5](#temporal--slow-evol03--seedream-45)
-      - [sora](#temporal--slow-evol03--sora)
-      - [Seedream 4.0](#temporal--slow-evol03--seedream-40)
-      - [SkyReels-V2](#temporal--slow-evol03--skyreels-v2)
-      - [Wan2.2-I2V-14B](#temporal--slow-evol03--wan22-i2v-14b)
-      - [BAGEL](#temporal--slow-evol03--bagel)
-      - [HunyuanVideo](#temporal--slow-evol03--hunyuanvideo)
-      - [Qwen-Image](#temporal--slow-evol03--qwen-image)
+    <details>
+    <summary><em>One hour passes.</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol01--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol01--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol01--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol01--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol01--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol01--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol01--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol01--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol01--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol01--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol01--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol01--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol01--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol01--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol01--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol01--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol01--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>Several hours pass.</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol02--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol02--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol02--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol02--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol02--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol02--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol02--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol02--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol02--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol02--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol02--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol02--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol02--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol02--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol02--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol02--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol02--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>Thirty minutes pass.</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol03--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol03--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol03--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol03--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol03--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol03--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol03--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol03--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol03--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol03--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol03--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol03--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol03--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol03--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol03--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol03--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--slow-evol03--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
   - [Stage-Order](#temporal--stage-order)
-    - [*Demolish a house built with building blocks.*](#temporal--stage-order01--prompt)
-      - [GPT image 1.5](#temporal--stage-order01--gpt-image-15)
-      - [Nano Banana Pro](#temporal--stage-order01--nano-banana-pro)
-      - [Veo 3.1](#temporal--stage-order01--veo-31)
-      - [Seedream 5.0](#temporal--stage-order01--seedream-50)
-      - [GPT image 1](#temporal--stage-order01--gpt-image-1)
-      - [Nano Banana](#temporal--stage-order01--nano-banana)
-      - [Nano Banana 2](#temporal--stage-order01--nano-banana-2)
-      - [Emu3.5](#temporal--stage-order01--emu35)
-      - [kling](#temporal--stage-order01--kling)
-      - [Seedream 4.5](#temporal--stage-order01--seedream-45)
-      - [sora](#temporal--stage-order01--sora)
-      - [Seedream 4.0](#temporal--stage-order01--seedream-40)
-      - [SkyReels-V2](#temporal--stage-order01--skyreels-v2)
-      - [Wan2.2-I2V-14B](#temporal--stage-order01--wan22-i2v-14b)
-      - [BAGEL](#temporal--stage-order01--bagel)
-      - [HunyuanVideo](#temporal--stage-order01--hunyuanvideo)
-      - [Qwen-Image](#temporal--stage-order01--qwen-image)
-    - [*Paint a portrait with oil paints.*](#temporal--stage-order02--prompt)
-      - [GPT image 1.5](#temporal--stage-order02--gpt-image-15)
-      - [Nano Banana Pro](#temporal--stage-order02--nano-banana-pro)
-      - [Veo 3.1](#temporal--stage-order02--veo-31)
-      - [Seedream 5.0](#temporal--stage-order02--seedream-50)
-      - [GPT image 1](#temporal--stage-order02--gpt-image-1)
-      - [Nano Banana](#temporal--stage-order02--nano-banana)
-      - [Nano Banana 2](#temporal--stage-order02--nano-banana-2)
-      - [Emu3.5](#temporal--stage-order02--emu35)
-      - [kling](#temporal--stage-order02--kling)
-      - [Seedream 4.5](#temporal--stage-order02--seedream-45)
-      - [sora](#temporal--stage-order02--sora)
-      - [Seedream 4.0](#temporal--stage-order02--seedream-40)
-      - [SkyReels-V2](#temporal--stage-order02--skyreels-v2)
-      - [Wan2.2-I2V-14B](#temporal--stage-order02--wan22-i2v-14b)
-      - [BAGEL](#temporal--stage-order02--bagel)
-      - [HunyuanVideo](#temporal--stage-order02--hunyuanvideo)
-      - [Qwen-Image](#temporal--stage-order02--qwen-image)
-    - [*A butterfly undergoes metamorphosis from egg to adult.*](#temporal--stage-order03--prompt)
-      - [GPT image 1.5](#temporal--stage-order03--gpt-image-15)
-      - [Nano Banana Pro](#temporal--stage-order03--nano-banana-pro)
-      - [Veo 3.1](#temporal--stage-order03--veo-31)
-      - [Seedream 5.0](#temporal--stage-order03--seedream-50)
-      - [GPT image 1](#temporal--stage-order03--gpt-image-1)
-      - [Nano Banana](#temporal--stage-order03--nano-banana)
-      - [Nano Banana 2](#temporal--stage-order03--nano-banana-2)
-      - [Emu3.5](#temporal--stage-order03--emu35)
-      - [kling](#temporal--stage-order03--kling)
-      - [Seedream 4.5](#temporal--stage-order03--seedream-45)
-      - [sora](#temporal--stage-order03--sora)
-      - [Seedream 4.0](#temporal--stage-order03--seedream-40)
-      - [SkyReels-V2](#temporal--stage-order03--skyreels-v2)
-      - [Wan2.2-I2V-14B](#temporal--stage-order03--wan22-i2v-14b)
-      - [BAGEL](#temporal--stage-order03--bagel)
-      - [HunyuanVideo](#temporal--stage-order03--hunyuanvideo)
-      - [Qwen-Image](#temporal--stage-order03--qwen-image)
+    <details>
+    <summary><em>Demolish a house built with building blocks.</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order01--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order01--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order01--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order01--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order01--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order01--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order01--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order01--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order01--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order01--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order01--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order01--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order01--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order01--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order01--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order01--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order01--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>Paint a portrait with oil paints.</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order02--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order02--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order02--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order02--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order02--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order02--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order02--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order02--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order02--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order02--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order02--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order02--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order02--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order02--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order02--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order02--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order02--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>A butterfly undergoes metamorphosis from egg to adult.</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order03--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order03--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order03--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order03--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order03--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order03--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order03--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order03--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order03--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order03--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order03--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order03--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order03--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order03--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order03--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order03--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--stage-order03--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
   - [Worldline](#temporal--worldline)
-    - [*A ceiling fan rotates continuously , with blades spinning smoothly and housing u…*](#temporal--worldline01--prompt)
-      - [GPT image 1.5](#temporal--worldline01--gpt-image-15)
-      - [Nano Banana Pro](#temporal--worldline01--nano-banana-pro)
-      - [Veo 3.1](#temporal--worldline01--veo-31)
-      - [Seedream 5.0](#temporal--worldline01--seedream-50)
-      - [GPT image 1](#temporal--worldline01--gpt-image-1)
-      - [Nano Banana](#temporal--worldline01--nano-banana)
-      - [Nano Banana 2](#temporal--worldline01--nano-banana-2)
-      - [Emu3.5](#temporal--worldline01--emu35)
-      - [kling](#temporal--worldline01--kling)
-      - [Seedream 4.5](#temporal--worldline01--seedream-45)
-      - [sora](#temporal--worldline01--sora)
-      - [Seedream 4.0](#temporal--worldline01--seedream-40)
-      - [SkyReels-V2](#temporal--worldline01--skyreels-v2)
-      - [Wan2.2-I2V-14B](#temporal--worldline01--wan22-i2v-14b)
-      - [BAGEL](#temporal--worldline01--bagel)
-      - [HunyuanVideo](#temporal--worldline01--hunyuanvideo)
-      - [Qwen-Image](#temporal--worldline01--qwen-image)
-    - [*A pendulum with engraved markings swings back and forth for ten minutes.*](#temporal--worldline02--prompt)
-      - [GPT image 1.5](#temporal--worldline02--gpt-image-15)
-      - [Nano Banana Pro](#temporal--worldline02--nano-banana-pro)
-      - [Veo 3.1](#temporal--worldline02--veo-31)
-      - [Seedream 5.0](#temporal--worldline02--seedream-50)
-      - [GPT image 1](#temporal--worldline02--gpt-image-1)
-      - [Nano Banana](#temporal--worldline02--nano-banana)
-      - [Nano Banana 2](#temporal--worldline02--nano-banana-2)
-      - [Emu3.5](#temporal--worldline02--emu35)
-      - [kling](#temporal--worldline02--kling)
-      - [Seedream 4.5](#temporal--worldline02--seedream-45)
-      - [sora](#temporal--worldline02--sora)
-      - [Seedream 4.0](#temporal--worldline02--seedream-40)
-      - [SkyReels-V2](#temporal--worldline02--skyreels-v2)
-      - [Wan2.2-I2V-14B](#temporal--worldline02--wan22-i2v-14b)
-      - [BAGEL](#temporal--worldline02--bagel)
-      - [HunyuanVideo](#temporal--worldline02--hunyuanvideo)
-      - [Qwen-Image](#temporal--worldline02--qwen-image)
-    - [*The sun sets steadily over thirty minutes, with the sky colors and shadows evolv…*](#temporal--worldline03--prompt)
-      - [GPT image 1.5](#temporal--worldline03--gpt-image-15)
-      - [Nano Banana Pro](#temporal--worldline03--nano-banana-pro)
-      - [Veo 3.1](#temporal--worldline03--veo-31)
-      - [Seedream 5.0](#temporal--worldline03--seedream-50)
-      - [GPT image 1](#temporal--worldline03--gpt-image-1)
-      - [Nano Banana](#temporal--worldline03--nano-banana)
-      - [Nano Banana 2](#temporal--worldline03--nano-banana-2)
-      - [Emu3.5](#temporal--worldline03--emu35)
-      - [kling](#temporal--worldline03--kling)
-      - [Seedream 4.5](#temporal--worldline03--seedream-45)
-      - [sora](#temporal--worldline03--sora)
-      - [Seedream 4.0](#temporal--worldline03--seedream-40)
-      - [SkyReels-V2](#temporal--worldline03--skyreels-v2)
-      - [Wan2.2-I2V-14B](#temporal--worldline03--wan22-i2v-14b)
-      - [BAGEL](#temporal--worldline03--bagel)
-      - [HunyuanVideo](#temporal--worldline03--hunyuanvideo)
-      - [Qwen-Image](#temporal--worldline03--qwen-image)
+    <details>
+    <summary><em>A ceiling fan rotates continuously , with blades spinning smoothly and housing u…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline01--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline01--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline01--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline01--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline01--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline01--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline01--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline01--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline01--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline01--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline01--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline01--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline01--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline01--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline01--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline01--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline01--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>A pendulum with engraved markings swings back and forth for ten minutes.</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline02--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline02--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline02--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline02--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline02--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline02--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline02--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline02--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline02--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline02--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline02--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline02--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline02--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline02--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline02--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline02--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline02--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+    <details>
+    <summary><em>The sun sets steadily over thirty minutes, with the sky colors and shadows evolv…</em></summary>
+    <div>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline03--gpt-image-15">GPT image 1.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline03--nano-banana-pro">Nano Banana Pro</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline03--veo-31">Veo 3.1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline03--seedream-50">Seedream 5.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline03--gpt-image-1">GPT image 1</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline03--nano-banana">Nano Banana</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline03--nano-banana-2">Nano Banana 2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline03--emu35">Emu3.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline03--kling">kling</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline03--seedream-45">Seedream 4.5</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline03--sora">sora</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline03--seedream-40">Seedream 4.0</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline03--skyreels-v2">SkyReels-V2</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline03--wan22-i2v-14b">Wan2.2-I2V-14B</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline03--bagel">BAGEL</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline03--hunyuanvideo">HunyuanVideo</a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#temporal--worldline03--qwen-image">Qwen-Image</a><br/>
+    </div>
+    </details>
+
 
 <a name="modal"></a>
 
@@ -1024,6 +1246,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Modal/input/inv01/inv01.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modal--subj-attr01--gpt-image-15"></a>
 
@@ -1212,6 +1437,8 @@ Input image
   <img src="model_output/Modal/Qwen-Image/Subj-Attr01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="modal--subj-attr02--prompt"></a>
@@ -1229,6 +1456,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Modal/input/inv02/inv02.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modal--subj-attr02--gpt-image-15"></a>
 
@@ -1417,6 +1647,8 @@ Input image
   <img src="model_output/Modal/Qwen-Image/Subj-Attr02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="modal--subj-attr03--prompt"></a>
@@ -1434,6 +1666,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Modal/input/inv03/inv03.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modal--subj-attr03--gpt-image-15"></a>
 
@@ -1622,6 +1857,8 @@ Input image
   <img src="model_output/Modal/Qwen-Image/Subj-Attr03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="modal--local-edit"></a>
@@ -1643,6 +1880,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Modal/input/loc01/loc01.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modal--local-edit01--gpt-image-15"></a>
 
@@ -1831,6 +2071,8 @@ Input image
   <img src="model_output/Modal/Qwen-Image/Local-Edit01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="modal--local-edit02--prompt"></a>
@@ -1848,6 +2090,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Modal/input/loc02/loc02.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modal--local-edit02--gpt-image-15"></a>
 
@@ -2036,6 +2281,8 @@ Input image
   <img src="model_output/Modal/Qwen-Image/Local-Edit02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="modal--local-edit03--prompt"></a>
@@ -2053,6 +2300,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Modal/input/loc03/loc03.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modal--local-edit03--gpt-image-15"></a>
 
@@ -2241,6 +2491,8 @@ Input image
   <img src="model_output/Modal/Qwen-Image/Local-Edit03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="modal--multi-const"></a>
@@ -2256,6 +2508,9 @@ Prompt
 ```text
 Generate a realistic image containing only three subjects, and satisfy all bindings: Person A: wearing a gray hoodie, holding a backpack in the left hand, and giving a water bottle to Person B with the right hand. Person B: wearing a orange t-shirt, holding a skateboard in the right hand, and giving a cap to Person A with the left hand. A squirrel: with brown fur, sitting on a tree branch, and looking at Person B. Negative constraints: No other people or animals;
 ```
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modal--multi-const01--gpt-image-15"></a>
 
@@ -2444,6 +2699,8 @@ Generate a realistic image containing only three subjects, and satisfy all bindi
   <img src="model_output/Modal/Qwen-Image/Multi-Const01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="modal--multi-const02--prompt"></a>
@@ -2455,6 +2712,9 @@ Prompt
 ```text
 Generate a realistic image containing only three subjects, and satisfy all bindings: Person A: wearing a yellow jacket, holding a camera in the left hand, and giving a hat to Person B with the right hand. Person B: wearing a purple sweater, holding a map in the right hand, and giving a scarf to Person A with the left hand. A bird: with red feathers, standing on a perch, and looking at Person B. Negative constraints: No other people or animals;
 ```
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modal--multi-const02--gpt-image-15"></a>
 
@@ -2643,6 +2903,8 @@ Generate a realistic image containing only three subjects, and satisfy all bindi
   <img src="model_output/Modal/Qwen-Image/Multi-Const02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="modal--multi-const03--prompt"></a>
@@ -2654,6 +2916,9 @@ Prompt
 ```text
 Produce a realistic image containing exactly three subjects: Gardener C: wearing gardening gloves, trimming a bush with shears in the right hand, and holding a watering can in the left hand. Child D: wearing a sun hat, watering flowers with a hose in the right hand, and holding a toy in the left hand. A bird: with blue feathers, perched on a branch, and watching Child D. Negative constraints: No gardening tools other than specified; no labels or writing on any item; the scene must use only green and brown colors.
 ```
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modal--multi-const03--gpt-image-15"></a>
 
@@ -2842,6 +3107,8 @@ Produce a realistic image containing exactly three subjects: Gardener C: wearing
   <img src="model_output/Modal/Qwen-Image/Multi-Const03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="modalxspatial"></a>
@@ -2867,6 +3134,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxSpatial/input/semmv01/semmv01.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxspatial--sem-mv01--gpt-image-15"></a>
 
@@ -3055,6 +3325,8 @@ Input image
   <img src="model_output/ModalxSpatial/Qwen-Image/Sem-MV01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="modalxspatial--sem-mv02--prompt"></a>
@@ -3072,6 +3344,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxSpatial/input/semmv02/semmv02.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxspatial--sem-mv02--gpt-image-15"></a>
 
@@ -3260,6 +3535,8 @@ Input image
   <img src="model_output/ModalxSpatial/Qwen-Image/Sem-MV02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="modalxspatial--sem-mv03--prompt"></a>
@@ -3277,6 +3554,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxSpatial/input/semmv03/semmv03.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxspatial--sem-mv03--gpt-image-15"></a>
 
@@ -3465,6 +3745,8 @@ Input image
   <img src="model_output/ModalxSpatial/Qwen-Image/Sem-MV03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="modalxspatial--sem-hier"></a>
@@ -3486,6 +3768,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxSpatial/input/semocc01/semocc01.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxspatial--sem-hier01--gpt-image-15"></a>
 
@@ -3674,6 +3959,8 @@ Input image
   <img src="model_output/ModalxSpatial/Qwen-Image/Sem-Hier01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="modalxspatial--sem-hier02--prompt"></a>
@@ -3691,6 +3978,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxSpatial/input/semocc02/semocc02.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxspatial--sem-hier02--gpt-image-15"></a>
 
@@ -3879,6 +4169,8 @@ Input image
   <img src="model_output/ModalxSpatial/Qwen-Image/Sem-Hier02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="modalxspatial--sem-hier03--prompt"></a>
@@ -3896,6 +4188,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxSpatial/input/semocc03/semocc03.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxspatial--sem-hier03--gpt-image-15"></a>
 
@@ -4084,6 +4379,8 @@ Input image
   <img src="model_output/ModalxSpatial/Qwen-Image/Sem-Hier03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="modalxspatial--sem-planar"></a>
@@ -4105,6 +4402,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxSpatial/input/semplanar01/semplanar01.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxspatial--sem-planar01--gpt-image-15"></a>
 
@@ -4293,6 +4593,8 @@ Input image
   <img src="model_output/ModalxSpatial/Qwen-Image/Sem-Planar01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="modalxspatial--sem-planar02--prompt"></a>
@@ -4310,6 +4612,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxSpatial/input/semplanar02/semplanar02.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxspatial--sem-planar02--gpt-image-15"></a>
 
@@ -4498,6 +4803,8 @@ Input image
   <img src="model_output/ModalxSpatial/Qwen-Image/Sem-Planar02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="modalxspatial--sem-planar03--prompt"></a>
@@ -4515,6 +4822,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxSpatial/input/semplanar03/semplanar03.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxspatial--sem-planar03--gpt-image-15"></a>
 
@@ -4703,6 +5013,8 @@ Input image
   <img src="model_output/ModalxSpatial/Qwen-Image/Sem-Planar03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="modalxtemporal"></a>
@@ -4728,6 +5040,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxTemporal/input/dyn01/dyn01.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxtemporal--attr-dyn01--gpt-image-15"></a>
 
@@ -4916,6 +5231,8 @@ Input image
   <img src="model_output/ModalxTemporal/Qwen-Image/Attr-Dyn01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="modalxtemporal--attr-dyn02--prompt"></a>
@@ -4933,6 +5250,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxTemporal/input/dyn02/dyn02.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxtemporal--attr-dyn02--gpt-image-15"></a>
 
@@ -5121,6 +5441,8 @@ Input image
   <img src="model_output/ModalxTemporal/Qwen-Image/Attr-Dyn02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="modalxtemporal--attr-dyn03--prompt"></a>
@@ -5138,6 +5460,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxTemporal/input/dyn03/dyn03.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxtemporal--attr-dyn03--gpt-image-15"></a>
 
@@ -5326,6 +5651,8 @@ Input image
   <img src="model_output/ModalxTemporal/Qwen-Image/Attr-Dyn03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="modalxtemporal--trigger-event"></a>
@@ -5347,6 +5674,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxTemporal/input/eve01/eve01.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxtemporal--trigger-event01--gpt-image-15"></a>
 
@@ -5535,6 +5865,8 @@ Input image
   <img src="model_output/ModalxTemporal/Qwen-Image/Trigger-Event01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="modalxtemporal--trigger-event02--prompt"></a>
@@ -5552,6 +5884,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxTemporal/input/eve02/eve02.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxtemporal--trigger-event02--gpt-image-15"></a>
 
@@ -5740,6 +6075,8 @@ Input image
   <img src="model_output/ModalxTemporal/Qwen-Image/Trigger-Event02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="modalxtemporal--trigger-event03--prompt"></a>
@@ -5757,6 +6094,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxTemporal/input/eve03/eve03.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxtemporal--trigger-event03--gpt-image-15"></a>
 
@@ -5945,6 +6285,8 @@ Input image
   <img src="model_output/ModalxTemporal/Qwen-Image/Trigger-Event03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="modalxtemporal--long-horizon"></a>
@@ -5966,6 +6308,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxTemporal/input/long01/long01.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxtemporal--long-horizon01--gpt-image-15"></a>
 
@@ -6154,6 +6499,8 @@ Input image
   <img src="model_output/ModalxTemporal/Qwen-Image/Long-Horizon01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="modalxtemporal--long-horizon02--prompt"></a>
@@ -6171,6 +6518,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxTemporal/input/long02/long02.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxtemporal--long-horizon02--gpt-image-15"></a>
 
@@ -6359,6 +6709,8 @@ Input image
   <img src="model_output/ModalxTemporal/Qwen-Image/Long-Horizon02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="modalxtemporal--long-horizon03--prompt"></a>
@@ -6376,6 +6728,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/ModalxTemporal/input/long03/long03.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="modalxtemporal--long-horizon03--gpt-image-15"></a>
 
@@ -6564,6 +6919,8 @@ Input image
   <img src="model_output/ModalxTemporal/Qwen-Image/Long-Horizon03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="spatial"></a>
@@ -6589,6 +6946,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Spatial/input/mv3d01/mv3d01.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatial--mv-3d01--gpt-image-15"></a>
 
@@ -6772,6 +7132,8 @@ Input image
   <img src="model_output/Spatial/Qwen-Image/MV-3D01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="spatial--mv-3d02--prompt"></a>
@@ -6789,6 +7151,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Spatial/input/mv3d02/mv3d02.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatial--mv-3d02--gpt-image-15"></a>
 
@@ -6977,6 +7342,8 @@ Input image
   <img src="model_output/Spatial/Qwen-Image/MV-3D02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="spatial--mv-3d03--prompt"></a>
@@ -6994,6 +7361,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Spatial/input/mv3d03/mv3d03.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatial--mv-3d03--gpt-image-15"></a>
 
@@ -7182,6 +7552,8 @@ Input image
   <img src="model_output/Spatial/Qwen-Image/MV-3D03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="spatial--occ-contain"></a>
@@ -7203,6 +7575,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Spatial/input/occ01/occ01.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatial--occ-contain01--gpt-image-15"></a>
 
@@ -7391,6 +7766,8 @@ Input image
   <img src="model_output/Spatial/Qwen-Image/Occ-Contain01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="spatial--occ-contain02--prompt"></a>
@@ -7408,6 +7785,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Spatial/input/occ02/occ02.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatial--occ-contain02--gpt-image-15"></a>
 
@@ -7596,6 +7976,8 @@ Input image
   <img src="model_output/Spatial/Qwen-Image/Occ-Contain02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="spatial--occ-contain03--prompt"></a>
@@ -7613,6 +7995,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Spatial/input/occ03/occ03.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatial--occ-contain03--gpt-image-15"></a>
 
@@ -7801,6 +8186,8 @@ Input image
   <img src="model_output/Spatial/Qwen-Image/Occ-Contain03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="spatial--planar-2d"></a>
@@ -7822,6 +8209,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Spatial/input/planar01/planar01.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatial--planar-2d01--gpt-image-15"></a>
 
@@ -8010,6 +8400,8 @@ Input image
   <img src="model_output/Spatial/Qwen-Image/Planar-2D01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="spatial--planar-2d02--prompt"></a>
@@ -8027,6 +8419,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Spatial/input/planar02/planar02.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatial--planar-2d02--gpt-image-15"></a>
 
@@ -8215,6 +8610,8 @@ Input image
   <img src="model_output/Spatial/Qwen-Image/Planar-2D02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="spatial--planar-2d03--prompt"></a>
@@ -8232,6 +8629,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Spatial/input/planar03/planar03.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatial--planar-2d03--gpt-image-15"></a>
 
@@ -8420,6 +8820,8 @@ Input image
   <img src="model_output/Spatial/Qwen-Image/Planar-2D03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="spatialxtemporal"></a>
@@ -8445,6 +8847,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/SpatialxTemporal/input/3d01/3d01.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatialxtemporal--3d-loop01--gpt-image-15"></a>
 
@@ -8633,6 +9038,8 @@ Input image
   <img src="model_output/SpatialxTemporal/Qwen-Image/3D-Loop01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="spatialxtemporal--3d-loop02--prompt"></a>
@@ -8650,6 +9057,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/SpatialxTemporal/input/3d02/3d02.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatialxtemporal--3d-loop02--gpt-image-15"></a>
 
@@ -8838,6 +9248,8 @@ Input image
   <img src="model_output/SpatialxTemporal/Qwen-Image/3D-Loop02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="spatialxtemporal--3d-loop03--prompt"></a>
@@ -8855,6 +9267,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/SpatialxTemporal/input/3d03/3d03.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatialxtemporal--3d-loop03--gpt-image-15"></a>
 
@@ -9043,6 +9458,8 @@ Input image
   <img src="model_output/SpatialxTemporal/Qwen-Image/3D-Loop03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="spatialxtemporal--maze"></a>
@@ -9064,6 +9481,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/SpatialxTemporal/input/maze01/maze01.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatialxtemporal--maze01--gpt-image-15"></a>
 
@@ -9252,6 +9672,8 @@ Input image
   <img src="model_output/SpatialxTemporal/Qwen-Image/Maze01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="spatialxtemporal--maze02--prompt"></a>
@@ -9269,6 +9691,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/SpatialxTemporal/input/maze02/maze02.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatialxtemporal--maze02--gpt-image-15"></a>
 
@@ -9457,6 +9882,8 @@ Input image
   <img src="model_output/SpatialxTemporal/Qwen-Image/Maze02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="spatialxtemporal--maze03--prompt"></a>
@@ -9474,6 +9901,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/SpatialxTemporal/input/maze03/maze03.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatialxtemporal--maze03--gpt-image-15"></a>
 
@@ -9662,6 +10092,8 @@ Input image
   <img src="model_output/SpatialxTemporal/Qwen-Image/Maze03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="spatialxtemporal--occ-motion"></a>
@@ -9683,6 +10115,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/SpatialxTemporal/input/occmotion01/occmotion01.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatialxtemporal--occ-motion01--gpt-image-15"></a>
 
@@ -9871,6 +10306,8 @@ Input image
   <img src="model_output/SpatialxTemporal/Qwen-Image/Occ-Motion01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="spatialxtemporal--occ-motion02--prompt"></a>
@@ -9888,6 +10325,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/SpatialxTemporal/input/occmotion02/occmotion02.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatialxtemporal--occ-motion02--gpt-image-15"></a>
 
@@ -10076,6 +10516,8 @@ Input image
   <img src="model_output/SpatialxTemporal/Qwen-Image/Occ-Motion02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="spatialxtemporal--occ-motion03--prompt"></a>
@@ -10093,6 +10535,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/SpatialxTemporal/input/occmotion03/occmotion03.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="spatialxtemporal--occ-motion03--gpt-image-15"></a>
 
@@ -10281,6 +10726,8 @@ Input image
   <img src="model_output/SpatialxTemporal/Qwen-Image/Occ-Motion03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="temporal"></a>
@@ -10306,6 +10753,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Temporal/input/Slow-Evol01/Slow-Evol01.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="temporal--slow-evol01--gpt-image-15"></a>
 
@@ -10494,6 +10944,8 @@ Input image
   <img src="model_output/Temporal/Qwen-Image/Slow-Evol01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="temporal--slow-evol02--prompt"></a>
@@ -10511,6 +10963,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Temporal/input/Slow-Evol02/Slow-Evol02.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="temporal--slow-evol02--gpt-image-15"></a>
 
@@ -10699,6 +11154,8 @@ Input image
   <img src="model_output/Temporal/Qwen-Image/Slow-Evol02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="temporal--slow-evol03--prompt"></a>
@@ -10716,6 +11173,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Temporal/input/Slow-Evol03/Slow-Evol03.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="temporal--slow-evol03--gpt-image-15"></a>
 
@@ -10904,6 +11364,8 @@ Input image
   <img src="model_output/Temporal/Qwen-Image/Slow-Evol03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="temporal--stage-order"></a>
@@ -10925,6 +11387,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Temporal/input/Stage01/Stage01.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="temporal--stage-order01--gpt-image-15"></a>
 
@@ -11113,6 +11578,8 @@ Input image
   <img src="model_output/Temporal/Qwen-Image/Stage-Order01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="temporal--stage-order02--prompt"></a>
@@ -11130,6 +11597,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Temporal/input/Stage02/Stage02.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="temporal--stage-order02--gpt-image-15"></a>
 
@@ -11313,6 +11783,8 @@ Input image
   <img src="model_output/Temporal/Qwen-Image/Stage-Order02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="temporal--stage-order03--prompt"></a>
@@ -11330,6 +11802,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Temporal/input/Stage03/Stage03.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="temporal--stage-order03--gpt-image-15"></a>
 
@@ -11518,6 +11993,8 @@ Input image
   <img src="model_output/Temporal/Qwen-Image/Stage-Order03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="temporal--worldline"></a>
@@ -11539,6 +12016,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Temporal/input/Worldline01/Worldline01.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="temporal--worldline01--gpt-image-15"></a>
 
@@ -11727,6 +12207,8 @@ Input image
   <img src="model_output/Temporal/Qwen-Image/Worldline01_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="temporal--worldline02--prompt"></a>
@@ -11744,6 +12226,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Temporal/input/Worldline02/Worldline02.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="temporal--worldline02--gpt-image-15"></a>
 
@@ -11932,6 +12417,8 @@ Input image
   <img src="model_output/Temporal/Qwen-Image/Worldline02_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
 
+</details>
+
 ---
 
 <a name="temporal--worldline03--prompt"></a>
@@ -11949,6 +12436,9 @@ Input image
 <div style="text-align: left;">
   <img src="model_output/Temporal/input/Worldline03/Worldline03.jpg" width="180" style="margin-right: 8px;" />
 </div>
+
+<details>
+<summary><b>Model Outputs (click to expand)</b></summary>
 
 <a name="temporal--worldline03--gpt-image-15"></a>
 
@@ -12136,6 +12626,8 @@ Input image
   <img src="model_output/Temporal/Qwen-Image/Worldline03_3.jpg" width="180" style="margin-right: 8px;" />
   <img src="model_output/Temporal/Qwen-Image/Worldline03_4.jpg" width="180" style="margin-right: 8px;" />
 </p>
+
+</details>
 
 ---
 
